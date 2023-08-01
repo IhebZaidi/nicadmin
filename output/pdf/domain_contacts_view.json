@@ -166,13 +166,13 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel domain_contacts id_domain }","bold":true},{"text":{$id_domain_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel domain_contacts id_contact }","bold":true},{"text":{$id_contact_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel domain_contacts type_contact }","bold":true},{"text":{$type_contact_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel domain_contacts domain }","bold":true},{"text":{$domain_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel domain_contacts nom }","bold":true},{"text":{$nom_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

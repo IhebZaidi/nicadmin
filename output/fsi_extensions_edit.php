@@ -32,8 +32,7 @@ $id = intval($id) == 0 ? 1 : $id;
 
 // $keys could not be set properly if editid params were no passed
 $keys = array();
-$keys["id_fsi"] = postvalue("editid1");
-$keys["ext"] = postvalue("editid2");
+$keys["ext"] = postvalue("editid1");
 
 //array of params for classes
 $params = array();

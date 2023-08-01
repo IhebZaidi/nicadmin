@@ -112,7 +112,200 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsfsi["English"]["reg_commentaire"] = "Reg Commentaire";
 	$fieldToolTipsfsi["English"]["reg_commentaire"] = "";
 	$placeHoldersfsi["English"]["reg_commentaire"] = "";
+	$pageTitlesfsi["English"]["view"] = "Fsi{%id_fsi}";
 	if (count($fieldToolTipsfsi["English"]))
+		$tdatafsi[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelsfsi["Arabic"] = array();
+	$fieldToolTipsfsi["Arabic"] = array();
+	$placeHoldersfsi["Arabic"] = array();
+	$pageTitlesfsi["Arabic"] = array();
+	$fieldLabelsfsi["Arabic"]["id_fsi"] = "Id Fsi";
+	$fieldToolTipsfsi["Arabic"]["id_fsi"] = "";
+	$placeHoldersfsi["Arabic"]["id_fsi"] = "";
+	$fieldLabelsfsi["Arabic"]["nom"] = "Nom";
+	$fieldToolTipsfsi["Arabic"]["nom"] = "";
+	$placeHoldersfsi["Arabic"]["nom"] = "";
+	$fieldLabelsfsi["Arabic"]["adresse"] = "Adresse";
+	$fieldToolTipsfsi["Arabic"]["adresse"] = "";
+	$placeHoldersfsi["Arabic"]["adresse"] = "";
+	$fieldLabelsfsi["Arabic"]["tel"] = "Tel";
+	$fieldToolTipsfsi["Arabic"]["tel"] = "";
+	$placeHoldersfsi["Arabic"]["tel"] = "";
+	$fieldLabelsfsi["Arabic"]["fax"] = "Fax";
+	$fieldToolTipsfsi["Arabic"]["fax"] = "";
+	$placeHoldersfsi["Arabic"]["fax"] = "";
+	$fieldLabelsfsi["Arabic"]["email"] = "Email";
+	$fieldToolTipsfsi["Arabic"]["email"] = "";
+	$placeHoldersfsi["Arabic"]["email"] = "";
+	$fieldLabelsfsi["Arabic"]["prim_email"] = "Prim Email";
+	$fieldToolTipsfsi["Arabic"]["prim_email"] = "";
+	$placeHoldersfsi["Arabic"]["prim_email"] = "";
+	$fieldLabelsfsi["Arabic"]["sec_email"] = "Sec Email";
+	$fieldToolTipsfsi["Arabic"]["sec_email"] = "";
+	$placeHoldersfsi["Arabic"]["sec_email"] = "";
+	$fieldLabelsfsi["Arabic"]["allowed_IPs"] = "Allowed IPs";
+	$fieldToolTipsfsi["Arabic"]["allowed_IPs"] = "";
+	$placeHoldersfsi["Arabic"]["allowed_IPs"] = "";
+	$fieldLabelsfsi["Arabic"]["url"] = "Url";
+	$fieldToolTipsfsi["Arabic"]["url"] = "";
+	$placeHoldersfsi["Arabic"]["url"] = "";
+	$fieldLabelsfsi["Arabic"]["login"] = "Login";
+	$fieldToolTipsfsi["Arabic"]["login"] = "";
+	$placeHoldersfsi["Arabic"]["login"] = "";
+	$fieldLabelsfsi["Arabic"]["password"] = "Password";
+	$fieldToolTipsfsi["Arabic"]["password"] = "";
+	$placeHoldersfsi["Arabic"]["password"] = "";
+	$fieldLabelsfsi["Arabic"]["API_password"] = "API Password";
+	$fieldToolTipsfsi["Arabic"]["API_password"] = "";
+	$placeHoldersfsi["Arabic"]["API_password"] = "";
+	$fieldLabelsfsi["Arabic"]["password_reset_token"] = "Password Reset Token";
+	$fieldToolTipsfsi["Arabic"]["password_reset_token"] = "";
+	$placeHoldersfsi["Arabic"]["password_reset_token"] = "";
+	$fieldLabelsfsi["Arabic"]["password_reset_token_expire"] = "Password Reset Token Expire";
+	$fieldToolTipsfsi["Arabic"]["password_reset_token_expire"] = "";
+	$placeHoldersfsi["Arabic"]["password_reset_token_expire"] = "";
+	$fieldLabelsfsi["Arabic"]["secret_pass"] = "Secret Pass";
+	$fieldToolTipsfsi["Arabic"]["secret_pass"] = "";
+	$placeHoldersfsi["Arabic"]["secret_pass"] = "";
+	$fieldLabelsfsi["Arabic"]["commentaires"] = "Commentaires";
+	$fieldToolTipsfsi["Arabic"]["commentaires"] = "";
+	$placeHoldersfsi["Arabic"]["commentaires"] = "";
+	$fieldLabelsfsi["Arabic"]["date_modif"] = "Date Modif";
+	$fieldToolTipsfsi["Arabic"]["date_modif"] = "";
+	$placeHoldersfsi["Arabic"]["date_modif"] = "";
+	$fieldLabelsfsi["Arabic"]["nomnoc"] = "Nomnoc";
+	$fieldToolTipsfsi["Arabic"]["nomnoc"] = "";
+	$placeHoldersfsi["Arabic"]["nomnoc"] = "";
+	$fieldLabelsfsi["Arabic"]["admin"] = "Admin";
+	$fieldToolTipsfsi["Arabic"]["admin"] = "";
+	$placeHoldersfsi["Arabic"]["admin"] = "";
+	$fieldLabelsfsi["Arabic"]["etat"] = "Etat";
+	$fieldToolTipsfsi["Arabic"]["etat"] = "";
+	$placeHoldersfsi["Arabic"]["etat"] = "";
+	$fieldLabelsfsi["Arabic"]["prefix"] = "Prefix";
+	$fieldToolTipsfsi["Arabic"]["prefix"] = "";
+	$placeHoldersfsi["Arabic"]["prefix"] = "";
+	$fieldLabelsfsi["Arabic"]["langue"] = "Langue";
+	$fieldToolTipsfsi["Arabic"]["langue"] = "";
+	$placeHoldersfsi["Arabic"]["langue"] = "";
+	$fieldLabelsfsi["Arabic"]["accountBalance"] = "Account Balance";
+	$fieldToolTipsfsi["Arabic"]["accountBalance"] = "";
+	$placeHoldersfsi["Arabic"]["accountBalance"] = "";
+	$fieldLabelsfsi["Arabic"]["creditLimit"] = "Credit Limit";
+	$fieldToolTipsfsi["Arabic"]["creditLimit"] = "";
+	$placeHoldersfsi["Arabic"]["creditLimit"] = "";
+	$fieldLabelsfsi["Arabic"]["creditThreshold"] = "Credit Threshold";
+	$fieldToolTipsfsi["Arabic"]["creditThreshold"] = "";
+	$placeHoldersfsi["Arabic"]["creditThreshold"] = "";
+	$fieldLabelsfsi["Arabic"]["thresholdType"] = "Threshold Type";
+	$fieldToolTipsfsi["Arabic"]["thresholdType"] = "";
+	$placeHoldersfsi["Arabic"]["thresholdType"] = "";
+	$fieldLabelsfsi["Arabic"]["mgmt"] = "Mgmt";
+	$fieldToolTipsfsi["Arabic"]["mgmt"] = "";
+	$placeHoldersfsi["Arabic"]["mgmt"] = "";
+	$fieldLabelsfsi["Arabic"]["reg_commentaire"] = "Reg Commentaire";
+	$fieldToolTipsfsi["Arabic"]["reg_commentaire"] = "";
+	$placeHoldersfsi["Arabic"]["reg_commentaire"] = "";
+	if (count($fieldToolTipsfsi["Arabic"]))
+		$tdatafsi[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelsfsi["French"] = array();
+	$fieldToolTipsfsi["French"] = array();
+	$placeHoldersfsi["French"] = array();
+	$pageTitlesfsi["French"] = array();
+	$fieldLabelsfsi["French"]["id_fsi"] = "Id Fsi";
+	$fieldToolTipsfsi["French"]["id_fsi"] = "";
+	$placeHoldersfsi["French"]["id_fsi"] = "";
+	$fieldLabelsfsi["French"]["nom"] = "Nom";
+	$fieldToolTipsfsi["French"]["nom"] = "";
+	$placeHoldersfsi["French"]["nom"] = "";
+	$fieldLabelsfsi["French"]["adresse"] = "Adresse";
+	$fieldToolTipsfsi["French"]["adresse"] = "";
+	$placeHoldersfsi["French"]["adresse"] = "";
+	$fieldLabelsfsi["French"]["tel"] = "Tel";
+	$fieldToolTipsfsi["French"]["tel"] = "";
+	$placeHoldersfsi["French"]["tel"] = "";
+	$fieldLabelsfsi["French"]["fax"] = "Fax";
+	$fieldToolTipsfsi["French"]["fax"] = "";
+	$placeHoldersfsi["French"]["fax"] = "";
+	$fieldLabelsfsi["French"]["email"] = "Email";
+	$fieldToolTipsfsi["French"]["email"] = "";
+	$placeHoldersfsi["French"]["email"] = "";
+	$fieldLabelsfsi["French"]["prim_email"] = "Prim Email";
+	$fieldToolTipsfsi["French"]["prim_email"] = "";
+	$placeHoldersfsi["French"]["prim_email"] = "";
+	$fieldLabelsfsi["French"]["sec_email"] = "Sec Email";
+	$fieldToolTipsfsi["French"]["sec_email"] = "";
+	$placeHoldersfsi["French"]["sec_email"] = "";
+	$fieldLabelsfsi["French"]["allowed_IPs"] = "Allowed IPs";
+	$fieldToolTipsfsi["French"]["allowed_IPs"] = "";
+	$placeHoldersfsi["French"]["allowed_IPs"] = "";
+	$fieldLabelsfsi["French"]["url"] = "Url";
+	$fieldToolTipsfsi["French"]["url"] = "";
+	$placeHoldersfsi["French"]["url"] = "";
+	$fieldLabelsfsi["French"]["login"] = "Login";
+	$fieldToolTipsfsi["French"]["login"] = "";
+	$placeHoldersfsi["French"]["login"] = "";
+	$fieldLabelsfsi["French"]["password"] = "Password";
+	$fieldToolTipsfsi["French"]["password"] = "";
+	$placeHoldersfsi["French"]["password"] = "";
+	$fieldLabelsfsi["French"]["API_password"] = "API Password";
+	$fieldToolTipsfsi["French"]["API_password"] = "";
+	$placeHoldersfsi["French"]["API_password"] = "";
+	$fieldLabelsfsi["French"]["password_reset_token"] = "Password Reset Token";
+	$fieldToolTipsfsi["French"]["password_reset_token"] = "";
+	$placeHoldersfsi["French"]["password_reset_token"] = "";
+	$fieldLabelsfsi["French"]["password_reset_token_expire"] = "Password Reset Token Expire";
+	$fieldToolTipsfsi["French"]["password_reset_token_expire"] = "";
+	$placeHoldersfsi["French"]["password_reset_token_expire"] = "";
+	$fieldLabelsfsi["French"]["secret_pass"] = "Secret Pass";
+	$fieldToolTipsfsi["French"]["secret_pass"] = "";
+	$placeHoldersfsi["French"]["secret_pass"] = "";
+	$fieldLabelsfsi["French"]["commentaires"] = "Commentaires";
+	$fieldToolTipsfsi["French"]["commentaires"] = "";
+	$placeHoldersfsi["French"]["commentaires"] = "";
+	$fieldLabelsfsi["French"]["date_modif"] = "Date Modif";
+	$fieldToolTipsfsi["French"]["date_modif"] = "";
+	$placeHoldersfsi["French"]["date_modif"] = "";
+	$fieldLabelsfsi["French"]["nomnoc"] = "Nomnoc";
+	$fieldToolTipsfsi["French"]["nomnoc"] = "";
+	$placeHoldersfsi["French"]["nomnoc"] = "";
+	$fieldLabelsfsi["French"]["admin"] = "Admin";
+	$fieldToolTipsfsi["French"]["admin"] = "";
+	$placeHoldersfsi["French"]["admin"] = "";
+	$fieldLabelsfsi["French"]["etat"] = "Etat";
+	$fieldToolTipsfsi["French"]["etat"] = "";
+	$placeHoldersfsi["French"]["etat"] = "";
+	$fieldLabelsfsi["French"]["prefix"] = "Prefix";
+	$fieldToolTipsfsi["French"]["prefix"] = "";
+	$placeHoldersfsi["French"]["prefix"] = "";
+	$fieldLabelsfsi["French"]["langue"] = "Langue";
+	$fieldToolTipsfsi["French"]["langue"] = "";
+	$placeHoldersfsi["French"]["langue"] = "";
+	$fieldLabelsfsi["French"]["accountBalance"] = "Account Balance";
+	$fieldToolTipsfsi["French"]["accountBalance"] = "";
+	$placeHoldersfsi["French"]["accountBalance"] = "";
+	$fieldLabelsfsi["French"]["creditLimit"] = "Credit Limit";
+	$fieldToolTipsfsi["French"]["creditLimit"] = "";
+	$placeHoldersfsi["French"]["creditLimit"] = "";
+	$fieldLabelsfsi["French"]["creditThreshold"] = "Credit Threshold";
+	$fieldToolTipsfsi["French"]["creditThreshold"] = "";
+	$placeHoldersfsi["French"]["creditThreshold"] = "";
+	$fieldLabelsfsi["French"]["thresholdType"] = "Threshold Type";
+	$fieldToolTipsfsi["French"]["thresholdType"] = "";
+	$placeHoldersfsi["French"]["thresholdType"] = "";
+	$fieldLabelsfsi["French"]["mgmt"] = "Mgmt";
+	$fieldToolTipsfsi["French"]["mgmt"] = "";
+	$placeHoldersfsi["French"]["mgmt"] = "";
+	$fieldLabelsfsi["French"]["reg_commentaire"] = "Reg Commentaire";
+	$fieldToolTipsfsi["French"]["reg_commentaire"] = "";
+	$placeHoldersfsi["French"]["reg_commentaire"] = "";
+	if (count($fieldToolTipsfsi["French"]))
 		$tdatafsi[".isUseToolTips"] = true;
 }
 
@@ -221,7 +414,7 @@ $tdatafsi[".addPageEvents"] = false;
 $tdatafsi[".isUseTimeForSearch"] = false;
 
 
-$tdatafsi[".badgeColor"] = "D2691E";
+$tdatafsi[".badgeColor"] = "d2691e";
 
 
 $tdatafsi[".allSearchFields"] = array();
@@ -4427,21 +4620,21 @@ changeTextControlsToDate( "fsi" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["fsi"] = array();
-//	contacts
+//	fsi_ns
 	
 	
 
 		$dIndex = 0;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="contacts";
-		$detailsParam["dOriginalTable"] = "contacts";
+	$detailsParam["dDataSourceTable"]="fsi_ns";
+		$detailsParam["dOriginalTable"] = "fsi_ns";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "contacts";
-	$detailsParam["dCaptionTable"] = GetTableCaption("contacts");
+	$detailsParam["dShortTable"] = "fsi_ns";
+	$detailsParam["dCaptionTable"] = GetTableCaption("fsi_ns");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -4472,36 +4665,6 @@ $detailsTablesData["fsi"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "fsi_extensions";
 	$detailsParam["dCaptionTable"] = GetTableCaption("fsi_extensions");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["fsi"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["fsi"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["fsi"][$dIndex]["masterKeys"][]="id_fsi";
-
-				$detailsTablesData["fsi"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["fsi"][$dIndex]["detailKeys"][]="id_fsi";
-//	fsi_ns
-	
-	
-
-		$dIndex = 2;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="fsi_ns";
-		$detailsParam["dOriginalTable"] = "fsi_ns";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "fsi_ns";
-	$detailsParam["dCaptionTable"] = GetTableCaption("fsi_ns");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

@@ -2,15 +2,15 @@
 $tdataextensions = array();
 $tdataextensions[".searchableFields"] = array();
 $tdataextensions[".ShortName"] = "extensions";
-$tdataextensions[".OwnerID"] = "id";
+$tdataextensions[".OwnerID"] = "";
 $tdataextensions[".OriginalTable"] = "extensions";
 
 
-$tdataextensions[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataextensions[".pagesByType"] = my_json_decode( "{}" );
 $tdataextensions[".originalPagesByType"] = $tdataextensions[".pagesByType"];
-$tdataextensions[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataextensions[".pages"] = types2pages( my_json_decode( "{}" ) );
 $tdataextensions[".originalPages"] = $tdataextensions[".pages"];
-$tdataextensions[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataextensions[".defaultPages"] = my_json_decode( "{}" );
 $tdataextensions[".originalDefaultPages"] = $tdataextensions[".defaultPages"];
 
 //	field labels
@@ -43,6 +43,54 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsextensions["English"]))
 		$tdataextensions[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelsextensions["Arabic"] = array();
+	$fieldToolTipsextensions["Arabic"] = array();
+	$placeHoldersextensions["Arabic"] = array();
+	$pageTitlesextensions["Arabic"] = array();
+	$fieldLabelsextensions["Arabic"]["id"] = "Id";
+	$fieldToolTipsextensions["Arabic"]["id"] = "";
+	$placeHoldersextensions["Arabic"]["id"] = "";
+	$fieldLabelsextensions["Arabic"]["nom"] = "Nom";
+	$fieldToolTipsextensions["Arabic"]["nom"] = "";
+	$placeHoldersextensions["Arabic"]["nom"] = "";
+	$fieldLabelsextensions["Arabic"]["commentaires"] = "Commentaires";
+	$fieldToolTipsextensions["Arabic"]["commentaires"] = "";
+	$placeHoldersextensions["Arabic"]["commentaires"] = "";
+	$fieldLabelsextensions["Arabic"]["nom_script"] = "Nom Script";
+	$fieldToolTipsextensions["Arabic"]["nom_script"] = "";
+	$placeHoldersextensions["Arabic"]["nom_script"] = "";
+	$fieldLabelsextensions["Arabic"]["upd"] = "Upd";
+	$fieldToolTipsextensions["Arabic"]["upd"] = "";
+	$placeHoldersextensions["Arabic"]["upd"] = "";
+	if (count($fieldToolTipsextensions["Arabic"]))
+		$tdataextensions[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelsextensions["French"] = array();
+	$fieldToolTipsextensions["French"] = array();
+	$placeHoldersextensions["French"] = array();
+	$pageTitlesextensions["French"] = array();
+	$fieldLabelsextensions["French"]["id"] = "Id";
+	$fieldToolTipsextensions["French"]["id"] = "";
+	$placeHoldersextensions["French"]["id"] = "";
+	$fieldLabelsextensions["French"]["nom"] = "Nom";
+	$fieldToolTipsextensions["French"]["nom"] = "";
+	$placeHoldersextensions["French"]["nom"] = "";
+	$fieldLabelsextensions["French"]["commentaires"] = "Commentaires";
+	$fieldToolTipsextensions["French"]["commentaires"] = "";
+	$placeHoldersextensions["French"]["commentaires"] = "";
+	$fieldLabelsextensions["French"]["nom_script"] = "Nom Script";
+	$fieldToolTipsextensions["French"]["nom_script"] = "";
+	$placeHoldersextensions["French"]["nom_script"] = "";
+	$fieldLabelsextensions["French"]["upd"] = "Upd";
+	$fieldToolTipsextensions["French"]["upd"] = "";
+	$placeHoldersextensions["French"]["upd"] = "";
+	if (count($fieldToolTipsextensions["French"]))
+		$tdataextensions[".isUseToolTips"] = true;
+}
 
 
 	$tdataextensions[".NCSearch"] = true;
@@ -50,9 +98,9 @@ if(mlang_getcurrentlang()=="English")
 
 
 $tdataextensions[".shortTableName"] = "extensions";
-$tdataextensions[".nSecOptions"] = 1;
+$tdataextensions[".nSecOptions"] = 0;
 
-$tdataextensions[".mainTableOwnerID"] = "id";
+$tdataextensions[".mainTableOwnerID"] = "";
 $tdataextensions[".entityType"] = 0;
 $tdataextensions[".connId"] = "nicadmin_at_localhost";
 
@@ -149,7 +197,7 @@ $tdataextensions[".addPageEvents"] = false;
 $tdataextensions[".isUseTimeForSearch"] = false;
 
 
-$tdataextensions[".badgeColor"] = "7B68EE";
+$tdataextensions[".badgeColor"] = "6DA5C8";
 
 
 $tdataextensions[".allSearchFields"] = array();
@@ -960,66 +1008,6 @@ changeTextControlsToDate( "extensions" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["extensions"] = array();
-//	domains
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="domains";
-		$detailsParam["dOriginalTable"] = "domains";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "domains";
-	$detailsParam["dCaptionTable"] = GetTableCaption("domains");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["extensions"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["extensions"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["extensions"][$dIndex]["masterKeys"][]="id";
-
-				$detailsTablesData["extensions"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["extensions"][$dIndex]["detailKeys"][]="ext";
-//	late_domains
-	
-	
-
-		$dIndex = 1;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="late_domains";
-		$detailsParam["dOriginalTable"] = "late_domains";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "late_domains";
-	$detailsParam["dCaptionTable"] = GetTableCaption("late_domains");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["extensions"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["extensions"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["extensions"][$dIndex]["masterKeys"][]="id";
-
-				$detailsTablesData["extensions"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["extensions"][$dIndex]["detailKeys"][]="ext";
 //endif
 
 // tables which are master tables for current table (detail)

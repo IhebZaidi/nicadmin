@@ -49,19 +49,13 @@ class tDAL
 {
 	var $tblnicadmin_at_localhost__contacts;
 	var $tblnicadmin_at_localhost__domain_contacts;
-	var $tblnicadmin_at_localhost__domain_status;
 	var $tblnicadmin_at_localhost__domains;
 	var $tblnicadmin_at_localhost__extensions;
 	var $tblnicadmin_at_localhost__fsi;
 	var $tblnicadmin_at_localhost__fsi_extensions;
 	var $tblnicadmin_at_localhost__fsi_ns;
 	var $tblnicadmin_at_localhost__hosts;
-	var $tblnicadmin_at_localhost__hosts_ip;
-	var $tblnicadmin_at_localhost__ip;
-	var $tblnicadmin_at_localhost__late_domains;
 	var $tblnicadmin_at_localhost__nameservers;
-	var $tblnicadmin_at_localhost__termes;
-	var $tblnicadmin_at_localhost__termes_deleted;
 	var $lstTables;
 	var $Table = array();
 
@@ -69,21 +63,15 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
-		$this->lstTables[] = array("name" => "contacts", "varname" => "nicadmin_at_localhost__contacts", "altvarname" => "contacts", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "domain_contacts", "varname" => "nicadmin_at_localhost__domain_contacts", "altvarname" => "domain_contacts", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "domain_status", "varname" => "nicadmin_at_localhost__domain_status", "altvarname" => "domain_status", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "domains", "varname" => "nicadmin_at_localhost__domains", "altvarname" => "domains", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "extensions", "varname" => "nicadmin_at_localhost__extensions", "altvarname" => "extensions", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "fsi", "varname" => "nicadmin_at_localhost__fsi", "altvarname" => "fsi", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "fsi_extensions", "varname" => "nicadmin_at_localhost__fsi_extensions", "altvarname" => "fsi_extensions", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "fsi_ns", "varname" => "nicadmin_at_localhost__fsi_ns", "altvarname" => "fsi_ns", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "hosts", "varname" => "nicadmin_at_localhost__hosts", "altvarname" => "hosts", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "hosts_ip", "varname" => "nicadmin_at_localhost__hosts_ip", "altvarname" => "hosts_ip", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "ip", "varname" => "nicadmin_at_localhost__ip", "altvarname" => "ip", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "late_domains", "varname" => "nicadmin_at_localhost__late_domains", "altvarname" => "late_domains", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "nameservers", "varname" => "nicadmin_at_localhost__nameservers", "altvarname" => "nameservers", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "termes", "varname" => "nicadmin_at_localhost__termes", "altvarname" => "termes", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
-		$this->lstTables[] = array("name" => "termes_deleted", "varname" => "nicadmin_at_localhost__termes_deleted", "altvarname" => "termes_deleted", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nicadmin at localhost");
+		$this->lstTables[] = array("name" => "contacts", "varname" => "nicadmin_at_localhost__contacts", "altvarname" => "contacts", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nic at localhost");
+		$this->lstTables[] = array("name" => "domain_contacts", "varname" => "nicadmin_at_localhost__domain_contacts", "altvarname" => "domain_contacts", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nic at localhost");
+		$this->lstTables[] = array("name" => "domains", "varname" => "nicadmin_at_localhost__domains", "altvarname" => "domains", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nic at localhost");
+		$this->lstTables[] = array("name" => "extensions", "varname" => "nicadmin_at_localhost__extensions", "altvarname" => "extensions", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nic at localhost");
+		$this->lstTables[] = array("name" => "fsi", "varname" => "nicadmin_at_localhost__fsi", "altvarname" => "fsi", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nic at localhost");
+		$this->lstTables[] = array("name" => "fsi_extensions", "varname" => "nicadmin_at_localhost__fsi_extensions", "altvarname" => "fsi_extensions", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nic at localhost");
+		$this->lstTables[] = array("name" => "fsi_ns", "varname" => "nicadmin_at_localhost__fsi_ns", "altvarname" => "fsi_ns", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nic at localhost");
+		$this->lstTables[] = array("name" => "hosts", "varname" => "nicadmin_at_localhost__hosts", "altvarname" => "hosts", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nic at localhost");
+		$this->lstTables[] = array("name" => "nameservers", "varname" => "nicadmin_at_localhost__nameservers", "altvarname" => "nameservers", "connId" => "nicadmin_at_localhost", "schema" => "", "connName" => "nic at localhost");
 	}
 
 	/**

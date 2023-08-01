@@ -6,11 +6,11 @@ $tdatacontacts[".OwnerID"] = "id_fsi";
 $tdatacontacts[".OriginalTable"] = "contacts";
 
 
-$tdatacontacts[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatacontacts[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatacontacts[".originalPagesByType"] = $tdatacontacts[".pagesByType"];
-$tdatacontacts[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatacontacts[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatacontacts[".originalPages"] = $tdatacontacts[".pages"];
-$tdatacontacts[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatacontacts[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatacontacts[".originalDefaultPages"] = $tdatacontacts[".defaultPages"];
 
 //	field labels
@@ -25,9 +25,6 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipscontacts["English"] = array();
 	$placeHolderscontacts["English"] = array();
 	$pageTitlescontacts["English"] = array();
-	$fieldLabelscontacts["English"]["id"] = "Id";
-	$fieldToolTipscontacts["English"]["id"] = "";
-	$placeHolderscontacts["English"]["id"] = "";
 	$fieldLabelscontacts["English"]["Prenom"] = "Prenom";
 	$fieldToolTipscontacts["English"]["Prenom"] = "";
 	$placeHolderscontacts["English"]["Prenom"] = "";
@@ -82,7 +79,142 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelscontacts["English"]["authtype"] = "Authtype";
 	$fieldToolTipscontacts["English"]["authtype"] = "";
 	$placeHolderscontacts["English"]["authtype"] = "";
+	$fieldLabelscontacts["English"]["id"] = "Id";
+	$fieldToolTipscontacts["English"]["id"] = "";
+	$placeHolderscontacts["English"]["id"] = "";
 	if (count($fieldToolTipscontacts["English"]))
+		$tdatacontacts[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelscontacts["Arabic"] = array();
+	$fieldToolTipscontacts["Arabic"] = array();
+	$placeHolderscontacts["Arabic"] = array();
+	$pageTitlescontacts["Arabic"] = array();
+	$fieldLabelscontacts["Arabic"]["Prenom"] = "Prenom";
+	$fieldToolTipscontacts["Arabic"]["Prenom"] = "";
+	$placeHolderscontacts["Arabic"]["Prenom"] = "";
+	$fieldLabelscontacts["Arabic"]["personne_physique"] = "Personne Physique";
+	$fieldToolTipscontacts["Arabic"]["personne_physique"] = "";
+	$placeHolderscontacts["Arabic"]["personne_physique"] = "";
+	$fieldLabelscontacts["Arabic"]["nom"] = "Nom";
+	$fieldToolTipscontacts["Arabic"]["nom"] = "";
+	$placeHolderscontacts["Arabic"]["nom"] = "";
+	$fieldLabelscontacts["Arabic"]["adresse"] = "Adresse";
+	$fieldToolTipscontacts["Arabic"]["adresse"] = "";
+	$placeHolderscontacts["Arabic"]["adresse"] = "";
+	$fieldLabelscontacts["Arabic"]["tel"] = "Tel";
+	$fieldToolTipscontacts["Arabic"]["tel"] = "";
+	$placeHolderscontacts["Arabic"]["tel"] = "";
+	$fieldLabelscontacts["Arabic"]["email"] = "Email";
+	$fieldToolTipscontacts["Arabic"]["email"] = "";
+	$placeHolderscontacts["Arabic"]["email"] = "";
+	$fieldLabelscontacts["Arabic"]["fax"] = "Fax";
+	$fieldToolTipscontacts["Arabic"]["fax"] = "";
+	$placeHolderscontacts["Arabic"]["fax"] = "";
+	$fieldLabelscontacts["Arabic"]["date_creation"] = "Date Creation";
+	$fieldToolTipscontacts["Arabic"]["date_creation"] = "";
+	$placeHolderscontacts["Arabic"]["date_creation"] = "";
+	$fieldLabelscontacts["Arabic"]["date_modif"] = "Date Modif";
+	$fieldToolTipscontacts["Arabic"]["date_modif"] = "";
+	$placeHolderscontacts["Arabic"]["date_modif"] = "";
+	$fieldLabelscontacts["Arabic"]["etat"] = "Etat";
+	$fieldToolTipscontacts["Arabic"]["etat"] = "";
+	$placeHolderscontacts["Arabic"]["etat"] = "";
+	$fieldLabelscontacts["Arabic"]["id_fsi"] = "Id Fsi";
+	$fieldToolTipscontacts["Arabic"]["id_fsi"] = "";
+	$placeHolderscontacts["Arabic"]["id_fsi"] = "";
+	$fieldLabelscontacts["Arabic"]["password"] = "Password";
+	$fieldToolTipscontacts["Arabic"]["password"] = "";
+	$placeHolderscontacts["Arabic"]["password"] = "";
+	$fieldLabelscontacts["Arabic"]["adresse2"] = "Adresse2";
+	$fieldToolTipscontacts["Arabic"]["adresse2"] = "";
+	$placeHolderscontacts["Arabic"]["adresse2"] = "";
+	$fieldLabelscontacts["Arabic"]["state_prov"] = "State Prov";
+	$fieldToolTipscontacts["Arabic"]["state_prov"] = "";
+	$placeHolderscontacts["Arabic"]["state_prov"] = "";
+	$fieldLabelscontacts["Arabic"]["zip_code"] = "Zip Code";
+	$fieldToolTipscontacts["Arabic"]["zip_code"] = "";
+	$placeHolderscontacts["Arabic"]["zip_code"] = "";
+	$fieldLabelscontacts["Arabic"]["city"] = "City";
+	$fieldToolTipscontacts["Arabic"]["city"] = "";
+	$placeHolderscontacts["Arabic"]["city"] = "";
+	$fieldLabelscontacts["Arabic"]["country"] = "Country";
+	$fieldToolTipscontacts["Arabic"]["country"] = "";
+	$placeHolderscontacts["Arabic"]["country"] = "";
+	$fieldLabelscontacts["Arabic"]["authtype"] = "Authtype";
+	$fieldToolTipscontacts["Arabic"]["authtype"] = "";
+	$placeHolderscontacts["Arabic"]["authtype"] = "";
+	$fieldLabelscontacts["Arabic"]["id"] = "Id";
+	$fieldToolTipscontacts["Arabic"]["id"] = "";
+	$placeHolderscontacts["Arabic"]["id"] = "";
+	if (count($fieldToolTipscontacts["Arabic"]))
+		$tdatacontacts[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelscontacts["French"] = array();
+	$fieldToolTipscontacts["French"] = array();
+	$placeHolderscontacts["French"] = array();
+	$pageTitlescontacts["French"] = array();
+	$fieldLabelscontacts["French"]["Prenom"] = "Prenom";
+	$fieldToolTipscontacts["French"]["Prenom"] = "";
+	$placeHolderscontacts["French"]["Prenom"] = "";
+	$fieldLabelscontacts["French"]["personne_physique"] = "Personne Physique";
+	$fieldToolTipscontacts["French"]["personne_physique"] = "";
+	$placeHolderscontacts["French"]["personne_physique"] = "";
+	$fieldLabelscontacts["French"]["nom"] = "Nom";
+	$fieldToolTipscontacts["French"]["nom"] = "";
+	$placeHolderscontacts["French"]["nom"] = "";
+	$fieldLabelscontacts["French"]["adresse"] = "Adresse";
+	$fieldToolTipscontacts["French"]["adresse"] = "";
+	$placeHolderscontacts["French"]["adresse"] = "";
+	$fieldLabelscontacts["French"]["tel"] = "Tel";
+	$fieldToolTipscontacts["French"]["tel"] = "";
+	$placeHolderscontacts["French"]["tel"] = "";
+	$fieldLabelscontacts["French"]["email"] = "Email";
+	$fieldToolTipscontacts["French"]["email"] = "";
+	$placeHolderscontacts["French"]["email"] = "";
+	$fieldLabelscontacts["French"]["fax"] = "Fax";
+	$fieldToolTipscontacts["French"]["fax"] = "";
+	$placeHolderscontacts["French"]["fax"] = "";
+	$fieldLabelscontacts["French"]["date_creation"] = "Date Creation";
+	$fieldToolTipscontacts["French"]["date_creation"] = "";
+	$placeHolderscontacts["French"]["date_creation"] = "";
+	$fieldLabelscontacts["French"]["date_modif"] = "Date Modif";
+	$fieldToolTipscontacts["French"]["date_modif"] = "";
+	$placeHolderscontacts["French"]["date_modif"] = "";
+	$fieldLabelscontacts["French"]["etat"] = "Etat";
+	$fieldToolTipscontacts["French"]["etat"] = "";
+	$placeHolderscontacts["French"]["etat"] = "";
+	$fieldLabelscontacts["French"]["id_fsi"] = "Id Fsi";
+	$fieldToolTipscontacts["French"]["id_fsi"] = "";
+	$placeHolderscontacts["French"]["id_fsi"] = "";
+	$fieldLabelscontacts["French"]["password"] = "Password";
+	$fieldToolTipscontacts["French"]["password"] = "";
+	$placeHolderscontacts["French"]["password"] = "";
+	$fieldLabelscontacts["French"]["adresse2"] = "Adresse2";
+	$fieldToolTipscontacts["French"]["adresse2"] = "";
+	$placeHolderscontacts["French"]["adresse2"] = "";
+	$fieldLabelscontacts["French"]["state_prov"] = "State Prov";
+	$fieldToolTipscontacts["French"]["state_prov"] = "";
+	$placeHolderscontacts["French"]["state_prov"] = "";
+	$fieldLabelscontacts["French"]["zip_code"] = "Zip Code";
+	$fieldToolTipscontacts["French"]["zip_code"] = "";
+	$placeHolderscontacts["French"]["zip_code"] = "";
+	$fieldLabelscontacts["French"]["city"] = "City";
+	$fieldToolTipscontacts["French"]["city"] = "";
+	$placeHolderscontacts["French"]["city"] = "";
+	$fieldLabelscontacts["French"]["country"] = "Country";
+	$fieldToolTipscontacts["French"]["country"] = "";
+	$placeHolderscontacts["French"]["country"] = "";
+	$fieldLabelscontacts["French"]["authtype"] = "Authtype";
+	$fieldToolTipscontacts["French"]["authtype"] = "";
+	$placeHolderscontacts["French"]["authtype"] = "";
+	$fieldLabelscontacts["French"]["id"] = "Id";
+	$fieldToolTipscontacts["French"]["id"] = "";
+	$placeHolderscontacts["French"]["id"] = "";
+	if (count($fieldToolTipscontacts["French"]))
 		$tdatacontacts[".isUseToolTips"] = true;
 }
 
@@ -199,7 +331,6 @@ $tdatacontacts[".filterFields"] = array();
 $tdatacontacts[".requiredSearchFields"] = array();
 
 $tdatacontacts[".googleLikeFields"] = array();
-$tdatacontacts[".googleLikeFields"][] = "id";
 $tdatacontacts[".googleLikeFields"][] = "Prenom";
 $tdatacontacts[".googleLikeFields"][] = "personne_physique";
 $tdatacontacts[".googleLikeFields"][] = "nom";
@@ -218,6 +349,7 @@ $tdatacontacts[".googleLikeFields"][] = "zip_code";
 $tdatacontacts[".googleLikeFields"][] = "city";
 $tdatacontacts[".googleLikeFields"][] = "country";
 $tdatacontacts[".googleLikeFields"][] = "authtype";
+$tdatacontacts[".googleLikeFields"][] = "id";
 
 
 
@@ -251,7 +383,7 @@ $tdatacontacts[".strOrderBy"] = $tstrOrderBy;
 $tdatacontacts[".orderindexes"] = array();
 
 
-$tdatacontacts[".sqlHead"] = "SELECT id,  	Prenom,  	personne_physique,  	nom,  	adresse,  	tel,  	email,  	fax,  	date_creation,  	date_modif,  	etat,  	id_fsi,  	password,  	adresse2,  	state_prov,  	zip_code,  	city,  	country,  	authtype";
+$tdatacontacts[".sqlHead"] = "SELECT Prenom,  personne_physique,  nom,  adresse,  tel,  email,  fax,  date_creation,  date_modif,  etat,  id_fsi,  password,  adresse2,  state_prov,  zip_code,  city,  country,  authtype,  id";
 $tdatacontacts[".sqlFrom"] = "FROM contacts";
 $tdatacontacts[".sqlWhereExpr"] = "";
 $tdatacontacts[".sqlTail"] = "";
@@ -290,7 +422,6 @@ $tdatacontacts[".arrGroupsPerPage"] = $arrGPP;
 $tdatacontacts[".highlightSearchResults"] = true;
 
 $tableKeyscontacts = array();
-$tableKeyscontacts[] = "id";
 $tdatacontacts[".Keys"] = $tableKeyscontacts;
 
 
@@ -299,152 +430,10 @@ $tdatacontacts[".hideMobileList"] = array();
 
 
 
-//	id
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 1;
-	$fdata["strName"] = "id";
-	$fdata["GoodName"] = "id";
-	$fdata["ownerTable"] = "contacts";
-	$fdata["Label"] = GetFieldLabel("contacts","id");
-	$fdata["FieldType"] = 3;
-
-
-		$fdata["AutoInc"] = true;
-
-	
-			
-
-		$fdata["strField"] = "id";
-
-		$fdata["sourceSingle"] = "id";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "id";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacontacts["id"] = $fdata;
-		$tdatacontacts[".searchableFields"][] = "id";
 //	Prenom
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 2;
+	$fdata["Index"] = 1;
 	$fdata["strName"] = "Prenom";
 	$fdata["GoodName"] = "Prenom";
 	$fdata["ownerTable"] = "contacts";
@@ -583,7 +572,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	personne_physique
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 3;
+	$fdata["Index"] = 2;
 	$fdata["strName"] = "personne_physique";
 	$fdata["GoodName"] = "personne_physique";
 	$fdata["ownerTable"] = "contacts";
@@ -722,7 +711,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	nom
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 4;
+	$fdata["Index"] = 3;
 	$fdata["strName"] = "nom";
 	$fdata["GoodName"] = "nom";
 	$fdata["ownerTable"] = "contacts";
@@ -861,7 +850,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	adresse
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 5;
+	$fdata["Index"] = 4;
 	$fdata["strName"] = "adresse";
 	$fdata["GoodName"] = "adresse";
 	$fdata["ownerTable"] = "contacts";
@@ -1000,7 +989,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	tel
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 6;
+	$fdata["Index"] = 5;
 	$fdata["strName"] = "tel";
 	$fdata["GoodName"] = "tel";
 	$fdata["ownerTable"] = "contacts";
@@ -1139,7 +1128,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	email
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 7;
+	$fdata["Index"] = 6;
 	$fdata["strName"] = "email";
 	$fdata["GoodName"] = "email";
 	$fdata["ownerTable"] = "contacts";
@@ -1278,7 +1267,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	fax
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 8;
+	$fdata["Index"] = 7;
 	$fdata["strName"] = "fax";
 	$fdata["GoodName"] = "fax";
 	$fdata["ownerTable"] = "contacts";
@@ -1417,7 +1406,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	date_creation
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 9;
+	$fdata["Index"] = 8;
 	$fdata["strName"] = "date_creation";
 	$fdata["GoodName"] = "date_creation";
 	$fdata["ownerTable"] = "contacts";
@@ -1556,7 +1545,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	date_modif
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 10;
+	$fdata["Index"] = 9;
 	$fdata["strName"] = "date_modif";
 	$fdata["GoodName"] = "date_modif";
 	$fdata["ownerTable"] = "contacts";
@@ -1695,7 +1684,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	etat
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 11;
+	$fdata["Index"] = 10;
 	$fdata["strName"] = "etat";
 	$fdata["GoodName"] = "etat";
 	$fdata["ownerTable"] = "contacts";
@@ -1834,7 +1823,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	id_fsi
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 12;
+	$fdata["Index"] = 11;
 	$fdata["strName"] = "id_fsi";
 	$fdata["GoodName"] = "id_fsi";
 	$fdata["ownerTable"] = "contacts";
@@ -1973,7 +1962,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	password
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 13;
+	$fdata["Index"] = 12;
 	$fdata["strName"] = "password";
 	$fdata["GoodName"] = "password";
 	$fdata["ownerTable"] = "contacts";
@@ -2112,7 +2101,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	adresse2
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 14;
+	$fdata["Index"] = 13;
 	$fdata["strName"] = "adresse2";
 	$fdata["GoodName"] = "adresse2";
 	$fdata["ownerTable"] = "contacts";
@@ -2251,7 +2240,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	state_prov
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 15;
+	$fdata["Index"] = 14;
 	$fdata["strName"] = "state_prov";
 	$fdata["GoodName"] = "state_prov";
 	$fdata["ownerTable"] = "contacts";
@@ -2390,7 +2379,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	zip_code
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 16;
+	$fdata["Index"] = 15;
 	$fdata["strName"] = "zip_code";
 	$fdata["GoodName"] = "zip_code";
 	$fdata["ownerTable"] = "contacts";
@@ -2529,7 +2518,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	city
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 17;
+	$fdata["Index"] = 16;
 	$fdata["strName"] = "city";
 	$fdata["GoodName"] = "city";
 	$fdata["ownerTable"] = "contacts";
@@ -2668,7 +2657,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	country
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 18;
+	$fdata["Index"] = 17;
 	$fdata["strName"] = "country";
 	$fdata["GoodName"] = "country";
 	$fdata["ownerTable"] = "contacts";
@@ -2807,7 +2796,7 @@ $tdatacontacts[".hideMobileList"] = array();
 //	authtype
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 19;
+	$fdata["Index"] = 18;
 	$fdata["strName"] = "authtype";
 	$fdata["GoodName"] = "authtype";
 	$fdata["ownerTable"] = "contacts";
@@ -2956,6 +2945,148 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	$tdatacontacts["authtype"] = $fdata;
 		$tdatacontacts[".searchableFields"][] = "authtype";
+//	id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 19;
+	$fdata["strName"] = "id";
+	$fdata["GoodName"] = "id";
+	$fdata["ownerTable"] = "contacts";
+	$fdata["Label"] = GetFieldLabel("contacts","id");
+	$fdata["FieldType"] = 3;
+
+
+		$fdata["AutoInc"] = true;
+
+	
+			
+
+		$fdata["strField"] = "id";
+
+		$fdata["sourceSingle"] = "id";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacontacts["id"] = $fdata;
+		$tdatacontacts[".searchableFields"][] = "id";
 
 
 $tables_data["contacts"]=&$tdatacontacts;
@@ -2973,96 +3104,6 @@ changeTextControlsToDate( "contacts" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["contacts"] = array();
-//	domain_contacts
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="domain_contacts";
-		$detailsParam["dOriginalTable"] = "domain_contacts";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "domain_contacts";
-	$detailsParam["dCaptionTable"] = GetTableCaption("domain_contacts");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["contacts"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["contacts"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["contacts"][$dIndex]["masterKeys"][]="id";
-
-				$detailsTablesData["contacts"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["contacts"][$dIndex]["detailKeys"][]="id_contact";
-//	domains
-	
-	
-
-		$dIndex = 1;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="domains";
-		$detailsParam["dOriginalTable"] = "domains";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "domains";
-	$detailsParam["dCaptionTable"] = GetTableCaption("domains");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["contacts"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["contacts"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["contacts"][$dIndex]["masterKeys"][]="id";
-
-				$detailsTablesData["contacts"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["contacts"][$dIndex]["detailKeys"][]="contact";
-//	late_domains
-	
-	
-
-		$dIndex = 2;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="late_domains";
-		$detailsParam["dOriginalTable"] = "late_domains";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "late_domains";
-	$detailsParam["dCaptionTable"] = GetTableCaption("late_domains");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["contacts"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["contacts"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["contacts"][$dIndex]["masterKeys"][]="id";
-
-				$detailsTablesData["contacts"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["contacts"][$dIndex]["detailKeys"][]="contact";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -3072,20 +3113,20 @@ $masterTablesData["contacts"] = array();
 
 	
 	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="fsi";
+			$strOriginalDetailsTable="domain_contacts";
 	$masterParams = array();
-	$masterParams["mDataSourceTable"]="fsi";
+	$masterParams["mDataSourceTable"]="domain_contacts";
 	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "fsi";
+	$masterParams["mShortTable"]= "domain_contacts";
 	$masterParams["masterKeys"]= array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
 					$masterTablesData["contacts"][0] = $masterParams;
 				$masterTablesData["contacts"][0]["masterKeys"] = array();
-	$masterTablesData["contacts"][0]["masterKeys"][]="id_fsi";
+	$masterTablesData["contacts"][0]["masterKeys"][]="nom";
 				$masterTablesData["contacts"][0]["detailKeys"] = array();
-	$masterTablesData["contacts"][0]["detailKeys"][]="id_fsi";
+	$masterTablesData["contacts"][0]["detailKeys"][]="nom";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
@@ -3108,7 +3149,7 @@ function createSqlQuery_contacts()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	Prenom,  	personne_physique,  	nom,  	adresse,  	tel,  	email,  	fax,  	date_creation,  	date_modif,  	etat,  	id_fsi,  	password,  	adresse2,  	state_prov,  	zip_code,  	city,  	country,  	authtype";
+$proto0["m_strFieldList"] = "Prenom,  personne_physique,  nom,  adresse,  tel,  email,  fax,  date_creation,  date_modif,  etat,  id_fsi,  password,  adresse2,  state_prov,  zip_code,  city,  country,  authtype,  id";
 $proto0["m_strFrom"] = "FROM contacts";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -3150,12 +3191,12 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "id",
+	"m_strName" => "Prenom",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto6["m_sql"] = "id";
+$proto6["m_sql"] = "Prenom";
 $proto6["m_srcTableName"] = "contacts";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -3164,12 +3205,12 @@ $obj = new SQLFieldListItem($proto6);
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Prenom",
+	"m_strName" => "personne_physique",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto8["m_sql"] = "Prenom";
+$proto8["m_sql"] = "personne_physique";
 $proto8["m_srcTableName"] = "contacts";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -3178,12 +3219,12 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "personne_physique",
+	"m_strName" => "nom",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto10["m_sql"] = "personne_physique";
+$proto10["m_sql"] = "nom";
 $proto10["m_srcTableName"] = "contacts";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -3192,12 +3233,12 @@ $obj = new SQLFieldListItem($proto10);
 $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
-	"m_strName" => "nom",
+	"m_strName" => "adresse",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto12["m_sql"] = "nom";
+$proto12["m_sql"] = "adresse";
 $proto12["m_srcTableName"] = "contacts";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -3206,12 +3247,12 @@ $obj = new SQLFieldListItem($proto12);
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
-	"m_strName" => "adresse",
+	"m_strName" => "tel",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto14["m_sql"] = "adresse";
+$proto14["m_sql"] = "tel";
 $proto14["m_srcTableName"] = "contacts";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -3220,12 +3261,12 @@ $obj = new SQLFieldListItem($proto14);
 $proto0["m_fieldlist"][]=$obj;
 						$proto16=array();
 			$obj = new SQLField(array(
-	"m_strName" => "tel",
+	"m_strName" => "email",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto16["m_sql"] = "tel";
+$proto16["m_sql"] = "email";
 $proto16["m_srcTableName"] = "contacts";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -3234,12 +3275,12 @@ $obj = new SQLFieldListItem($proto16);
 $proto0["m_fieldlist"][]=$obj;
 						$proto18=array();
 			$obj = new SQLField(array(
-	"m_strName" => "email",
+	"m_strName" => "fax",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto18["m_sql"] = "email";
+$proto18["m_sql"] = "fax";
 $proto18["m_srcTableName"] = "contacts";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -3248,12 +3289,12 @@ $obj = new SQLFieldListItem($proto18);
 $proto0["m_fieldlist"][]=$obj;
 						$proto20=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fax",
+	"m_strName" => "date_creation",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto20["m_sql"] = "fax";
+$proto20["m_sql"] = "date_creation";
 $proto20["m_srcTableName"] = "contacts";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
@@ -3262,12 +3303,12 @@ $obj = new SQLFieldListItem($proto20);
 $proto0["m_fieldlist"][]=$obj;
 						$proto22=array();
 			$obj = new SQLField(array(
-	"m_strName" => "date_creation",
+	"m_strName" => "date_modif",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto22["m_sql"] = "date_creation";
+$proto22["m_sql"] = "date_modif";
 $proto22["m_srcTableName"] = "contacts";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
@@ -3276,12 +3317,12 @@ $obj = new SQLFieldListItem($proto22);
 $proto0["m_fieldlist"][]=$obj;
 						$proto24=array();
 			$obj = new SQLField(array(
-	"m_strName" => "date_modif",
+	"m_strName" => "etat",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto24["m_sql"] = "date_modif";
+$proto24["m_sql"] = "etat";
 $proto24["m_srcTableName"] = "contacts";
 $proto24["m_expr"]=$obj;
 $proto24["m_alias"] = "";
@@ -3290,12 +3331,12 @@ $obj = new SQLFieldListItem($proto24);
 $proto0["m_fieldlist"][]=$obj;
 						$proto26=array();
 			$obj = new SQLField(array(
-	"m_strName" => "etat",
+	"m_strName" => "id_fsi",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto26["m_sql"] = "etat";
+$proto26["m_sql"] = "id_fsi";
 $proto26["m_srcTableName"] = "contacts";
 $proto26["m_expr"]=$obj;
 $proto26["m_alias"] = "";
@@ -3304,12 +3345,12 @@ $obj = new SQLFieldListItem($proto26);
 $proto0["m_fieldlist"][]=$obj;
 						$proto28=array();
 			$obj = new SQLField(array(
-	"m_strName" => "id_fsi",
+	"m_strName" => "password",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto28["m_sql"] = "id_fsi";
+$proto28["m_sql"] = "password";
 $proto28["m_srcTableName"] = "contacts";
 $proto28["m_expr"]=$obj;
 $proto28["m_alias"] = "";
@@ -3318,12 +3359,12 @@ $obj = new SQLFieldListItem($proto28);
 $proto0["m_fieldlist"][]=$obj;
 						$proto30=array();
 			$obj = new SQLField(array(
-	"m_strName" => "password",
+	"m_strName" => "adresse2",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto30["m_sql"] = "password";
+$proto30["m_sql"] = "adresse2";
 $proto30["m_srcTableName"] = "contacts";
 $proto30["m_expr"]=$obj;
 $proto30["m_alias"] = "";
@@ -3332,12 +3373,12 @@ $obj = new SQLFieldListItem($proto30);
 $proto0["m_fieldlist"][]=$obj;
 						$proto32=array();
 			$obj = new SQLField(array(
-	"m_strName" => "adresse2",
+	"m_strName" => "state_prov",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto32["m_sql"] = "adresse2";
+$proto32["m_sql"] = "state_prov";
 $proto32["m_srcTableName"] = "contacts";
 $proto32["m_expr"]=$obj;
 $proto32["m_alias"] = "";
@@ -3346,12 +3387,12 @@ $obj = new SQLFieldListItem($proto32);
 $proto0["m_fieldlist"][]=$obj;
 						$proto34=array();
 			$obj = new SQLField(array(
-	"m_strName" => "state_prov",
+	"m_strName" => "zip_code",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto34["m_sql"] = "state_prov";
+$proto34["m_sql"] = "zip_code";
 $proto34["m_srcTableName"] = "contacts";
 $proto34["m_expr"]=$obj;
 $proto34["m_alias"] = "";
@@ -3360,12 +3401,12 @@ $obj = new SQLFieldListItem($proto34);
 $proto0["m_fieldlist"][]=$obj;
 						$proto36=array();
 			$obj = new SQLField(array(
-	"m_strName" => "zip_code",
+	"m_strName" => "city",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto36["m_sql"] = "zip_code";
+$proto36["m_sql"] = "city";
 $proto36["m_srcTableName"] = "contacts";
 $proto36["m_expr"]=$obj;
 $proto36["m_alias"] = "";
@@ -3374,12 +3415,12 @@ $obj = new SQLFieldListItem($proto36);
 $proto0["m_fieldlist"][]=$obj;
 						$proto38=array();
 			$obj = new SQLField(array(
-	"m_strName" => "city",
+	"m_strName" => "country",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto38["m_sql"] = "city";
+$proto38["m_sql"] = "country";
 $proto38["m_srcTableName"] = "contacts";
 $proto38["m_expr"]=$obj;
 $proto38["m_alias"] = "";
@@ -3388,12 +3429,12 @@ $obj = new SQLFieldListItem($proto38);
 $proto0["m_fieldlist"][]=$obj;
 						$proto40=array();
 			$obj = new SQLField(array(
-	"m_strName" => "country",
+	"m_strName" => "authtype",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto40["m_sql"] = "country";
+$proto40["m_sql"] = "authtype";
 $proto40["m_srcTableName"] = "contacts";
 $proto40["m_expr"]=$obj;
 $proto40["m_alias"] = "";
@@ -3402,12 +3443,12 @@ $obj = new SQLFieldListItem($proto40);
 $proto0["m_fieldlist"][]=$obj;
 						$proto42=array();
 			$obj = new SQLField(array(
-	"m_strName" => "authtype",
+	"m_strName" => "id",
 	"m_strTable" => "contacts",
 	"m_srcTableName" => "contacts"
 ));
 
-$proto42["m_sql"] = "authtype";
+$proto42["m_sql"] = "id";
 $proto42["m_srcTableName"] = "contacts";
 $proto42["m_expr"]=$obj;
 $proto42["m_alias"] = "";

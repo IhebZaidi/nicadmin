@@ -1,5 +1,6 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'master' => array( 'domains' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'id_status',
 'status' ),
 'searchRequiredFields' => array(  ),

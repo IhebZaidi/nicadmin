@@ -46,7 +46,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Expand" class="btn btn-link   
+	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -212,7 +212,7 @@
 	<div class="panel-heading">
 		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Search in			<span class="caret"></span>
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -222,12 +222,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
 			</ul>
 		</div>
 
@@ -245,40 +245,27 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_ext}
+																		{BEGIN searchCtrlBlock_nom}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_ext}" {$filterRow_attrs_ext}>
-			<label>{$label fsi_extensions ext }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ext}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ext}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ext}</span>
-						</div>
-		{END searchCtrlBlock_ext}
-																{BEGIN searchCtrlBlock_id_fsi}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id_fsi}" {$filterRow_attrs_id_fsi}>
-			<label>{$label fsi_extensions id_fsi }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_nom}" {$filterRow_attrs_nom}>
+			<label>{$label fsi_extensions nom }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_id_fsi}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id_fsi}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id_fsi}</span>
+								<span class="rnr-searchtype">{$searchtype_nom}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_nom}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_nom}</span>
 						</div>
-		{END searchCtrlBlock_id_fsi}
+		{END searchCtrlBlock_nom}
 		
 
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
 
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -295,7 +282,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -304,7 +291,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -339,7 +326,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -366,29 +353,21 @@
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
 				
-		Export selected		
+		{mlang_message EXPORT_SELECTED}		
 		</a>
 	</li>
 {END exportselected_link}
-							{BEGIN deleteselected_link}
-	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
-				
-		Delete selected		
-		</a>
-	</li>
-{END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="fsi_extensions_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		Advanced search		
+		{mlang_message ADVANCED_SEARCH}		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		Show search panel		
+		{mlang_message SHOW_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -396,7 +375,7 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		Hide search panel		
+		{mlang_message HIDE_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -404,7 +383,7 @@
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
 				
-		Export results		
+		{mlang_message EXPORT_RESULTS}		
 		</a>
 	</li>
 {END export_link}
@@ -412,10 +391,25 @@
 	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
 				<a  {$importlink_attrs} href="fsi_extensions_import.php{$stateLink_full}"  title="" >
 				
-		Import		
+		{mlang_message IMPORT}		
 		</a>
 	</li>
 {END import_link}
+							<li role="separator" class="divider"></li>								{BEGIN ArabicLANGLINK}
+	<li><a href="#" data-lang="Arabic" class="rnr-langlink">
+		{BEGIN ArabicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END ArabicLANGLINK_ACTIVE}
+		العربية</a></li>
+	{END ArabicLANGLINK}
+	{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+	{BEGIN FrenchLANGLINK}
+	<li><a href="#" data-lang="French" class="rnr-langlink">
+		{BEGIN FrenchLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END FrenchLANGLINK_ACTIVE}
+		Français</a></li>
+	{END FrenchLANGLINK}
 					</ul>
 	</span>
 </span>
@@ -426,7 +420,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							Login			</a>
+							{mlang_message LOGIN}			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -444,7 +438,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		User Profile		
+		{mlang_message USERINFO}		
 		</a>
 	</li>
 {END userinfo_link}
@@ -452,7 +446,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		Log out		
+		{mlang_message LOG_OUT}		
 		</a>
 	</li>
 {END logoutbutton}
@@ -495,34 +489,18 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
 		 
-		{BEGIN add_link}
-<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="fsi_extensions_add.php{$stateLink_full}" >
-							Add new			</a>
-</span>
-{END add_link}
-	 
 		{BEGIN inlineadd_link}
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							Inline Add			</a>
+							{mlang_message INLINE_ADD}			</a>
 </span>
 {END inlineadd_link}
-	 
-		{BEGIN deleteselected_link}
-<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Delete			</a>
-</span>
-{END deleteselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -538,7 +516,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -550,14 +528,14 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			Scope:		</div>
+			{mlang_message PPANEL_SCOPE}		</div>
 
 			 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="fsi_extensions_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									Print all pages							</label>
+									{mlang_message PPANEL_ALL_PAGES}							</label>
 		</div>
 		{END print_friendly_all}
 		</div>
@@ -566,7 +544,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="fsi_extensions_print.php?{$crosstable_attrs}">
-				Print this page			</label>
+				{mlang_message PPANEL_THIS_PAGE}			</label>
 		</div>
 	</div>
 		
@@ -578,7 +556,7 @@
 		<div class="col-md-8">
 			<label style="color: gray;" for="printSelection{$id}">
 			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			Print selected			</label>
+			{mlang_message PPANEL_SELECTED}			</label>
 		</div>
 	</div>
 	</div>
@@ -591,7 +569,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					Records Per Page							
+					{mlang_message RECORDS_PP}							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -605,7 +583,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							Print			</a>
+							{mlang_message PPANEL_PRINT}			</a>
 </span>
 				 
 					</li>
@@ -627,11 +605,8 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="id_fsi"]:before {
-		content: "{$label fsi_extensions id_fsi}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ext"]:before {
-		content: "{$label fsi_extensions ext}";
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nom"]:before {
+		content: "{$label fsi_extensions nom}";
 	}
 	}
 </style>
@@ -691,68 +666,34 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_fsi_class}	"
+		 r-ori-vert		 {$nom_class}	"
 
-			data-field="id_fsi"
+			data-field="nom"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN id_fsi_fieldheadercolumn}
-	{BEGIN id_fsi_fieldheader}
+		{BEGIN nom_fieldheadercolumn}
+	{BEGIN nom_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_fsi" data-fieldname="id_fsi" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nom" data-fieldname="nom" 
 
-			{$id_fsi_orderlinkattrs}
+			{$nom_orderlinkattrs}
 	
 	
 	>
 	<span class="text-label">
-		<span>{$label fsi_extensions id_fsi }</span>
-					{$arrow_icon_id_fsi}
+		<span>{$label fsi_extensions nom }</span>
+					{$arrow_icon_nom}
 			</span>
 	</span>
-	{END id_fsi_fieldheader}
-{END id_fsi_fieldheadercolumn}
+	{END nom_fieldheader}
+{END nom_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ext_class}	"
-
-			data-field="ext"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ext_fieldheadercolumn}
-	{BEGIN ext_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ext" data-fieldname="ext" 
-
-			{$ext_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label fsi_extensions ext }</span>
-					{$arrow_icon_ext}
-			</span>
-	</span>
-	{END ext_fieldheader}
-{END ext_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
 							</tr>
 															
 					{END grid_header}
@@ -770,7 +711,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_extensions_list"		data-control-cell
@@ -778,36 +719,14 @@
 	>
 
 	 
-		{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Edit" class="btn-link   
-	 glyphicon glyphicon-pencil" href="fsi_extensions_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >		
-				
-								</a>
-</span>
-{END edit_link}
-{END edit_column}
-	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Cancel" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
+	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
 				
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="View record" class="btn-link   
-	 glyphicon glyphicon-search" href="fsi_extensions_view.php?{$editlink}" {$viewlink_attrs} title="View" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -841,42 +760,21 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_fsi_class}	"
+		 r-ori-vert		 {$nom_class}	"
 
-			data-field="id_fsi"
+			data-field="nom"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN id_fsi_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_fsi" data-fieldname="id_fsi" data-default-width >
-{$id_fsi_value}
+		{BEGIN nom_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nom" data-fieldname="nom" data-default-width >
+{$nom_value}
 </span>
-{END id_fsi_fieldcolumn}	
+{END nom_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ext_class}	"
-
-			data-field="ext"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ext_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ext" data-fieldname="ext" data-default-width >
-{$ext_value}
-</span>
-{END ext_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
 							</tr>
 										
 											{END grid_row}
@@ -924,7 +822,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_fsi_class}	"
+		 r-ori-vert		 {$nom_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_extensions_list"	
@@ -933,21 +831,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ext_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_extensions_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
 							</tr>
 					
 					</tfoot>

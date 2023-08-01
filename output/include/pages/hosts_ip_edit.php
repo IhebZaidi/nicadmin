@@ -1,6 +1,5 @@
 <?php
-			$optionsArray = array( 'master' => array( 'hosts' => array( 'preview' => false ),
-'ip' => array( 'preview' => false ) ),
+			$optionsArray = array( 'master' => array( 'hosts' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'address',
 'host_id',

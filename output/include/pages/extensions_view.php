@@ -1,8 +1,6 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'domains' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'late_domains' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'id',
 'nom',

@@ -46,7 +46,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Expand" class="btn btn-link   
+	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -212,7 +212,7 @@
 	<div class="panel-heading">
 		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Search in			<span class="caret"></span>
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -222,12 +222,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
 			</ul>
 		</div>
 
@@ -336,32 +336,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_nom}</span>
 						</div>
 		{END searchCtrlBlock_nom}
-																{BEGIN searchCtrlBlock_id_fsi}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id_fsi}" {$filterRow_attrs_id_fsi}>
-			<label>{$label contacts id_fsi }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_id_fsi}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id_fsi}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id_fsi}</span>
-						</div>
-		{END searchCtrlBlock_id_fsi}
-																{BEGIN searchCtrlBlock_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id}" {$filterRow_attrs_id}>
-			<label>{$label contacts id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id}</span>
-						</div>
-		{END searchCtrlBlock_id}
 																{BEGIN searchCtrlBlock_fax}
 
 
@@ -497,9 +471,9 @@
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
 
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -516,7 +490,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -525,7 +499,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -560,7 +534,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -587,29 +561,21 @@
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
 				
-		Export selected		
+		{mlang_message EXPORT_SELECTED}		
 		</a>
 	</li>
 {END exportselected_link}
-							{BEGIN deleteselected_link}
-	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
-				
-		Delete selected		
-		</a>
-	</li>
-{END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="contacts_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		Advanced search		
+		{mlang_message ADVANCED_SEARCH}		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		Show search panel		
+		{mlang_message SHOW_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -617,7 +583,7 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		Hide search panel		
+		{mlang_message HIDE_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -625,7 +591,7 @@
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
 				
-		Export results		
+		{mlang_message EXPORT_RESULTS}		
 		</a>
 	</li>
 {END export_link}
@@ -633,10 +599,25 @@
 	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
 				<a  {$importlink_attrs} href="contacts_import.php{$stateLink_full}"  title="" >
 				
-		Import		
+		{mlang_message IMPORT}		
 		</a>
 	</li>
 {END import_link}
+							<li role="separator" class="divider"></li>								{BEGIN ArabicLANGLINK}
+	<li><a href="#" data-lang="Arabic" class="rnr-langlink">
+		{BEGIN ArabicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END ArabicLANGLINK_ACTIVE}
+		العربية</a></li>
+	{END ArabicLANGLINK}
+	{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+	{BEGIN FrenchLANGLINK}
+	<li><a href="#" data-lang="French" class="rnr-langlink">
+		{BEGIN FrenchLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END FrenchLANGLINK_ACTIVE}
+		Français</a></li>
+	{END FrenchLANGLINK}
 					</ul>
 	</span>
 </span>
@@ -647,7 +628,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							Login			</a>
+							{mlang_message LOGIN}			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -665,7 +646,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		User Profile		
+		{mlang_message USERINFO}		
 		</a>
 	</li>
 {END userinfo_link}
@@ -673,7 +654,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		Log out		
+		{mlang_message LOG_OUT}		
 		</a>
 	</li>
 {END logoutbutton}
@@ -725,7 +706,7 @@
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$addlink_attrs} href="contacts_add.php{$stateLink_full}" >
-							Add new			</a>
+							{mlang_message ADD_NEW}			</a>
 </span>
 {END add_link}
 	 
@@ -733,17 +714,9 @@
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							Inline Add			</a>
+							{mlang_message INLINE_ADD}			</a>
 </span>
 {END inlineadd_link}
-	 
-		{BEGIN deleteselected_link}
-<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Delete			</a>
-</span>
-{END deleteselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -759,7 +732,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -771,14 +744,14 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			Scope:		</div>
+			{mlang_message PPANEL_SCOPE}		</div>
 
 			 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="contacts_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									Print all pages							</label>
+									{mlang_message PPANEL_ALL_PAGES}							</label>
 		</div>
 		{END print_friendly_all}
 		</div>
@@ -787,59 +760,11 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="contacts_print.php?{$crosstable_attrs}">
-				Print this page			</label>
+				{mlang_message PPANEL_THIS_PAGE}			</label>
 		</div>
 	</div>
 		
-		 
-	<div class="row">
-		<div class="col-md-4">
-			&nbsp;
-		</div>
-		<div class="col-md-8">
-			<label style="color: gray;" for="printSelection{$id}">
-			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			Print selected			</label>
-		</div>
 	</div>
-	</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-										">
-									{BEGIN print_details}
-<div>
-	<label for="printDetailsToggler{$id}">
-		<input type="checkbox" id="printDetailsToggler{$id}">
-		Print details	</label>
-	<div  id="printdetailstables{$id}" style="display:none;">
-											{BEGIN print_details_domain_contacts}
-			<div>
-				<label for="printDetailsdomain_contacts{$id}">
-					<input type="checkbox" value="domain_contacts" id="printDetailsdomain_contacts{$id}" checked>
-					Domain Contacts				</label>
-			</div>
-			{END print_details_domain_contacts}
-														{BEGIN print_details_domains}
-			<div>
-				<label for="printDetailsdomains{$id}">
-					<input type="checkbox" value="domains" id="printDetailsdomains{$id}" checked>
-					Domains				</label>
-			</div>
-			{END print_details_domains}
-														{BEGIN print_details_late_domains}
-			<div>
-				<label for="printDetailslate_domains{$id}">
-					<input type="checkbox" value="late_domains" id="printDetailslate_domains{$id}" checked>
-					Late Domains				</label>
-			</div>
-			{END print_details_late_domains}
-						</div>
-</div>
-{END print_details}
 				 
 					</li>
 											<li class="divider" role="separator"></li>
@@ -849,7 +774,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					Records Per Page							
+					{mlang_message RECORDS_PP}							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -863,7 +788,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							Print			</a>
+							{mlang_message PPANEL_PRINT}			</a>
 </span>
 				 
 					</li>
@@ -885,10 +810,7 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="id"]:before {
-		content: "{$label contacts id}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Prenom"]:before {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Prenom"]:before {
 		content: "{$label contacts Prenom}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="personne_physique"]:before {
@@ -918,10 +840,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="etat"]:before {
 		content: "{$label contacts etat}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="id_fsi"]:before {
-		content: "{$label contacts id_fsi}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="password"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="password"]:before {
 		content: "{$label contacts password}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="adresse2"]:before {
@@ -942,16 +861,16 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="authtype"]:before {
 		content: "{$label contacts authtype}";
 	}
-	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-striped table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
-	data-body-height="2"
+	data-body-height="1"
 >
 						<thead>
 			{BEGIN grid_header}
 			
-																														<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
 									{$gridHeader_class}
 					
 								r-gridrow
@@ -994,73 +913,24 @@
 	
 	</th>
 	{END cellblock_grid_headcell_checkbox}
-									{BEGIN cellblock_grid_headcell_details}
-	<th
-	
-	{$cell_grid_headcell_details}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_details}
 									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_class}	"
-
-			data-field="id"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_fieldheadercolumn}
-	{BEGIN id_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id" 
-
-			{$id_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label contacts id }</span>
-					{$arrow_icon_id}
-			</span>
-	</span>
-	{END id_fieldheader}
-{END id_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Prenom_class}	"
 
 			data-field="Prenom"
 	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN Prenom_fieldheadercolumn}
 	{BEGIN Prenom_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prenom" data-fieldname="Prenom" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prenom" data-fieldname="Prenom" 
 
 			{$Prenom_orderlinkattrs}
 	
@@ -1076,25 +946,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
-	{$cell_grid_headcell_field2}
+	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$personne_physique_class}	"
 
 			data-field="personne_physique"
 	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN personne_physique_fieldheadercolumn}
 	{BEGIN personne_physique_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="personne_physique" data-fieldname="personne_physique" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="personne_physique" data-fieldname="personne_physique" 
 
 			{$personne_physique_orderlinkattrs}
 	
@@ -1110,25 +980,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
 	<th
 	
-	{$cell_grid_headcell_field3}
+	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$nom_class}	"
 
 			data-field="nom"
 	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN nom_fieldheadercolumn}
 	{BEGIN nom_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nom" data-fieldname="nom" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nom" data-fieldname="nom" 
 
 			{$nom_orderlinkattrs}
 	
@@ -1144,25 +1014,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
-	{$cell_grid_headcell_field4}
+	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$adresse_class}	"
 
 			data-field="adresse"
 	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN adresse_fieldheadercolumn}
 	{BEGIN adresse_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="adresse" data-fieldname="adresse" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="adresse" data-fieldname="adresse" 
 
 			{$adresse_orderlinkattrs}
 	
@@ -1178,25 +1048,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
-									{BEGIN cellblock_grid_headcell_field5}
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
 	<th
 	
-	{$cell_grid_headcell_field5}
+	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$tel_class}	"
 
 			data-field="tel"
 	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN tel_fieldheadercolumn}
 	{BEGIN tel_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tel" data-fieldname="tel" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tel" data-fieldname="tel" 
 
 			{$tel_orderlinkattrs}
 	
@@ -1212,25 +1082,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
 	<th
 	
-	{$cell_grid_headcell_field6}
+	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$email_class}	"
 
 			data-field="email"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN email_fieldheadercolumn}
 	{BEGIN email_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email" data-fieldname="email" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email" data-fieldname="email" 
 
 			{$email_orderlinkattrs}
 	
@@ -1246,25 +1116,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
 	<th
 	
-	{$cell_grid_headcell_field7}
+	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$fax_class}	"
 
 			data-field="fax"
 	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN fax_fieldheadercolumn}
 	{BEGIN fax_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fax" data-fieldname="fax" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fax" data-fieldname="fax" 
 
 			{$fax_orderlinkattrs}
 	
@@ -1280,25 +1150,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
 	<th
 	
-	{$cell_grid_headcell_field8}
+	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$date_creation_class}	"
 
 			data-field="date_creation"
 	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN date_creation_fieldheadercolumn}
 	{BEGIN date_creation_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="date_creation" data-fieldname="date_creation" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="date_creation" data-fieldname="date_creation" 
 
 			{$date_creation_orderlinkattrs}
 	
@@ -1314,25 +1184,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field9}
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
 	<th
 	
-	{$cell_grid_headcell_field9}
+	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$date_modif_class}	"
 
 			data-field="date_modif"
 	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN date_modif_fieldheadercolumn}
 	{BEGIN date_modif_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="date_modif" data-fieldname="date_modif" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="date_modif" data-fieldname="date_modif" 
 
 			{$date_modif_orderlinkattrs}
 	
@@ -1348,25 +1218,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field9}
-									{BEGIN cellblock_grid_headcell_field10}
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
 	<th
 	
-	{$cell_grid_headcell_field10}
+	{$cell_grid_headcell_field9}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$etat_class}	"
 
 			data-field="etat"
 	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN etat_fieldheadercolumn}
 	{BEGIN etat_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="etat" data-fieldname="etat" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="etat" data-fieldname="etat" 
 
 			{$etat_orderlinkattrs}
 	
@@ -1382,59 +1252,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field10}
-									{BEGIN cellblock_grid_headcell_field11}
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
 	<th
 	
-	{$cell_grid_headcell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$id_fsi_class}	"
-
-			data-field="id_fsi"
-	
-	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_fsi_fieldheadercolumn}
-	{BEGIN id_fsi_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_fsi" data-fieldname="id_fsi" 
-
-			{$id_fsi_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label contacts id_fsi }</span>
-					{$arrow_icon_id_fsi}
-			</span>
-	</span>
-	{END id_fsi_fieldheader}
-{END id_fsi_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field11}
-									{BEGIN cellblock_grid_headcell_field12}
-	<th
-	
-	{$cell_grid_headcell_field12}
+	{$cell_grid_headcell_field10}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$password_class}	"
 
 			data-field="password"
 	
-	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN password_fieldheadercolumn}
 	{BEGIN password_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password" data-fieldname="password" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password" data-fieldname="password" 
 
 			{$password_orderlinkattrs}
 	
@@ -1450,25 +1286,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field12}
-									{BEGIN cellblock_grid_headcell_field13}
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
 	<th
 	
-	{$cell_grid_headcell_field13}
+	{$cell_grid_headcell_field11}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$adresse2_class}	"
 
 			data-field="adresse2"
 	
-	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN adresse2_fieldheadercolumn}
 	{BEGIN adresse2_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="adresse2" data-fieldname="adresse2" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="adresse2" data-fieldname="adresse2" 
 
 			{$adresse2_orderlinkattrs}
 	
@@ -1484,25 +1320,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field13}
-									{BEGIN cellblock_grid_headcell_field14}
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
 	<th
 	
-	{$cell_grid_headcell_field14}
+	{$cell_grid_headcell_field12}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$state_prov_class}	"
 
 			data-field="state_prov"
 	
-	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN state_prov_fieldheadercolumn}
 	{BEGIN state_prov_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="state_prov" data-fieldname="state_prov" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="state_prov" data-fieldname="state_prov" 
 
 			{$state_prov_orderlinkattrs}
 	
@@ -1518,25 +1354,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field14}
-									{BEGIN cellblock_grid_headcell_field15}
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
 	<th
 	
-	{$cell_grid_headcell_field15}
+	{$cell_grid_headcell_field13}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$zip_code_class}	"
 
 			data-field="zip_code"
 	
-	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN zip_code_fieldheadercolumn}
 	{BEGIN zip_code_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="zip_code" data-fieldname="zip_code" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="zip_code" data-fieldname="zip_code" 
 
 			{$zip_code_orderlinkattrs}
 	
@@ -1552,25 +1388,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field15}
-									{BEGIN cellblock_grid_headcell_field16}
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
 	<th
 	
-	{$cell_grid_headcell_field16}
+	{$cell_grid_headcell_field14}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$city_class}	"
 
 			data-field="city"
 	
-	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN city_fieldheadercolumn}
 	{BEGIN city_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="city" data-fieldname="city" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="city" data-fieldname="city" 
 
 			{$city_orderlinkattrs}
 	
@@ -1586,25 +1422,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field16}
-									{BEGIN cellblock_grid_headcell_field17}
+	{END cellblock_grid_headcell_field14}
+									{BEGIN cellblock_grid_headcell_field15}
 	<th
 	
-	{$cell_grid_headcell_field17}
+	{$cell_grid_headcell_field15}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$country_class}	"
 
 			data-field="country"
 	
-	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN country_fieldheadercolumn}
 	{BEGIN country_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country" data-fieldname="country" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country" data-fieldname="country" 
 
 			{$country_orderlinkattrs}
 	
@@ -1620,25 +1456,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field17}
-									{BEGIN cellblock_grid_headcell_field18}
+	{END cellblock_grid_headcell_field15}
+									{BEGIN cellblock_grid_headcell_field16}
 	<th
 	
-	{$cell_grid_headcell_field18}
+	{$cell_grid_headcell_field16}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$authtype_class}	"
 
 			data-field="authtype"
 	
-	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN authtype_fieldheadercolumn}
 	{BEGIN authtype_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="authtype" data-fieldname="authtype" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="authtype" data-fieldname="authtype" 
 
 			{$authtype_orderlinkattrs}
 	
@@ -1654,15 +1490,15 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field18}
+	{END cellblock_grid_headcell_field16}
 							</tr>
-																				
+															
 					{END grid_header}
 			</thead>
 															<tbody>
 					{BEGIN grid_row}
 							
-																																			<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
 				
 								r-gridrow
 							">
@@ -1672,7 +1508,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"		data-control-cell
@@ -1680,36 +1516,14 @@
 	>
 
 	 
-		{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Edit" class="btn-link   
-	 glyphicon glyphicon-pencil" href="contacts_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >		
-				
-								</a>
-</span>
-{END edit_link}
-{END edit_column}
-	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Cancel" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
+	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
 				
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="View record" class="btn-link   
-	 glyphicon glyphicon-search" href="contacts_view.php?{$editlink}" {$viewlink_attrs} title="View" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -1737,123 +1551,17 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
-									{BEGIN cellblock_grid_cell_details}
-	<td
-	
-	{$cell_grid_cell_details}
-	{$recordattrs}
-	class="
-					"
-
-	
-	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"		data-control-cell
-	
-	>
-
-	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Show details"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN domain_contacts_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$domain_contacts_link_attrs} data-short-details="domain_contacts"
-		class="{$domain_contacts_dlink_class}" 
-		title="{$caption domain_contacts }"			>
-								
-									{BEGIN domain_contacts_childcount}
-				<span class="details-badge badge domain_contacts_badge" {$domain_contacts_childnumber_attr}>
-					{$domain_contacts_childnumber}				
-				</span>
-				{END domain_contacts_childcount}
-						</a>
-	</span>
-	{END domain_contacts_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN domains_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$domains_link_attrs} data-short-details="domains"
-		class="{$domains_dlink_class}" 
-		title="{$caption domains }"			>
-								
-									{BEGIN domains_childcount}
-				<span class="details-badge badge domains_badge" {$domains_childnumber_attr}>
-					{$domains_childnumber}				
-				</span>
-				{END domains_childcount}
-						</a>
-	</span>
-	{END domains_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN late_domains_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$late_domains_link_attrs} data-short-details="late_domains"
-		class="{$late_domains_dlink_class}" 
-		title="{$caption late_domains }"			>
-								
-									{BEGIN late_domains_childcount}
-				<span class="details-badge badge late_domains_badge" {$late_domains_childnumber_attr}>
-					{$late_domains_childnumber}				
-				</span>
-				{END late_domains_childcount}
-						</a>
-	</span>
-	{END late_domains_dtable_link}
-
-
-	
-	</td>
-	{END cellblock_grid_cell_details}
 									{BEGIN cellblock_grid_cell_field}
 	<td
 	
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_class}	"
-
-			data-field="id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id" data-default-width >
-{$id_value}
-</span>
-{END id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Prenom_class}	"
 
 			data-field="Prenom"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1863,18 +1571,18 @@
 </span>
 {END Prenom_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$personne_physique_class}	"
 
 			data-field="personne_physique"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1884,18 +1592,18 @@
 </span>
 {END personne_physique_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$nom_class}	"
 
 			data-field="nom"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1905,18 +1613,18 @@
 </span>
 {END nom_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$adresse_class}	"
 
 			data-field="adresse"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1926,18 +1634,18 @@
 </span>
 {END adresse_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$tel_class}	"
 
 			data-field="tel"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1947,18 +1655,18 @@
 </span>
 {END tel_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$email_class}	"
 
 			data-field="email"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1968,18 +1676,18 @@
 </span>
 {END email_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$fax_class}	"
 
 			data-field="fax"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1989,18 +1697,18 @@
 </span>
 {END fax_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
 	<td
 	
-	{$cell_grid_cell_field8}
+	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$date_creation_class}	"
 
 			data-field="date_creation"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2010,18 +1718,18 @@
 </span>
 {END date_creation_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
 	<td
 	
-	{$cell_grid_cell_field9}
+	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$date_modif_class}	"
 
 			data-field="date_modif"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2031,18 +1739,18 @@
 </span>
 {END date_modif_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field10}
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
 	<td
 	
-	{$cell_grid_cell_field10}
+	{$cell_grid_cell_field9}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$etat_class}	"
 
 			data-field="etat"
 	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2052,39 +1760,18 @@
 </span>
 {END etat_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field10}
-									{BEGIN cellblock_grid_cell_field11}
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
 	<td
 	
-	{$cell_grid_cell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$id_fsi_class}	"
-
-			data-field="id_fsi"
-	
-	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_fsi_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_fsi" data-fieldname="id_fsi" data-default-width >
-{$id_fsi_value}
-</span>
-{END id_fsi_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field11}
-									{BEGIN cellblock_grid_cell_field12}
-	<td
-	
-	{$cell_grid_cell_field12}
+	{$cell_grid_cell_field10}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$password_class}	"
 
 			data-field="password"
 	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2094,18 +1781,18 @@
 </span>
 {END password_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field12}
-									{BEGIN cellblock_grid_cell_field13}
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
 	<td
 	
-	{$cell_grid_cell_field13}
+	{$cell_grid_cell_field11}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$adresse2_class}	"
 
 			data-field="adresse2"
 	
-	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2115,18 +1802,18 @@
 </span>
 {END adresse2_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field13}
-									{BEGIN cellblock_grid_cell_field14}
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
 	<td
 	
-	{$cell_grid_cell_field14}
+	{$cell_grid_cell_field12}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$state_prov_class}	"
 
 			data-field="state_prov"
 	
-	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2136,18 +1823,18 @@
 </span>
 {END state_prov_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field14}
-									{BEGIN cellblock_grid_cell_field15}
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
 	<td
 	
-	{$cell_grid_cell_field15}
+	{$cell_grid_cell_field13}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$zip_code_class}	"
 
 			data-field="zip_code"
 	
-	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2157,18 +1844,18 @@
 </span>
 {END zip_code_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field15}
-									{BEGIN cellblock_grid_cell_field16}
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
 	<td
 	
-	{$cell_grid_cell_field16}
+	{$cell_grid_cell_field14}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$city_class}	"
 
 			data-field="city"
 	
-	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2178,18 +1865,18 @@
 </span>
 {END city_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field16}
-									{BEGIN cellblock_grid_cell_field17}
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
 	<td
 	
-	{$cell_grid_cell_field17}
+	{$cell_grid_cell_field15}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$country_class}	"
 
 			data-field="country"
 	
-	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2199,18 +1886,18 @@
 </span>
 {END country_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field17}
-									{BEGIN cellblock_grid_cell_field18}
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
 	<td
 	
-	{$cell_grid_cell_field18}
+	{$cell_grid_cell_field16}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$authtype_class}	"
 
 			data-field="authtype"
 	
-	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2220,48 +1907,14 @@
 </span>
 {END authtype_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field18}
-							</tr>
-											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
-				
-							">
-									{BEGIN cellblock_grid_cell_dpreview}
-	<td
-	
-	{$cell_grid_cell_dpreview}
-	{$recordattrs}
-	class="
-					"
-
-	
-	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="domain_contacts,domains,late_domains"
-			data-details-domain_contacts			data-details-domains			data-details-late_domains	>
-		<span data-details-inside data-short-table="domain_contacts">
-			</span>
-		<span data-details-inside data-short-table="domains">
-			</span>
-		<span data-details-inside data-short-table="late_domains">
-			</span>
-		<div data-details-preview>
-	</div>
-</div>
-	 
-			 
-			
-	</td>
-	{END cellblock_grid_cell_dpreview}
+	{END cellblock_grid_cell_field16}
 							</tr>
 										
 											{END grid_row}
 					</tbody>
 													<tfoot>
 			
-																																													<tr {$rowattrs} {$row_grid_3} class="{$rowclass}
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 									{$gridFooter_class}
 					
 								r-gridrow
@@ -2296,28 +1949,13 @@
 	
 	</td>
 	{END cellblock_grid_footcell_checkbox}
-									{BEGIN cellblock_grid_footcell_details}
-	<td
-	
-	{$cell_grid_footcell_details}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_details}
 									{BEGIN cellblock_grid_footcell_field}
 	<td
 	
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_class}	"
+		 r-ori-vert		 {$Prenom_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2332,7 +1970,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Prenom_class}	"
+		 r-ori-vert		 {$personne_physique_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2347,7 +1985,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$personne_physique_class}	"
+		 r-ori-vert		 {$nom_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2362,7 +2000,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$nom_class}	"
+		 r-ori-vert		 {$adresse_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2377,7 +2015,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$adresse_class}	"
+		 r-ori-vert		 {$tel_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2392,7 +2030,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$tel_class}	"
+		 r-ori-vert		 {$email_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2407,7 +2045,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$email_class}	"
+		 r-ori-vert		 {$fax_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2422,7 +2060,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$fax_class}	"
+		 r-ori-vert		 {$date_creation_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2437,7 +2075,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$date_creation_class}	"
+		 r-ori-vert		 {$date_modif_class}	"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2452,7 +2090,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$date_modif_class}	"
+		 r-ori-vert		 {$etat_class}	"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2467,7 +2105,7 @@
 	{$cell_grid_footcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$etat_class}	"
+		 r-ori-vert		 {$password_class}	"
 
 	
 	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2482,7 +2120,7 @@
 	{$cell_grid_footcell_field11}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_fsi_class}	"
+		 r-ori-vert		 {$adresse2_class}	"
 
 	
 	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2497,7 +2135,7 @@
 	{$cell_grid_footcell_field12}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$password_class}	"
+		 r-ori-vert		 {$state_prov_class}	"
 
 	
 	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2512,7 +2150,7 @@
 	{$cell_grid_footcell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$adresse2_class}	"
+		 r-ori-vert		 {$zip_code_class}	"
 
 	
 	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2527,7 +2165,7 @@
 	{$cell_grid_footcell_field14}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$state_prov_class}	"
+		 r-ori-vert		 {$city_class}	"
 
 	
 	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2542,7 +2180,7 @@
 	{$cell_grid_footcell_field15}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$zip_code_class}	"
+		 r-ori-vert		 {$country_class}	"
 
 	
 	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2557,7 +2195,7 @@
 	{$cell_grid_footcell_field16}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$city_class}	"
+		 r-ori-vert		 {$authtype_class}	"
 
 	
 	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
@@ -2566,36 +2204,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field16}
-									{BEGIN cellblock_grid_footcell_field17}
-	<td
-	
-	{$cell_grid_footcell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$country_class}	"
-
-	
-	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field17}
-									{BEGIN cellblock_grid_footcell_field18}
-	<td
-	
-	{$cell_grid_footcell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$authtype_class}	"
-
-	
-	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="contacts_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field18}
 							</tr>
 					
 					</tfoot>

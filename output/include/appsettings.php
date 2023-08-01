@@ -49,7 +49,9 @@ include(getabspath('classes/pdlayout.php'));
 
 //	custom labels
 $custom_labels = array();
+$custom_labels["Arabic"] = array();
 $custom_labels["English"] = array();
+$custom_labels["French"] = array();
 
 define('GLOBAL_PAGES_SHORT', "_global");
 define('GLOBAL_PAGES', "<global>");
@@ -634,7 +636,9 @@ $globalSettings["LandingURL"] = "";
 $globalSettings["LandingPageId"] = "";
 
 $globalSettings["ProjectLogo"] = array();
-$globalSettings["ProjectLogo"]["English"] = "nicadmin1";
+$globalSettings["ProjectLogo"]["Arabic"] = "NICADMIN";
+$globalSettings["ProjectLogo"]["English"] = "NICADMIN";
+$globalSettings["ProjectLogo"]["French"] = "NICADMIN";
 
 $globalSettings["CookieBanner"] = array();
 
@@ -644,7 +648,7 @@ $globalSettings["htmlEmailTemplates"] = array();
 
 
 $globalSettings["createLoginPage"] = true;
-$globalSettings["userGroupCount"] = 0;
+$globalSettings["userGroupCount"] = 1;
 
 
 $globalSettings["apiGoogleMapsCode"] = "";
@@ -753,9 +757,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "0_1690528601";
+$projectBuildKey = "68_1690797464";
 $wizardBuildKey = "41053";
-$projectBuildNumber = "0";
+$projectBuildNumber = "68";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -784,18 +788,34 @@ $tableCaptions["English"][""] = "";
 $tableCaptions["English"]["contacts"] = "Contacts";
 $tableCaptions["English"]["fsi"] = "Fsi";
 $tableCaptions["English"]["domain_contacts"] = "Domain Contacts";
-$tableCaptions["English"]["domain_status"] = "Domain Status";
 $tableCaptions["English"]["domains"] = "Domains";
-$tableCaptions["English"]["extensions"] = "Extensions";
 $tableCaptions["English"]["fsi_extensions"] = "Fsi Extensions";
 $tableCaptions["English"]["fsi_ns"] = "Fsi Ns";
-$tableCaptions["English"]["hosts"] = "Hosts";
-$tableCaptions["English"]["hosts_ip"] = "Hosts Ip";
-$tableCaptions["English"]["ip"] = "Ip";
-$tableCaptions["English"]["late_domains"] = "Late Domains";
 $tableCaptions["English"]["nameservers"] = "Nameservers";
-$tableCaptions["English"]["termes"] = "Termes";
-$tableCaptions["English"]["termes_deleted"] = "Termes Deleted";
+$tableCaptions["English"]["extensions"] = "Extensions";
+$tableCaptions["English"]["hosts"] = "Hosts";
+$tableCaptions["Arabic"] = array();
+$tableCaptions["Arabic"][""] = "";
+$tableCaptions["Arabic"]["contacts"] = "Contacts";
+$tableCaptions["Arabic"]["fsi"] = "Fsi";
+$tableCaptions["Arabic"]["domain_contacts"] = "Domain Contacts";
+$tableCaptions["Arabic"]["domains"] = "Domains";
+$tableCaptions["Arabic"]["fsi_extensions"] = "Fsi Extensions";
+$tableCaptions["Arabic"]["fsi_ns"] = "Fsi Ns";
+$tableCaptions["Arabic"]["nameservers"] = "Nameservers";
+$tableCaptions["Arabic"]["extensions"] = "Extensions";
+$tableCaptions["Arabic"]["hosts"] = "Hosts";
+$tableCaptions["French"] = array();
+$tableCaptions["French"][""] = "";
+$tableCaptions["French"]["contacts"] = "Contacts";
+$tableCaptions["French"]["fsi"] = "Fsi";
+$tableCaptions["French"]["domain_contacts"] = "Domain Contacts";
+$tableCaptions["French"]["domains"] = "Domains";
+$tableCaptions["French"]["fsi_extensions"] = "Fsi Extensions";
+$tableCaptions["French"]["fsi_ns"] = "Fsi Ns";
+$tableCaptions["French"]["nameservers"] = "Nameservers";
+$tableCaptions["French"]["extensions"] = "Extensions";
+$tableCaptions["French"]["hosts"] = "Hosts";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -875,6 +895,12 @@ $mediaType = isset($_COOKIE["mediaType"]) ? $_COOKIE["mediaType"] : 0;
 
 $page_titles[GLOBAL_PAGES_SHORT] = array();
 if(mlang_getcurrentlang()=="English")
+{
+}
+if(mlang_getcurrentlang()=="Arabic")
+{
+}
+if(mlang_getcurrentlang()=="French")
 {
 }
 

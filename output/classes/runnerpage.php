@@ -3814,6 +3814,7 @@ class RunnerPage
 	 */
 	function setLangParams()
 	{
+		SetLangVars($this->xt, $this->shortTableName, $this->pageType);
 	}
 
 	/**
@@ -4611,7 +4612,7 @@ class RunnerPage
 		if ( $captchaSettings["type"] == FLASH_CAPTCHA && @strtolower($this->captchaValue) != strtolower(@$_SESSION["captcha_" . $this->getCaptchaId()]) )
 		{
 			$this->isCaptchaOk = false;
-			$this->message = "Invalid security code.";
+			$this->message = mlang_message("SEC_INVALID_CAPTCHA_CODE");
 		}
 
 		//	check recaptcha
@@ -4671,7 +4672,7 @@ class RunnerPage
 	{
 		$captchaHTML = '<div class="captcha_block">';
 
-		$typeCodeMessage = "Type the code you see above";
+		$typeCodeMessage = mlang_message("SEC_TYPETHECODE");
 		$path = GetCaptchaPath();
 		$swfPath = GetCaptchaSwfPath();
 
@@ -4718,11 +4719,11 @@ class RunnerPage
 			return $this->bsCreatePerPage();
 		}
 		$classString = "";
-		$allMessage = "Show all";
+		$allMessage = mlang_message("SHOW_ALL");
 		if( $this->isBootstrap() )
 		{
 			$classString = 'class="form-control"';
-			$allMessage = "All";
+			$allMessage = mlang_message("ALL");
 		}
 		$rpp = "<select ".$classString." id=\"recordspp".$this->id."\">";
 
@@ -4743,7 +4744,7 @@ class RunnerPage
 	{
 		$txtVal = $this->pageSize;
 		if( $this->pageSize == -1 )
-			$txtVal = "Show all";
+			$txtVal = mlang_message("SHOW_ALL");
 		$rpp = '<div class="dropdown btn-group">
 			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="dropdown-text">' . $txtVal . '</span> <span class="caret"></span></button>
 			<ul class="dropdown-menu pull-right" role="menu">';
@@ -4752,7 +4753,7 @@ class RunnerPage
 			$val = $this->arrRecsPerPage[$i];
 			$txtVal = $val;
 			if( $val == -1 )
-				$txtVal = "Show all";
+				$txtVal = mlang_message("SHOW_ALL");
 			$selectedAttr = '';
 			if( $this->pageSize == $val )
 				$selectedAttr = 'aria-selected="true" class="active"';
@@ -4823,13 +4824,13 @@ class RunnerPage
 			$isSearchRun = true;
 
 		if( $this->pSetSearch->noRecordsOnFirstPage() && !$isSearchRun )
-			return "Nothing to see. Run some search.";
+			return mlang_message("NOTHING_TO_SEE");
 
 		if( !$this->recordsOnPage && !$isSearchRun )
-			return "No data yet.";
+			return mlang_message("NO_DATA_YET");
 
 		if( $isSearchRun && !$this->recordsOnPage )
-			return "No results found.";
+			return mlang_message("NO_RECORDS");
 	}
 
 	function showNoRecordsMessage()
@@ -4972,8 +4973,8 @@ class RunnerPage
 			$counterend = $maxPages;
 		if($counterstart != 1)
 		{
-			$pagination.= $this->getPaginationLink(1,"First");
-			$pagination.= $this->getPaginationLink($counterstart - 1,"Previous");
+			$pagination.= $this->getPaginationLink(1,mlang_message("FIRST"));
+			$pagination.= $this->getPaginationLink($counterstart - 1,mlang_message("PREVIOUS"));
 		}
 
 		$pageLinks = "";
@@ -4983,8 +4984,8 @@ class RunnerPage
 
 		$pagination .= $pageLinks;
 		if( $counterend != $maxPages ) {
-			$pagination.= $this->getPaginationLink($counterend + 1,"Next");
-			$pagination.= $this->getPaginationLink($maxPages,"Last");
+			$pagination.= $this->getPaginationLink($counterend + 1,mlang_message("NEXT"));
+			$pagination.= $this->getPaginationLink($maxPages,mlang_message("LAST"));
 		}
 
 		return '<nav class="text-center"><ul class="pagination" data-function="pagination' . $this->id . '">' . $pagination . '</ul></nav>';
@@ -5397,7 +5398,7 @@ class RunnerPage
 		$this->xt->assign("searchform_text", true);
 		$this->xt->assign("searchform_search", true);
 
-		$this->xt->assign('searchbutton_attrs', 'id="searchButtTop'.$this->id.'" title="'."Search".'"');
+		$this->xt->assign('searchbutton_attrs', 'id="searchButtTop'.$this->id.'" title="'.mlang_message("SEARCH").'"');
 
 		if( !$this->pSetSearch->noRecordsOnFirstPage()
 			|| $this->searchClauseObj->isSearchFunctionalityActivated()
@@ -5429,7 +5430,7 @@ class RunnerPage
 		if( $this->isUseAjaxSuggest )
 			$searchforAttrs .= " autocomplete=off ";
 
-		$searchforAttrs.= ' placeholder="'."search".'"';
+		$searchforAttrs.= ' placeholder="'.mlang_message("SEARCH_TIP").'"';
 		if( $this->searchClauseObj->searchStarted() || strlen( $params["simpleSrch"] ) ) {
 			$valSrchFor = $params["simpleSrch"];
 			$searchforAttrs.= " value=\"".runner_htmlspecialchars( $valSrchFor )."\"";
@@ -6126,7 +6127,7 @@ class RunnerPage
 
 		return '<span class="rnr-dbebrick">'
 			.'<a href="' . $this->getProceedUrl() . '" name="dp' . $this->id . '">'
-			.  "Proceed to" . ' '. GetTableCaption( GoodFieldName( $this->tName ) )
+			.  mlang_message("PROCEED_TO") . ' '. GetTableCaption( GoodFieldName( $this->tName ) )
 			. '</a>'
 			. "&nbsp;&nbsp;</span>";
 	}
@@ -6646,17 +6647,17 @@ class RunnerPage
 	public static function getDefaultPageTitle($page, $table, $pSet)
 	{
 		if( $page == "add" )
-			return GetTableCaption($table).", "."Add new";
+			return GetTableCaption($table).", ".mlang_message("ADD_NEW");
 		if( $page == "edit" )
-			return GetTableCaption($table).", "."Edit"." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
+			return GetTableCaption($table).", ".mlang_message("EDIT")." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
 		if( $page == "view" )
 			return GetTableCaption($table)." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
 		if( $page == "export" )
-			return "Export";
+			return mlang_message("EXPORT");
 		if( $page == "import" )
-			return GetTableCaption($table).", "."Import";
+			return GetTableCaption($table).", ".mlang_message("IMPORT");
 		if( $page == "search" )
-			return GetTableCaption($table)." - "."Advanced search";
+			return GetTableCaption($table)." - ".mlang_message("ADVANCED_SEARCH");
 		if( $page == "print" )
 			return GetTableCaption($table);
 		if( $page == "rprint" )
@@ -6672,19 +6673,19 @@ class RunnerPage
 		if( $page == "masterprint" )
 			return GetTableCaption($table)." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
 		if( $page == "login" )
-			return "Login";
+			return mlang_message("LOGIN");
 		if( $page == "register" )
-			return "Register";
+			return mlang_message("REGISTER");
 		if( $page == "register_success" )
-			return "Registration successful!";
+			return mlang_message("REG_SUCCESS");
 		if( $page == "changepwd" )
-			return "Change password";
+			return mlang_message("CHANGE_PASSWORD");
 		if( $page == "changepwd_success" )
-			return "Change password";
+			return mlang_message("CHANGE_PASSWORD");
 		if( $page == "remind" )
-			return "Password reminder";
+			return mlang_message("REMINDER");
 		if( $page == "remind_success" )
-			return "Password reminder";
+			return mlang_message("REMINDER");
 		if( $page == "chart" )
 			return GetTableCaption($table);
 		if( $page == "report" )
@@ -6692,11 +6693,11 @@ class RunnerPage
 		if( $page == "dashboard" )
 			return GetTableCaption($table);
 		if( $page == "menu" )
-			return "Menu";
+			return mlang_message("MENU");
 		if( $page == "admin_rights_list" || $page == "admin_members_list" || $page == "admin_admembers_list" )
 			return GetTableCaption($table);
 		if( $page == PAGE_USERINFO )
-			return "User Profile";
+			return mlang_message("USERINFO");
 
 		return GetTableCaption( $table );
 	}
@@ -8372,10 +8373,10 @@ class RunnerPage
 
 	protected function recheckUserPermissions() {
 		if( Security::isGuest() || !isLogged() ) {
-			$this->setMessage( "Your session has expired." .
+			$this->setMessage( mlang_message("SESSION_EXPIRED1") .
 				"<a href='#' id='loginButtonContinue" . $this->id . "'>" .
-				"Login" . "</a>" .
-				" to save data." );
+				mlang_message("SESSION_EXPIRED3") . "</a>" .
+				mlang_message("SESSION_EXPIRED4") );
 		} else {
 			$this->setMessage( 'You have no permissions to complete this action.' );
 		}
@@ -8754,7 +8755,7 @@ class RunnerPage
 		$data = array( $fieldName => $returnValue );
 
 		$displayValue = (string)$this->getTextValue( $fieldName, $data );
-		$displayValue = $displayValue !== "" ? $displayValue : "(" . "Empty" . ")";
+		$displayValue = $displayValue !== "" ? $displayValue : "(" . mlang_message("EMPTY") . ")";
 
 		$returnDisplayValue = runner_strlen( $displayValue ) > $fieldFilterMaxDisplayValueLength
 			? runner_substr( $displayValue, 0, $fieldFilterMaxDisplayValueLength ) . $fieldFilterValueShrinkPostfix

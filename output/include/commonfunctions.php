@@ -137,7 +137,9 @@ function getFilenameFromURI( $uri )
 function getLangFileName($langName)
 {
 	$langArr = array();
+	$langArr["Arabic"] = "Arabic";
 	$langArr["English"] = "English";
+	$langArr["French"] = "French";
 	return $langArr[$langName];
 }
 
@@ -209,29 +211,17 @@ function checkTableName($shortTName )
 		return true;
 	if ("domain_contacts" == $shortTName )
 		return true;
-	if ("domain_status" == $shortTName )
-		return true;
 	if ("domains" == $shortTName )
-		return true;
-	if ("extensions" == $shortTName )
 		return true;
 	if ("fsi_extensions" == $shortTName )
 		return true;
 	if ("fsi_ns" == $shortTName )
 		return true;
-	if ("hosts" == $shortTName )
-		return true;
-	if ("hosts_ip" == $shortTName )
-		return true;
-	if ("ip" == $shortTName )
-		return true;
-	if ("late_domains" == $shortTName )
-		return true;
 	if ("nameservers" == $shortTName )
 		return true;
-	if ("termes" == $shortTName )
+	if ("extensions" == $shortTName )
 		return true;
-	if ("termes_deleted" == $shortTName )
+	if ("hosts" == $shortTName )
 		return true;
 	return false;
 }
@@ -312,30 +302,12 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("domain_status");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="domain_status";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("domains");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
 		$arr[]="domains";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("extensions");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="extensions";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -357,42 +329,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("hosts");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="hosts";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("hosts_ip");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="hosts_ip";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("ip");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="ip";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("late_domains");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="late_domains";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("nameservers");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -402,21 +338,21 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("termes");
+		$strPerm = GetUserPermissions("extensions");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="termes";
+		$arr[]="extensions";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("termes_deleted");
+		$strPerm = GetUserPermissions("hosts");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="termes_deleted";
+		$arr[]="hosts";
 	}
 	return $arr;
 }
@@ -430,18 +366,12 @@ function GetTablesListWithoutSecurity()
 	$arr[]="contacts";
 	$arr[]="fsi";
 	$arr[]="domain_contacts";
-	$arr[]="domain_status";
 	$arr[]="domains";
-	$arr[]="extensions";
 	$arr[]="fsi_extensions";
 	$arr[]="fsi_ns";
-	$arr[]="hosts";
-	$arr[]="hosts_ip";
-	$arr[]="ip";
-	$arr[]="late_domains";
 	$arr[]="nameservers";
-	$arr[]="termes";
-	$arr[]="termes_deleted";
+	$arr[]="extensions";
+	$arr[]="hosts";
 	return $arr;
 }
 
@@ -1066,91 +996,46 @@ function GetUserPermissionsStatic( $table )
 	if( $table=="contacts" )
 	{
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="fsi" )
 	{
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="domain_contacts" )
 	{
 //	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="domain_status" )
-	{
-//	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="domains" )
 	{
 //	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="extensions" )
-	{
-//	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="fsi_extensions" )
 	{
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="fsi_ns" )
 	{
 //	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="hosts" )
-	{
-//	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="hosts_ip" )
-	{
-//	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="ip" )
-	{
-//	default permissions
-		// grant all by default
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="late_domains" )
-	{
-//	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="nameservers" )
 	{
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="termes" )
+	if( $table=="extensions" )
 	{
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="termes_deleted" )
+	if( $table=="hosts" )
 	{
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
@@ -1999,7 +1884,9 @@ function SetLangVars($xt, $prefix, $pageName = "", $extraparams = "")
 
 	$xt->assign($currentLang . "LANGLINK_ACTIVE", true);
 
+	$xt->assign("ArabicLANGLINK", "Arabic" != $currentLang);
 	$xt->assign("EnglishLANGLINK", "English" != $currentLang);
+	$xt->assign("FrenchLANGLINK", "French" != $currentLang);
 
 	if( isEnableSection508() )
 		$xt->assign_section("lang_label", "<label for=\"languageSelector\">","</label>");
@@ -2164,18 +2051,18 @@ function mlang_getlanglist()
 function getMountNames()
 {
 	$mounts = array();
-		$mounts[1] = "January";
-	$mounts[2] = "February";
-	$mounts[3] = "March";
-	$mounts[4] = "April";
-	$mounts[5] = "May";
-	$mounts[6] = "June";
-	$mounts[7] = "July";
-	$mounts[8] = "August";
-	$mounts[9] = "September";
-	$mounts[10] = "October";
-	$mounts[11] = "November";
-	$mounts[12] = "December";
+		$mounts[1] = mlang_message("MONTH_JAN");
+	$mounts[2] = mlang_message("MONTH_FEB");
+	$mounts[3] = mlang_message("MONTH_MAR");
+	$mounts[4] = mlang_message("MONTH_APR");
+	$mounts[5] = mlang_message("MONTH_MAY");
+	$mounts[6] = mlang_message("MONTH_JUN");
+	$mounts[7] = mlang_message("MONTH_JUL");
+	$mounts[8] = mlang_message("MONTH_AUG");
+	$mounts[9] = mlang_message("MONTH_SEP");
+	$mounts[10] = mlang_message("MONTH_OCT");
+	$mounts[11] = mlang_message("MONTH_NOV");
+	$mounts[12] = mlang_message("MONTH_DEC");
 
 	return $mounts;
 }
@@ -3386,7 +3273,9 @@ function getDefaultLanguage()
 	if( @strlen(@$_SESSION["language"]) == 0 && $_SERVER['HTTP_ACCEPT_LANGUAGE'] )
 	{
 		$arrWizardLang = array();
+		$arrWizardLang[] = "Arabic";
 		$arrWizardLang[] = "English";
+		$arrWizardLang[] = "French";
 		$arrLang = array();
 		$arrLang["af"] = "Afrikaans";
 		$arrLang["ar"] = "Arabic";
@@ -3722,8 +3611,8 @@ function verifyRecaptchaResponse( $response ) {
 	$verifyUrl = "https://www.recaptcha.net/recaptcha/api/siteverify?";
 
 	$errors = array();
-	$errors["missing-input-response"] = "Invalid security code.";
-	$errors["invalid-input-response"] = "Invalid security code.";
+	$errors["missing-input-response"] = mlang_message("SEC_INVALID_CAPTCHA_CODE");
+	$errors["invalid-input-response"] = mlang_message("SEC_INVALID_CAPTCHA_CODE");
 	$errors["missing-input-secret"] = "The secret parameter is missing";
 	$errors["invalid-input-secret"] = "The secret parameter is invalid or malformed";
 	$errors["bad-request"] = "The request is invalid or malformed";

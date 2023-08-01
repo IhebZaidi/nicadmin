@@ -211,9 +211,6 @@ pdfDocument = {
 										{BEGIN col_grid_48}
 					"%",
 					{END col_grid_48}
-										{BEGIN col_grid_49}
-					"%",
-					{END col_grid_49}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -313,10 +310,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -339,64 +334,9 @@ pdfDocument = {
 				
 				{BEGIN row_grid_0}
 				[
-																{BEGIN cellblock_grid_headcell_icons}
-{
-	cellId: 'headcell_icons',
-	col:0,
-	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_headcell_icons}
-																							{BEGIN cellblock_grid_headcell_field}
+																{BEGIN cellblock_grid_headcell_field}
 {
 	cellId: 'headcell_field',
-	col:0,
-	row:0,
-			fieldName: 'id',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel domains id }","hidden":"{$item_hide_simple_grid_field49}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
 	col:0,
 	row:0,
 			fieldName: 'code',
@@ -413,7 +353,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains code }","hidden":"{$item_hide_simple_grid_field50}","bold":true},
+			{"text":"{$jslabel domains code }","hidden":"{$item_hide_simple_grid_field49}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -422,10 +362,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field1',
 	col:0,
 	row:0,
 			fieldName: 'domain',
@@ -442,7 +382,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains domain }","hidden":"{$item_hide_simple_grid_field51}","bold":true},
+			{"text":"{$jslabel domains domain }","hidden":"{$item_hide_simple_grid_field50}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -451,10 +391,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'domainidn',
@@ -471,7 +411,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains domainidn }","hidden":"{$item_hide_simple_grid_field52}","bold":true},
+			{"text":"{$jslabel domains domainidn }","hidden":"{$item_hide_simple_grid_field51}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -480,10 +420,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field4',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'ext',
@@ -500,7 +440,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains ext }","hidden":"{$item_hide_simple_grid_field53}","bold":true},
+			{"text":"{$jslabel domains ext }","hidden":"{$item_hide_simple_grid_field52}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -509,10 +449,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
 {
-	cellId: 'headcell_field5',
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'fsi',
@@ -529,7 +469,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains fsi }","hidden":"{$item_hide_simple_grid_field54}","bold":true},
+			{"text":"{$jslabel domains fsi }","hidden":"{$item_hide_simple_grid_field53}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -538,10 +478,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
 {
-	cellId: 'headcell_field6',
+	cellId: 'headcell_field5',
 	col:0,
 	row:0,
 			fieldName: 'organisme',
@@ -558,7 +498,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains organisme }","hidden":"{$item_hide_simple_grid_field55}","bold":true},
+			{"text":"{$jslabel domains organisme }","hidden":"{$item_hide_simple_grid_field54}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -567,10 +507,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
 {
-	cellId: 'headcell_field7',
+	cellId: 'headcell_field6',
 	col:0,
 	row:0,
 			fieldName: 'adresse',
@@ -587,7 +527,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains adresse }","hidden":"{$item_hide_simple_grid_field56}","bold":true},
+			{"text":"{$jslabel domains adresse }","hidden":"{$item_hide_simple_grid_field55}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -596,10 +536,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
 {
-	cellId: 'headcell_field8',
+	cellId: 'headcell_field7',
 	col:0,
 	row:0,
 			fieldName: 'tel',
@@ -616,7 +556,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains tel }","hidden":"{$item_hide_simple_grid_field57}","bold":true},
+			{"text":"{$jslabel domains tel }","hidden":"{$item_hide_simple_grid_field56}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -625,10 +565,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
 {
-	cellId: 'headcell_field9',
+	cellId: 'headcell_field8',
 	col:0,
 	row:0,
 			fieldName: 'fax',
@@ -645,7 +585,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains fax }","hidden":"{$item_hide_simple_grid_field58}","bold":true},
+			{"text":"{$jslabel domains fax }","hidden":"{$item_hide_simple_grid_field57}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -654,10 +594,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
 {
-	cellId: 'headcell_field10',
+	cellId: 'headcell_field9',
 	col:0,
 	row:0,
 			fieldName: 'email',
@@ -674,7 +614,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains email }","hidden":"{$item_hide_simple_grid_field59}","bold":true},
+			{"text":"{$jslabel domains email }","hidden":"{$item_hide_simple_grid_field58}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -683,10 +623,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field10}
-																							{BEGIN cellblock_grid_headcell_field11}
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
 {
-	cellId: 'headcell_field11',
+	cellId: 'headcell_field10',
 	col:0,
 	row:0,
 			fieldName: 'contact',
@@ -703,7 +643,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains contact }","hidden":"{$item_hide_simple_grid_field60}","bold":true},
+			{"text":"{$jslabel domains contact }","hidden":"{$item_hide_simple_grid_field59}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -712,10 +652,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field11}
-																							{BEGIN cellblock_grid_headcell_field12}
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
 {
-	cellId: 'headcell_field12',
+	cellId: 'headcell_field11',
 	col:0,
 	row:0,
 			fieldName: 'activite',
@@ -732,7 +672,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains activite }","hidden":"{$item_hide_simple_grid_field61}","bold":true},
+			{"text":"{$jslabel domains activite }","hidden":"{$item_hide_simple_grid_field60}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -741,10 +681,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field12}
-																							{BEGIN cellblock_grid_headcell_field13}
+{END cellblock_grid_headcell_field11}
+																							{BEGIN cellblock_grid_headcell_field12}
 {
-	cellId: 'headcell_field13',
+	cellId: 'headcell_field12',
 	col:0,
 	row:0,
 			fieldName: 'rubrique',
@@ -761,7 +701,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains rubrique }","hidden":"{$item_hide_simple_grid_field62}","bold":true},
+			{"text":"{$jslabel domains rubrique }","hidden":"{$item_hide_simple_grid_field61}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -770,10 +710,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field13}
-																							{BEGIN cellblock_grid_headcell_field14}
+{END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
 {
-	cellId: 'headcell_field14',
+	cellId: 'headcell_field13',
 	col:0,
 	row:0,
 			fieldName: 'date_recept',
@@ -790,7 +730,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_recept }","hidden":"{$item_hide_simple_grid_field63}","bold":true},
+			{"text":"{$jslabel domains date_recept }","hidden":"{$item_hide_simple_grid_field62}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -799,10 +739,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field14}
-																							{BEGIN cellblock_grid_headcell_field15}
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_headcell_field14}
 {
-	cellId: 'headcell_field15',
+	cellId: 'headcell_field14',
 	col:0,
 	row:0,
 			fieldName: 'date_accept',
@@ -819,7 +759,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_accept }","hidden":"{$item_hide_simple_grid_field64}","bold":true},
+			{"text":"{$jslabel domains date_accept }","hidden":"{$item_hide_simple_grid_field63}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -828,10 +768,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field15}
-																							{BEGIN cellblock_grid_headcell_field16}
+{END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field15}
 {
-	cellId: 'headcell_field16',
+	cellId: 'headcell_field15',
 	col:0,
 	row:0,
 			fieldName: 'date_activ',
@@ -848,7 +788,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_activ }","hidden":"{$item_hide_simple_grid_field65}","bold":true},
+			{"text":"{$jslabel domains date_activ }","hidden":"{$item_hide_simple_grid_field64}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -857,10 +797,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field16}
-																							{BEGIN cellblock_grid_headcell_field17}
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field16}
 {
-	cellId: 'headcell_field17',
+	cellId: 'headcell_field16',
 	col:0,
 	row:0,
 			fieldName: 'date_modif',
@@ -877,7 +817,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_modif }","hidden":"{$item_hide_simple_grid_field66}","bold":true},
+			{"text":"{$jslabel domains date_modif }","hidden":"{$item_hide_simple_grid_field65}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -886,10 +826,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field17}
-																							{BEGIN cellblock_grid_headcell_field18}
+{END cellblock_grid_headcell_field16}
+																							{BEGIN cellblock_grid_headcell_field17}
 {
-	cellId: 'headcell_field18',
+	cellId: 'headcell_field17',
 	col:0,
 	row:0,
 			fieldName: 'date_annul',
@@ -906,7 +846,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_annul }","hidden":"{$item_hide_simple_grid_field67}","bold":true},
+			{"text":"{$jslabel domains date_annul }","hidden":"{$item_hide_simple_grid_field66}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -915,10 +855,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field18}
-																							{BEGIN cellblock_grid_headcell_field19}
+{END cellblock_grid_headcell_field17}
+																							{BEGIN cellblock_grid_headcell_field18}
 {
-	cellId: 'headcell_field19',
+	cellId: 'headcell_field18',
 	col:0,
 	row:0,
 			fieldName: 'date_annul_due',
@@ -935,7 +875,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_annul_due }","hidden":"{$item_hide_simple_grid_field68}","bold":true},
+			{"text":"{$jslabel domains date_annul_due }","hidden":"{$item_hide_simple_grid_field67}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -944,10 +884,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field19}
-																							{BEGIN cellblock_grid_headcell_field20}
+{END cellblock_grid_headcell_field18}
+																							{BEGIN cellblock_grid_headcell_field19}
 {
-	cellId: 'headcell_field20',
+	cellId: 'headcell_field19',
 	col:0,
 	row:0,
 			fieldName: 'etat',
@@ -964,7 +904,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains etat }","hidden":"{$item_hide_simple_grid_field69}","bold":true},
+			{"text":"{$jslabel domains etat }","hidden":"{$item_hide_simple_grid_field68}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -973,10 +913,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field20}
-																							{BEGIN cellblock_grid_headcell_field21}
+{END cellblock_grid_headcell_field19}
+																							{BEGIN cellblock_grid_headcell_field20}
 {
-	cellId: 'headcell_field21',
+	cellId: 'headcell_field20',
 	col:0,
 	row:0,
 			fieldName: 'modif',
@@ -993,7 +933,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains modif }","hidden":"{$item_hide_simple_grid_field70}","bold":true},
+			{"text":"{$jslabel domains modif }","hidden":"{$item_hide_simple_grid_field69}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1002,10 +942,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field21}
-																							{BEGIN cellblock_grid_headcell_field22}
+{END cellblock_grid_headcell_field20}
+																							{BEGIN cellblock_grid_headcell_field21}
 {
-	cellId: 'headcell_field22',
+	cellId: 'headcell_field21',
 	col:0,
 	row:0,
 			fieldName: 'commentaire',
@@ -1022,7 +962,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains commentaire }","hidden":"{$item_hide_simple_grid_field71}","bold":true},
+			{"text":"{$jslabel domains commentaire }","hidden":"{$item_hide_simple_grid_field70}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1031,10 +971,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field22}
-																							{BEGIN cellblock_grid_headcell_field23}
+{END cellblock_grid_headcell_field21}
+																							{BEGIN cellblock_grid_headcell_field22}
 {
-	cellId: 'headcell_field23',
+	cellId: 'headcell_field22',
 	col:0,
 	row:0,
 			fieldName: 'ns_modif',
@@ -1051,7 +991,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains ns_modif }","hidden":"{$item_hide_simple_grid_field72}","bold":true},
+			{"text":"{$jslabel domains ns_modif }","hidden":"{$item_hide_simple_grid_field71}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1060,10 +1000,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field23}
-																							{BEGIN cellblock_grid_headcell_field24}
+{END cellblock_grid_headcell_field22}
+																							{BEGIN cellblock_grid_headcell_field23}
 {
-	cellId: 'headcell_field24',
+	cellId: 'headcell_field23',
 	col:0,
 	row:0,
 			fieldName: 'id_fsi_in',
@@ -1080,7 +1020,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains id_fsi_in }","hidden":"{$item_hide_simple_grid_field73}","bold":true},
+			{"text":"{$jslabel domains id_fsi_in }","hidden":"{$item_hide_simple_grid_field72}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1089,10 +1029,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field24}
-																							{BEGIN cellblock_grid_headcell_field25}
+{END cellblock_grid_headcell_field23}
+																							{BEGIN cellblock_grid_headcell_field24}
 {
-	cellId: 'headcell_field25',
+	cellId: 'headcell_field24',
 	col:0,
 	row:0,
 			fieldName: 'domain_pw',
@@ -1109,7 +1049,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains domain_pw }","hidden":"{$item_hide_simple_grid_field74}","bold":true},
+			{"text":"{$jslabel domains domain_pw }","hidden":"{$item_hide_simple_grid_field73}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1118,10 +1058,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field25}
-																							{BEGIN cellblock_grid_headcell_field26}
+{END cellblock_grid_headcell_field24}
+																							{BEGIN cellblock_grid_headcell_field25}
 {
-	cellId: 'headcell_field26',
+	cellId: 'headcell_field25',
 	col:0,
 	row:0,
 			fieldName: 'date_blocked',
@@ -1138,7 +1078,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_blocked }","hidden":"{$item_hide_simple_grid_field75}","bold":true},
+			{"text":"{$jslabel domains date_blocked }","hidden":"{$item_hide_simple_grid_field74}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1147,10 +1087,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field26}
-																							{BEGIN cellblock_grid_headcell_field27}
+{END cellblock_grid_headcell_field25}
+																							{BEGIN cellblock_grid_headcell_field26}
 {
-	cellId: 'headcell_field27',
+	cellId: 'headcell_field26',
 	col:0,
 	row:0,
 			fieldName: 'date_blocked_max',
@@ -1167,7 +1107,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_blocked_max }","hidden":"{$item_hide_simple_grid_field76}","bold":true},
+			{"text":"{$jslabel domains date_blocked_max }","hidden":"{$item_hide_simple_grid_field75}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1176,10 +1116,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field27}
-																							{BEGIN cellblock_grid_headcell_field28}
+{END cellblock_grid_headcell_field26}
+																							{BEGIN cellblock_grid_headcell_field27}
 {
-	cellId: 'headcell_field28',
+	cellId: 'headcell_field27',
 	col:0,
 	row:0,
 			fieldName: 'blocked_by',
@@ -1196,7 +1136,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains blocked_by }","hidden":"{$item_hide_simple_grid_field77}","bold":true},
+			{"text":"{$jslabel domains blocked_by }","hidden":"{$item_hide_simple_grid_field76}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1205,10 +1145,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field28}
-																							{BEGIN cellblock_grid_headcell_field29}
+{END cellblock_grid_headcell_field27}
+																							{BEGIN cellblock_grid_headcell_field28}
 {
-	cellId: 'headcell_field29',
+	cellId: 'headcell_field28',
 	col:0,
 	row:0,
 			fieldName: 'date_unblocked',
@@ -1225,7 +1165,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_unblocked }","hidden":"{$item_hide_simple_grid_field78}","bold":true},
+			{"text":"{$jslabel domains date_unblocked }","hidden":"{$item_hide_simple_grid_field77}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1234,10 +1174,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field29}
-																							{BEGIN cellblock_grid_headcell_field30}
+{END cellblock_grid_headcell_field28}
+																							{BEGIN cellblock_grid_headcell_field29}
 {
-	cellId: 'headcell_field30',
+	cellId: 'headcell_field29',
 	col:0,
 	row:0,
 			fieldName: 'date_transfer_req',
@@ -1254,7 +1194,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_transfer_req }","hidden":"{$item_hide_simple_grid_field79}","bold":true},
+			{"text":"{$jslabel domains date_transfer_req }","hidden":"{$item_hide_simple_grid_field78}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1263,10 +1203,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field30}
-																							{BEGIN cellblock_grid_headcell_field31}
+{END cellblock_grid_headcell_field29}
+																							{BEGIN cellblock_grid_headcell_field30}
 {
-	cellId: 'headcell_field31',
+	cellId: 'headcell_field30',
 	col:0,
 	row:0,
 			fieldName: 'date_transfer_due',
@@ -1283,7 +1223,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_transfer_due }","hidden":"{$item_hide_simple_grid_field80}","bold":true},
+			{"text":"{$jslabel domains date_transfer_due }","hidden":"{$item_hide_simple_grid_field79}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1292,10 +1232,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field31}
-																							{BEGIN cellblock_grid_headcell_field32}
+{END cellblock_grid_headcell_field30}
+																							{BEGIN cellblock_grid_headcell_field31}
 {
-	cellId: 'headcell_field32',
+	cellId: 'headcell_field31',
 	col:0,
 	row:0,
 			fieldName: 'date_transfer_canceled',
@@ -1312,7 +1252,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_transfer_canceled }","hidden":"{$item_hide_simple_grid_field81}","bold":true},
+			{"text":"{$jslabel domains date_transfer_canceled }","hidden":"{$item_hide_simple_grid_field80}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1321,10 +1261,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field32}
-																							{BEGIN cellblock_grid_headcell_field33}
+{END cellblock_grid_headcell_field31}
+																							{BEGIN cellblock_grid_headcell_field32}
 {
-	cellId: 'headcell_field33',
+	cellId: 'headcell_field32',
 	col:0,
 	row:0,
 			fieldName: 'date_transfer_accepted',
@@ -1341,7 +1281,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_transfer_accepted }","hidden":"{$item_hide_simple_grid_field82}","bold":true},
+			{"text":"{$jslabel domains date_transfer_accepted }","hidden":"{$item_hide_simple_grid_field81}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1350,10 +1290,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field33}
-																							{BEGIN cellblock_grid_headcell_field34}
+{END cellblock_grid_headcell_field32}
+																							{BEGIN cellblock_grid_headcell_field33}
 {
-	cellId: 'headcell_field34',
+	cellId: 'headcell_field33',
 	col:0,
 	row:0,
 			fieldName: 'date_transfer_rejected',
@@ -1370,7 +1310,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_transfer_rejected }","hidden":"{$item_hide_simple_grid_field83}","bold":true},
+			{"text":"{$jslabel domains date_transfer_rejected }","hidden":"{$item_hide_simple_grid_field82}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1379,10 +1319,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field34}
-																							{BEGIN cellblock_grid_headcell_field35}
+{END cellblock_grid_headcell_field33}
+																							{BEGIN cellblock_grid_headcell_field34}
 {
-	cellId: 'headcell_field35',
+	cellId: 'headcell_field34',
 	col:0,
 	row:0,
 			fieldName: 'date_annul_req',
@@ -1399,7 +1339,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains date_annul_req }","hidden":"{$item_hide_simple_grid_field84}","bold":true},
+			{"text":"{$jslabel domains date_annul_req }","hidden":"{$item_hide_simple_grid_field83}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1408,10 +1348,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field35}
-																							{BEGIN cellblock_grid_headcell_field36}
+{END cellblock_grid_headcell_field34}
+																							{BEGIN cellblock_grid_headcell_field35}
 {
-	cellId: 'headcell_field36',
+	cellId: 'headcell_field35',
 	col:0,
 	row:0,
 			fieldName: 'last_status',
@@ -1428,7 +1368,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains last_status }","hidden":"{$item_hide_simple_grid_field85}","bold":true},
+			{"text":"{$jslabel domains last_status }","hidden":"{$item_hide_simple_grid_field84}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1437,10 +1377,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field36}
-																							{BEGIN cellblock_grid_headcell_field37}
+{END cellblock_grid_headcell_field35}
+																							{BEGIN cellblock_grid_headcell_field36}
 {
-	cellId: 'headcell_field37',
+	cellId: 'headcell_field36',
 	col:0,
 	row:0,
 			fieldName: 'updated_by',
@@ -1457,7 +1397,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains updated_by }","hidden":"{$item_hide_simple_grid_field86}","bold":true},
+			{"text":"{$jslabel domains updated_by }","hidden":"{$item_hide_simple_grid_field85}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1466,10 +1406,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field37}
-																							{BEGIN cellblock_grid_headcell_field38}
+{END cellblock_grid_headcell_field36}
+																							{BEGIN cellblock_grid_headcell_field37}
 {
-	cellId: 'headcell_field38',
+	cellId: 'headcell_field37',
 	col:0,
 	row:0,
 			fieldName: 'private',
@@ -1486,7 +1426,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains private }","hidden":"{$item_hide_simple_grid_field87}","bold":true},
+			{"text":"{$jslabel domains private }","hidden":"{$item_hide_simple_grid_field86}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1495,10 +1435,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field38}
-																							{BEGIN cellblock_grid_headcell_field39}
+{END cellblock_grid_headcell_field37}
+																							{BEGIN cellblock_grid_headcell_field38}
 {
-	cellId: 'headcell_field39',
+	cellId: 'headcell_field38',
 	col:0,
 	row:0,
 			fieldName: 'mgmt',
@@ -1515,7 +1455,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains mgmt }","hidden":"{$item_hide_simple_grid_field88}","bold":true},
+			{"text":"{$jslabel domains mgmt }","hidden":"{$item_hide_simple_grid_field87}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1524,10 +1464,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field39}
-																							{BEGIN cellblock_grid_headcell_field40}
+{END cellblock_grid_headcell_field38}
+																							{BEGIN cellblock_grid_headcell_field39}
 {
-	cellId: 'headcell_field40',
+	cellId: 'headcell_field39',
 	col:0,
 	row:0,
 			fieldName: 'forward',
@@ -1544,7 +1484,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains forward }","hidden":"{$item_hide_simple_grid_field89}","bold":true},
+			{"text":"{$jslabel domains forward }","hidden":"{$item_hide_simple_grid_field88}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1553,10 +1493,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field40}
-																							{BEGIN cellblock_grid_headcell_field41}
+{END cellblock_grid_headcell_field39}
+																							{BEGIN cellblock_grid_headcell_field40}
 {
-	cellId: 'headcell_field41',
+	cellId: 'headcell_field40',
 	col:0,
 	row:0,
 			fieldName: 'dnssec',
@@ -1573,7 +1513,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains dnssec }","hidden":"{$item_hide_simple_grid_field90}","bold":true},
+			{"text":"{$jslabel domains dnssec }","hidden":"{$item_hide_simple_grid_field89}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1582,10 +1522,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field41}
-																							{BEGIN cellblock_grid_headcell_field42}
+{END cellblock_grid_headcell_field40}
+																							{BEGIN cellblock_grid_headcell_field41}
 {
-	cellId: 'headcell_field42',
+	cellId: 'headcell_field41',
 	col:0,
 	row:0,
 			fieldName: 'stat',
@@ -1602,7 +1542,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains stat }","hidden":"{$item_hide_simple_grid_field91}","bold":true},
+			{"text":"{$jslabel domains stat }","hidden":"{$item_hide_simple_grid_field90}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1611,10 +1551,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field42}
-																							{BEGIN cellblock_grid_headcell_field43}
+{END cellblock_grid_headcell_field41}
+																							{BEGIN cellblock_grid_headcell_field42}
 {
-	cellId: 'headcell_field43',
+	cellId: 'headcell_field42',
 	col:0,
 	row:0,
 			fieldName: 'in',
@@ -1631,7 +1571,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains in }","hidden":"{$item_hide_simple_grid_field92}","bold":true},
+			{"text":"{$jslabel domains in }","hidden":"{$item_hide_simple_grid_field91}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1640,10 +1580,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field43}
-																							{BEGIN cellblock_grid_headcell_field44}
+{END cellblock_grid_headcell_field42}
+																							{BEGIN cellblock_grid_headcell_field43}
 {
-	cellId: 'headcell_field44',
+	cellId: 'headcell_field43',
 	col:0,
 	row:0,
 			fieldName: 'change_prop',
@@ -1660,7 +1600,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains change_prop }","hidden":"{$item_hide_simple_grid_field93}","bold":true},
+			{"text":"{$jslabel domains change_prop }","hidden":"{$item_hide_simple_grid_field92}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1669,10 +1609,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field44}
-																							{BEGIN cellblock_grid_headcell_field45}
+{END cellblock_grid_headcell_field43}
+																							{BEGIN cellblock_grid_headcell_field44}
 {
-	cellId: 'headcell_field45',
+	cellId: 'headcell_field44',
 	col:0,
 	row:0,
 			fieldName: 'reg_annul_reason',
@@ -1689,7 +1629,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains reg_annul_reason }","hidden":"{$item_hide_simple_grid_field94}","bold":true},
+			{"text":"{$jslabel domains reg_annul_reason }","hidden":"{$item_hide_simple_grid_field93}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1698,10 +1638,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field45}
-																							{BEGIN cellblock_grid_headcell_field46}
+{END cellblock_grid_headcell_field44}
+																							{BEGIN cellblock_grid_headcell_field45}
 {
-	cellId: 'headcell_field46',
+	cellId: 'headcell_field45',
 	col:0,
 	row:0,
 			fieldName: 'reg_comment',
@@ -1718,7 +1658,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains reg_comment }","hidden":"{$item_hide_simple_grid_field95}","bold":true},
+			{"text":"{$jslabel domains reg_comment }","hidden":"{$item_hide_simple_grid_field94}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1727,10 +1667,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field46}
-																							{BEGIN cellblock_grid_headcell_field47}
+{END cellblock_grid_headcell_field45}
+																							{BEGIN cellblock_grid_headcell_field46}
 {
-	cellId: 'headcell_field47',
+	cellId: 'headcell_field46',
 	col:0,
 	row:0,
 			fieldName: 'reg_transfer_prohibited',
@@ -1747,7 +1687,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains reg_transfer_prohibited }","hidden":"{$item_hide_simple_grid_field96}","bold":true},
+			{"text":"{$jslabel domains reg_transfer_prohibited }","hidden":"{$item_hide_simple_grid_field95}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1756,10 +1696,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field47}
-																							{BEGIN cellblock_grid_headcell_field48}
+{END cellblock_grid_headcell_field46}
+																							{BEGIN cellblock_grid_headcell_field47}
 {
-	cellId: 'headcell_field48',
+	cellId: 'headcell_field47',
 	col:0,
 	row:0,
 			fieldName: 'reg_restore_prohibited',
@@ -1776,11 +1716,40 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domains reg_restore_prohibited }","hidden":"{$item_hide_simple_grid_field97}","bold":true},
+			{"text":"{$jslabel domains reg_restore_prohibited }","hidden":"{$item_hide_simple_grid_field96}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$reg_restore_prohibited_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field47}
+																							{BEGIN cellblock_grid_headcell_field48}
+{
+	cellId: 'headcell_field48',
+	col:0,
+	row:0,
+			fieldName: 'id',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel domains id }","hidden":"{$item_hide_simple_grid_field97}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$id_align}',
      
       
       },
@@ -1795,66 +1764,9 @@ pdfDocument = {
 				
 				{BEGIN row_grid_1}
 				[
-																{BEGIN cellblock_grid_cell_icons}
-{
-	cellId: 'cell_icons',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_icons}
-																							{BEGIN cellblock_grid_cell_field}
+																{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'id',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$id_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'code',
@@ -1880,10 +1792,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'domain',
@@ -1909,10 +1821,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'domainidn',
@@ -1938,10 +1850,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field4',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'ext',
@@ -1967,10 +1879,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
 {
-	cellId: 'cell_field5',
+	cellId: 'cell_field4',
 	col:0,
 	row:0,
 			fieldName: 'fsi',
@@ -1996,10 +1908,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			fieldName: 'organisme',
@@ -2025,10 +1937,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			fieldName: 'adresse',
@@ -2054,10 +1966,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			fieldName: 'tel',
@@ -2083,10 +1995,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
 {
-	cellId: 'cell_field9',
+	cellId: 'cell_field8',
 	col:0,
 	row:0,
 			fieldName: 'fax',
@@ -2112,10 +2024,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
 {
-	cellId: 'cell_field10',
+	cellId: 'cell_field9',
 	col:0,
 	row:0,
 			fieldName: 'email',
@@ -2141,10 +2053,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field10}
-																							{BEGIN cellblock_grid_cell_field11}
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
 {
-	cellId: 'cell_field11',
+	cellId: 'cell_field10',
 	col:0,
 	row:0,
 			fieldName: 'contact',
@@ -2170,10 +2082,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field11}
-																							{BEGIN cellblock_grid_cell_field12}
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
 {
-	cellId: 'cell_field12',
+	cellId: 'cell_field11',
 	col:0,
 	row:0,
 			fieldName: 'activite',
@@ -2199,10 +2111,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field12}
-																							{BEGIN cellblock_grid_cell_field13}
+{END cellblock_grid_cell_field11}
+																							{BEGIN cellblock_grid_cell_field12}
 {
-	cellId: 'cell_field13',
+	cellId: 'cell_field12',
 	col:0,
 	row:0,
 			fieldName: 'rubrique',
@@ -2228,10 +2140,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field13}
-																							{BEGIN cellblock_grid_cell_field14}
+{END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
 {
-	cellId: 'cell_field14',
+	cellId: 'cell_field13',
 	col:0,
 	row:0,
 			fieldName: 'date_recept',
@@ -2257,10 +2169,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field14}
-																							{BEGIN cellblock_grid_cell_field15}
+{END cellblock_grid_cell_field13}
+																							{BEGIN cellblock_grid_cell_field14}
 {
-	cellId: 'cell_field15',
+	cellId: 'cell_field14',
 	col:0,
 	row:0,
 			fieldName: 'date_accept',
@@ -2286,10 +2198,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field15}
-																							{BEGIN cellblock_grid_cell_field16}
+{END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
 {
-	cellId: 'cell_field16',
+	cellId: 'cell_field15',
 	col:0,
 	row:0,
 			fieldName: 'date_activ',
@@ -2315,10 +2227,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field16}
-																							{BEGIN cellblock_grid_cell_field17}
+{END cellblock_grid_cell_field15}
+																							{BEGIN cellblock_grid_cell_field16}
 {
-	cellId: 'cell_field17',
+	cellId: 'cell_field16',
 	col:0,
 	row:0,
 			fieldName: 'date_modif',
@@ -2344,10 +2256,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field17}
-																							{BEGIN cellblock_grid_cell_field18}
+{END cellblock_grid_cell_field16}
+																							{BEGIN cellblock_grid_cell_field17}
 {
-	cellId: 'cell_field18',
+	cellId: 'cell_field17',
 	col:0,
 	row:0,
 			fieldName: 'date_annul',
@@ -2373,10 +2285,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field18}
-																							{BEGIN cellblock_grid_cell_field19}
+{END cellblock_grid_cell_field17}
+																							{BEGIN cellblock_grid_cell_field18}
 {
-	cellId: 'cell_field19',
+	cellId: 'cell_field18',
 	col:0,
 	row:0,
 			fieldName: 'date_annul_due',
@@ -2402,10 +2314,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field19}
-																							{BEGIN cellblock_grid_cell_field20}
+{END cellblock_grid_cell_field18}
+																							{BEGIN cellblock_grid_cell_field19}
 {
-	cellId: 'cell_field20',
+	cellId: 'cell_field19',
 	col:0,
 	row:0,
 			fieldName: 'etat',
@@ -2431,10 +2343,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field20}
-																							{BEGIN cellblock_grid_cell_field21}
+{END cellblock_grid_cell_field19}
+																							{BEGIN cellblock_grid_cell_field20}
 {
-	cellId: 'cell_field21',
+	cellId: 'cell_field20',
 	col:0,
 	row:0,
 			fieldName: 'modif',
@@ -2460,10 +2372,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field21}
-																							{BEGIN cellblock_grid_cell_field22}
+{END cellblock_grid_cell_field20}
+																							{BEGIN cellblock_grid_cell_field21}
 {
-	cellId: 'cell_field22',
+	cellId: 'cell_field21',
 	col:0,
 	row:0,
 			fieldName: 'commentaire',
@@ -2489,10 +2401,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field22}
-																							{BEGIN cellblock_grid_cell_field23}
+{END cellblock_grid_cell_field21}
+																							{BEGIN cellblock_grid_cell_field22}
 {
-	cellId: 'cell_field23',
+	cellId: 'cell_field22',
 	col:0,
 	row:0,
 			fieldName: 'ns_modif',
@@ -2518,10 +2430,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field23}
-																							{BEGIN cellblock_grid_cell_field24}
+{END cellblock_grid_cell_field22}
+																							{BEGIN cellblock_grid_cell_field23}
 {
-	cellId: 'cell_field24',
+	cellId: 'cell_field23',
 	col:0,
 	row:0,
 			fieldName: 'id_fsi_in',
@@ -2547,10 +2459,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field24}
-																							{BEGIN cellblock_grid_cell_field25}
+{END cellblock_grid_cell_field23}
+																							{BEGIN cellblock_grid_cell_field24}
 {
-	cellId: 'cell_field25',
+	cellId: 'cell_field24',
 	col:0,
 	row:0,
 			fieldName: 'domain_pw',
@@ -2576,10 +2488,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field25}
-																							{BEGIN cellblock_grid_cell_field26}
+{END cellblock_grid_cell_field24}
+																							{BEGIN cellblock_grid_cell_field25}
 {
-	cellId: 'cell_field26',
+	cellId: 'cell_field25',
 	col:0,
 	row:0,
 			fieldName: 'date_blocked',
@@ -2605,10 +2517,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field26}
-																							{BEGIN cellblock_grid_cell_field27}
+{END cellblock_grid_cell_field25}
+																							{BEGIN cellblock_grid_cell_field26}
 {
-	cellId: 'cell_field27',
+	cellId: 'cell_field26',
 	col:0,
 	row:0,
 			fieldName: 'date_blocked_max',
@@ -2634,10 +2546,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field27}
-																							{BEGIN cellblock_grid_cell_field28}
+{END cellblock_grid_cell_field26}
+																							{BEGIN cellblock_grid_cell_field27}
 {
-	cellId: 'cell_field28',
+	cellId: 'cell_field27',
 	col:0,
 	row:0,
 			fieldName: 'blocked_by',
@@ -2663,10 +2575,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field28}
-																							{BEGIN cellblock_grid_cell_field29}
+{END cellblock_grid_cell_field27}
+																							{BEGIN cellblock_grid_cell_field28}
 {
-	cellId: 'cell_field29',
+	cellId: 'cell_field28',
 	col:0,
 	row:0,
 			fieldName: 'date_unblocked',
@@ -2692,10 +2604,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field29}
-																							{BEGIN cellblock_grid_cell_field30}
+{END cellblock_grid_cell_field28}
+																							{BEGIN cellblock_grid_cell_field29}
 {
-	cellId: 'cell_field30',
+	cellId: 'cell_field29',
 	col:0,
 	row:0,
 			fieldName: 'date_transfer_req',
@@ -2721,10 +2633,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field30}
-																							{BEGIN cellblock_grid_cell_field31}
+{END cellblock_grid_cell_field29}
+																							{BEGIN cellblock_grid_cell_field30}
 {
-	cellId: 'cell_field31',
+	cellId: 'cell_field30',
 	col:0,
 	row:0,
 			fieldName: 'date_transfer_due',
@@ -2750,10 +2662,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field31}
-																							{BEGIN cellblock_grid_cell_field32}
+{END cellblock_grid_cell_field30}
+																							{BEGIN cellblock_grid_cell_field31}
 {
-	cellId: 'cell_field32',
+	cellId: 'cell_field31',
 	col:0,
 	row:0,
 			fieldName: 'date_transfer_canceled',
@@ -2779,10 +2691,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field32}
-																							{BEGIN cellblock_grid_cell_field33}
+{END cellblock_grid_cell_field31}
+																							{BEGIN cellblock_grid_cell_field32}
 {
-	cellId: 'cell_field33',
+	cellId: 'cell_field32',
 	col:0,
 	row:0,
 			fieldName: 'date_transfer_accepted',
@@ -2808,10 +2720,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field33}
-																							{BEGIN cellblock_grid_cell_field34}
+{END cellblock_grid_cell_field32}
+																							{BEGIN cellblock_grid_cell_field33}
 {
-	cellId: 'cell_field34',
+	cellId: 'cell_field33',
 	col:0,
 	row:0,
 			fieldName: 'date_transfer_rejected',
@@ -2837,10 +2749,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field34}
-																							{BEGIN cellblock_grid_cell_field35}
+{END cellblock_grid_cell_field33}
+																							{BEGIN cellblock_grid_cell_field34}
 {
-	cellId: 'cell_field35',
+	cellId: 'cell_field34',
 	col:0,
 	row:0,
 			fieldName: 'date_annul_req',
@@ -2866,10 +2778,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field35}
-																							{BEGIN cellblock_grid_cell_field36}
+{END cellblock_grid_cell_field34}
+																							{BEGIN cellblock_grid_cell_field35}
 {
-	cellId: 'cell_field36',
+	cellId: 'cell_field35',
 	col:0,
 	row:0,
 			fieldName: 'last_status',
@@ -2895,10 +2807,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field36}
-																							{BEGIN cellblock_grid_cell_field37}
+{END cellblock_grid_cell_field35}
+																							{BEGIN cellblock_grid_cell_field36}
 {
-	cellId: 'cell_field37',
+	cellId: 'cell_field36',
 	col:0,
 	row:0,
 			fieldName: 'updated_by',
@@ -2924,10 +2836,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field37}
-																							{BEGIN cellblock_grid_cell_field38}
+{END cellblock_grid_cell_field36}
+																							{BEGIN cellblock_grid_cell_field37}
 {
-	cellId: 'cell_field38',
+	cellId: 'cell_field37',
 	col:0,
 	row:0,
 			fieldName: 'private',
@@ -2953,10 +2865,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field38}
-																							{BEGIN cellblock_grid_cell_field39}
+{END cellblock_grid_cell_field37}
+																							{BEGIN cellblock_grid_cell_field38}
 {
-	cellId: 'cell_field39',
+	cellId: 'cell_field38',
 	col:0,
 	row:0,
 			fieldName: 'mgmt',
@@ -2982,10 +2894,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field39}
-																							{BEGIN cellblock_grid_cell_field40}
+{END cellblock_grid_cell_field38}
+																							{BEGIN cellblock_grid_cell_field39}
 {
-	cellId: 'cell_field40',
+	cellId: 'cell_field39',
 	col:0,
 	row:0,
 			fieldName: 'forward',
@@ -3011,10 +2923,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field40}
-																							{BEGIN cellblock_grid_cell_field41}
+{END cellblock_grid_cell_field39}
+																							{BEGIN cellblock_grid_cell_field40}
 {
-	cellId: 'cell_field41',
+	cellId: 'cell_field40',
 	col:0,
 	row:0,
 			fieldName: 'dnssec',
@@ -3040,10 +2952,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field41}
-																							{BEGIN cellblock_grid_cell_field42}
+{END cellblock_grid_cell_field40}
+																							{BEGIN cellblock_grid_cell_field41}
 {
-	cellId: 'cell_field42',
+	cellId: 'cell_field41',
 	col:0,
 	row:0,
 			fieldName: 'stat',
@@ -3069,10 +2981,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field42}
-																							{BEGIN cellblock_grid_cell_field43}
+{END cellblock_grid_cell_field41}
+																							{BEGIN cellblock_grid_cell_field42}
 {
-	cellId: 'cell_field43',
+	cellId: 'cell_field42',
 	col:0,
 	row:0,
 			fieldName: 'in',
@@ -3098,10 +3010,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field43}
-																							{BEGIN cellblock_grid_cell_field44}
+{END cellblock_grid_cell_field42}
+																							{BEGIN cellblock_grid_cell_field43}
 {
-	cellId: 'cell_field44',
+	cellId: 'cell_field43',
 	col:0,
 	row:0,
 			fieldName: 'change_prop',
@@ -3127,10 +3039,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field44}
-																							{BEGIN cellblock_grid_cell_field45}
+{END cellblock_grid_cell_field43}
+																							{BEGIN cellblock_grid_cell_field44}
 {
-	cellId: 'cell_field45',
+	cellId: 'cell_field44',
 	col:0,
 	row:0,
 			fieldName: 'reg_annul_reason',
@@ -3156,10 +3068,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field45}
-																							{BEGIN cellblock_grid_cell_field46}
+{END cellblock_grid_cell_field44}
+																							{BEGIN cellblock_grid_cell_field45}
 {
-	cellId: 'cell_field46',
+	cellId: 'cell_field45',
 	col:0,
 	row:0,
 			fieldName: 'reg_comment',
@@ -3185,10 +3097,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field46}
-																							{BEGIN cellblock_grid_cell_field47}
+{END cellblock_grid_cell_field45}
+																							{BEGIN cellblock_grid_cell_field46}
 {
-	cellId: 'cell_field47',
+	cellId: 'cell_field46',
 	col:0,
 	row:0,
 			fieldName: 'reg_transfer_prohibited',
@@ -3214,10 +3126,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field47}
-																							{BEGIN cellblock_grid_cell_field48}
+{END cellblock_grid_cell_field46}
+																							{BEGIN cellblock_grid_cell_field47}
 {
-	cellId: 'cell_field48',
+	cellId: 'cell_field47',
 	col:0,
 	row:0,
 			fieldName: 'reg_restore_prohibited',
@@ -3243,22 +3155,14 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field48}
-											],
-				{END row_grid_1}
-		
-		{END grid_record}
-	{END grid_row}
-			
-					
-				{BEGIN row_grid_2}
-				[
-																{BEGIN cellblock_grid_footcell_icons}
+{END cellblock_grid_cell_field47}
+																							{BEGIN cellblock_grid_cell_field48}
 {
-	cellId: 'footcell_icons',
+	cellId: 'cell_field48',
 	col:0,
 	row:0,
-				style: 'footcell',
+			fieldName: 'id',
+				style: 'bodycell',
 		
 		
 	//	dynamic colspan/rowspan
@@ -3270,16 +3174,27 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":{$id_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+				
+		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$id_align}',
      
       
       },
 
-{END cellblock_grid_footcell_icons}
-																							{BEGIN cellblock_grid_footcell_field}
+{END cellblock_grid_cell_field48}
+											],
+				{END row_grid_1}
+		
+		{END grid_record}
+	{END grid_row}
+			
+					
+				{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_footcell_field}
 {
 	cellId: 'footcell_field',
 	col:0,

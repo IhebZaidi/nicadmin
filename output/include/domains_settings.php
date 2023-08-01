@@ -175,6 +175,318 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdomains["English"]))
 		$tdatadomains[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelsdomains["Arabic"] = array();
+	$fieldToolTipsdomains["Arabic"] = array();
+	$placeHoldersdomains["Arabic"] = array();
+	$pageTitlesdomains["Arabic"] = array();
+	$fieldLabelsdomains["Arabic"]["id"] = "Id";
+	$fieldToolTipsdomains["Arabic"]["id"] = "";
+	$placeHoldersdomains["Arabic"]["id"] = "";
+	$fieldLabelsdomains["Arabic"]["code"] = "Code";
+	$fieldToolTipsdomains["Arabic"]["code"] = "";
+	$placeHoldersdomains["Arabic"]["code"] = "";
+	$fieldLabelsdomains["Arabic"]["domain"] = "Domain";
+	$fieldToolTipsdomains["Arabic"]["domain"] = "";
+	$placeHoldersdomains["Arabic"]["domain"] = "";
+	$fieldLabelsdomains["Arabic"]["domainidn"] = "Domainidn";
+	$fieldToolTipsdomains["Arabic"]["domainidn"] = "";
+	$placeHoldersdomains["Arabic"]["domainidn"] = "";
+	$fieldLabelsdomains["Arabic"]["ext"] = "Ext";
+	$fieldToolTipsdomains["Arabic"]["ext"] = "";
+	$placeHoldersdomains["Arabic"]["ext"] = "";
+	$fieldLabelsdomains["Arabic"]["fsi"] = "Fsi";
+	$fieldToolTipsdomains["Arabic"]["fsi"] = "";
+	$placeHoldersdomains["Arabic"]["fsi"] = "";
+	$fieldLabelsdomains["Arabic"]["organisme"] = "Organisme";
+	$fieldToolTipsdomains["Arabic"]["organisme"] = "";
+	$placeHoldersdomains["Arabic"]["organisme"] = "";
+	$fieldLabelsdomains["Arabic"]["adresse"] = "Adresse";
+	$fieldToolTipsdomains["Arabic"]["adresse"] = "";
+	$placeHoldersdomains["Arabic"]["adresse"] = "";
+	$fieldLabelsdomains["Arabic"]["tel"] = "Tel";
+	$fieldToolTipsdomains["Arabic"]["tel"] = "";
+	$placeHoldersdomains["Arabic"]["tel"] = "";
+	$fieldLabelsdomains["Arabic"]["fax"] = "Fax";
+	$fieldToolTipsdomains["Arabic"]["fax"] = "";
+	$placeHoldersdomains["Arabic"]["fax"] = "";
+	$fieldLabelsdomains["Arabic"]["email"] = "Email";
+	$fieldToolTipsdomains["Arabic"]["email"] = "";
+	$placeHoldersdomains["Arabic"]["email"] = "";
+	$fieldLabelsdomains["Arabic"]["contact"] = "Contact";
+	$fieldToolTipsdomains["Arabic"]["contact"] = "";
+	$placeHoldersdomains["Arabic"]["contact"] = "";
+	$fieldLabelsdomains["Arabic"]["activite"] = "Activite";
+	$fieldToolTipsdomains["Arabic"]["activite"] = "";
+	$placeHoldersdomains["Arabic"]["activite"] = "";
+	$fieldLabelsdomains["Arabic"]["rubrique"] = "Rubrique";
+	$fieldToolTipsdomains["Arabic"]["rubrique"] = "";
+	$placeHoldersdomains["Arabic"]["rubrique"] = "";
+	$fieldLabelsdomains["Arabic"]["date_recept"] = "Date Recept";
+	$fieldToolTipsdomains["Arabic"]["date_recept"] = "";
+	$placeHoldersdomains["Arabic"]["date_recept"] = "";
+	$fieldLabelsdomains["Arabic"]["date_accept"] = "Date Accept";
+	$fieldToolTipsdomains["Arabic"]["date_accept"] = "";
+	$placeHoldersdomains["Arabic"]["date_accept"] = "";
+	$fieldLabelsdomains["Arabic"]["date_activ"] = "Date Activ";
+	$fieldToolTipsdomains["Arabic"]["date_activ"] = "";
+	$placeHoldersdomains["Arabic"]["date_activ"] = "";
+	$fieldLabelsdomains["Arabic"]["date_modif"] = "Date Modif";
+	$fieldToolTipsdomains["Arabic"]["date_modif"] = "";
+	$placeHoldersdomains["Arabic"]["date_modif"] = "";
+	$fieldLabelsdomains["Arabic"]["date_annul"] = "Date Annul";
+	$fieldToolTipsdomains["Arabic"]["date_annul"] = "";
+	$placeHoldersdomains["Arabic"]["date_annul"] = "";
+	$fieldLabelsdomains["Arabic"]["date_annul_due"] = "Date Annul Due";
+	$fieldToolTipsdomains["Arabic"]["date_annul_due"] = "";
+	$placeHoldersdomains["Arabic"]["date_annul_due"] = "";
+	$fieldLabelsdomains["Arabic"]["etat"] = "Etat";
+	$fieldToolTipsdomains["Arabic"]["etat"] = "";
+	$placeHoldersdomains["Arabic"]["etat"] = "";
+	$fieldLabelsdomains["Arabic"]["modif"] = "Modif";
+	$fieldToolTipsdomains["Arabic"]["modif"] = "";
+	$placeHoldersdomains["Arabic"]["modif"] = "";
+	$fieldLabelsdomains["Arabic"]["commentaire"] = "Commentaire";
+	$fieldToolTipsdomains["Arabic"]["commentaire"] = "";
+	$placeHoldersdomains["Arabic"]["commentaire"] = "";
+	$fieldLabelsdomains["Arabic"]["ns_modif"] = "Ns Modif";
+	$fieldToolTipsdomains["Arabic"]["ns_modif"] = "";
+	$placeHoldersdomains["Arabic"]["ns_modif"] = "";
+	$fieldLabelsdomains["Arabic"]["id_fsi_in"] = "Id Fsi In";
+	$fieldToolTipsdomains["Arabic"]["id_fsi_in"] = "";
+	$placeHoldersdomains["Arabic"]["id_fsi_in"] = "";
+	$fieldLabelsdomains["Arabic"]["domain_pw"] = "Domain Pw";
+	$fieldToolTipsdomains["Arabic"]["domain_pw"] = "";
+	$placeHoldersdomains["Arabic"]["domain_pw"] = "";
+	$fieldLabelsdomains["Arabic"]["date_blocked"] = "Date Blocked";
+	$fieldToolTipsdomains["Arabic"]["date_blocked"] = "";
+	$placeHoldersdomains["Arabic"]["date_blocked"] = "";
+	$fieldLabelsdomains["Arabic"]["date_blocked_max"] = "Date Blocked Max";
+	$fieldToolTipsdomains["Arabic"]["date_blocked_max"] = "";
+	$placeHoldersdomains["Arabic"]["date_blocked_max"] = "";
+	$fieldLabelsdomains["Arabic"]["blocked_by"] = "Blocked By";
+	$fieldToolTipsdomains["Arabic"]["blocked_by"] = "";
+	$placeHoldersdomains["Arabic"]["blocked_by"] = "";
+	$fieldLabelsdomains["Arabic"]["date_unblocked"] = "Date Unblocked";
+	$fieldToolTipsdomains["Arabic"]["date_unblocked"] = "";
+	$placeHoldersdomains["Arabic"]["date_unblocked"] = "";
+	$fieldLabelsdomains["Arabic"]["date_transfer_req"] = "Date Transfer Req";
+	$fieldToolTipsdomains["Arabic"]["date_transfer_req"] = "";
+	$placeHoldersdomains["Arabic"]["date_transfer_req"] = "";
+	$fieldLabelsdomains["Arabic"]["date_transfer_due"] = "Date Transfer Due";
+	$fieldToolTipsdomains["Arabic"]["date_transfer_due"] = "";
+	$placeHoldersdomains["Arabic"]["date_transfer_due"] = "";
+	$fieldLabelsdomains["Arabic"]["date_transfer_canceled"] = "Date Transfer Canceled";
+	$fieldToolTipsdomains["Arabic"]["date_transfer_canceled"] = "";
+	$placeHoldersdomains["Arabic"]["date_transfer_canceled"] = "";
+	$fieldLabelsdomains["Arabic"]["date_transfer_accepted"] = "Date Transfer Accepted";
+	$fieldToolTipsdomains["Arabic"]["date_transfer_accepted"] = "";
+	$placeHoldersdomains["Arabic"]["date_transfer_accepted"] = "";
+	$fieldLabelsdomains["Arabic"]["date_transfer_rejected"] = "Date Transfer Rejected";
+	$fieldToolTipsdomains["Arabic"]["date_transfer_rejected"] = "";
+	$placeHoldersdomains["Arabic"]["date_transfer_rejected"] = "";
+	$fieldLabelsdomains["Arabic"]["date_annul_req"] = "Date Annul Req";
+	$fieldToolTipsdomains["Arabic"]["date_annul_req"] = "";
+	$placeHoldersdomains["Arabic"]["date_annul_req"] = "";
+	$fieldLabelsdomains["Arabic"]["last_status"] = "Last Status";
+	$fieldToolTipsdomains["Arabic"]["last_status"] = "";
+	$placeHoldersdomains["Arabic"]["last_status"] = "";
+	$fieldLabelsdomains["Arabic"]["updated_by"] = "Updated By";
+	$fieldToolTipsdomains["Arabic"]["updated_by"] = "";
+	$placeHoldersdomains["Arabic"]["updated_by"] = "";
+	$fieldLabelsdomains["Arabic"]["private"] = "Private";
+	$fieldToolTipsdomains["Arabic"]["private"] = "";
+	$placeHoldersdomains["Arabic"]["private"] = "";
+	$fieldLabelsdomains["Arabic"]["mgmt"] = "Mgmt";
+	$fieldToolTipsdomains["Arabic"]["mgmt"] = "";
+	$placeHoldersdomains["Arabic"]["mgmt"] = "";
+	$fieldLabelsdomains["Arabic"]["forward"] = "Forward";
+	$fieldToolTipsdomains["Arabic"]["forward"] = "";
+	$placeHoldersdomains["Arabic"]["forward"] = "";
+	$fieldLabelsdomains["Arabic"]["dnssec"] = "Dnssec";
+	$fieldToolTipsdomains["Arabic"]["dnssec"] = "";
+	$placeHoldersdomains["Arabic"]["dnssec"] = "";
+	$fieldLabelsdomains["Arabic"]["stat"] = "Stat";
+	$fieldToolTipsdomains["Arabic"]["stat"] = "";
+	$placeHoldersdomains["Arabic"]["stat"] = "";
+	$fieldLabelsdomains["Arabic"]["in"] = "In";
+	$fieldToolTipsdomains["Arabic"]["in"] = "";
+	$placeHoldersdomains["Arabic"]["in"] = "";
+	$fieldLabelsdomains["Arabic"]["change_prop"] = "Change Prop";
+	$fieldToolTipsdomains["Arabic"]["change_prop"] = "";
+	$placeHoldersdomains["Arabic"]["change_prop"] = "";
+	$fieldLabelsdomains["Arabic"]["reg_annul_reason"] = "Reg Annul Reason";
+	$fieldToolTipsdomains["Arabic"]["reg_annul_reason"] = "";
+	$placeHoldersdomains["Arabic"]["reg_annul_reason"] = "";
+	$fieldLabelsdomains["Arabic"]["reg_comment"] = "Reg Comment";
+	$fieldToolTipsdomains["Arabic"]["reg_comment"] = "";
+	$placeHoldersdomains["Arabic"]["reg_comment"] = "";
+	$fieldLabelsdomains["Arabic"]["reg_transfer_prohibited"] = "Reg Transfer Prohibited";
+	$fieldToolTipsdomains["Arabic"]["reg_transfer_prohibited"] = "";
+	$placeHoldersdomains["Arabic"]["reg_transfer_prohibited"] = "";
+	$fieldLabelsdomains["Arabic"]["reg_restore_prohibited"] = "Reg Restore Prohibited";
+	$fieldToolTipsdomains["Arabic"]["reg_restore_prohibited"] = "";
+	$placeHoldersdomains["Arabic"]["reg_restore_prohibited"] = "";
+	if (count($fieldToolTipsdomains["Arabic"]))
+		$tdatadomains[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelsdomains["French"] = array();
+	$fieldToolTipsdomains["French"] = array();
+	$placeHoldersdomains["French"] = array();
+	$pageTitlesdomains["French"] = array();
+	$fieldLabelsdomains["French"]["id"] = "Id";
+	$fieldToolTipsdomains["French"]["id"] = "";
+	$placeHoldersdomains["French"]["id"] = "";
+	$fieldLabelsdomains["French"]["code"] = "Code";
+	$fieldToolTipsdomains["French"]["code"] = "";
+	$placeHoldersdomains["French"]["code"] = "";
+	$fieldLabelsdomains["French"]["domain"] = "Domain";
+	$fieldToolTipsdomains["French"]["domain"] = "";
+	$placeHoldersdomains["French"]["domain"] = "";
+	$fieldLabelsdomains["French"]["domainidn"] = "Domainidn";
+	$fieldToolTipsdomains["French"]["domainidn"] = "";
+	$placeHoldersdomains["French"]["domainidn"] = "";
+	$fieldLabelsdomains["French"]["ext"] = "Ext";
+	$fieldToolTipsdomains["French"]["ext"] = "";
+	$placeHoldersdomains["French"]["ext"] = "";
+	$fieldLabelsdomains["French"]["fsi"] = "Fsi";
+	$fieldToolTipsdomains["French"]["fsi"] = "";
+	$placeHoldersdomains["French"]["fsi"] = "";
+	$fieldLabelsdomains["French"]["organisme"] = "Organisme";
+	$fieldToolTipsdomains["French"]["organisme"] = "";
+	$placeHoldersdomains["French"]["organisme"] = "";
+	$fieldLabelsdomains["French"]["adresse"] = "Adresse";
+	$fieldToolTipsdomains["French"]["adresse"] = "";
+	$placeHoldersdomains["French"]["adresse"] = "";
+	$fieldLabelsdomains["French"]["tel"] = "Tel";
+	$fieldToolTipsdomains["French"]["tel"] = "";
+	$placeHoldersdomains["French"]["tel"] = "";
+	$fieldLabelsdomains["French"]["fax"] = "Fax";
+	$fieldToolTipsdomains["French"]["fax"] = "";
+	$placeHoldersdomains["French"]["fax"] = "";
+	$fieldLabelsdomains["French"]["email"] = "Email";
+	$fieldToolTipsdomains["French"]["email"] = "";
+	$placeHoldersdomains["French"]["email"] = "";
+	$fieldLabelsdomains["French"]["contact"] = "Contact";
+	$fieldToolTipsdomains["French"]["contact"] = "";
+	$placeHoldersdomains["French"]["contact"] = "";
+	$fieldLabelsdomains["French"]["activite"] = "Activite";
+	$fieldToolTipsdomains["French"]["activite"] = "";
+	$placeHoldersdomains["French"]["activite"] = "";
+	$fieldLabelsdomains["French"]["rubrique"] = "Rubrique";
+	$fieldToolTipsdomains["French"]["rubrique"] = "";
+	$placeHoldersdomains["French"]["rubrique"] = "";
+	$fieldLabelsdomains["French"]["date_recept"] = "Date Recept";
+	$fieldToolTipsdomains["French"]["date_recept"] = "";
+	$placeHoldersdomains["French"]["date_recept"] = "";
+	$fieldLabelsdomains["French"]["date_accept"] = "Date Accept";
+	$fieldToolTipsdomains["French"]["date_accept"] = "";
+	$placeHoldersdomains["French"]["date_accept"] = "";
+	$fieldLabelsdomains["French"]["date_activ"] = "Date Activ";
+	$fieldToolTipsdomains["French"]["date_activ"] = "";
+	$placeHoldersdomains["French"]["date_activ"] = "";
+	$fieldLabelsdomains["French"]["date_modif"] = "Date Modif";
+	$fieldToolTipsdomains["French"]["date_modif"] = "";
+	$placeHoldersdomains["French"]["date_modif"] = "";
+	$fieldLabelsdomains["French"]["date_annul"] = "Date Annul";
+	$fieldToolTipsdomains["French"]["date_annul"] = "";
+	$placeHoldersdomains["French"]["date_annul"] = "";
+	$fieldLabelsdomains["French"]["date_annul_due"] = "Date Annul Due";
+	$fieldToolTipsdomains["French"]["date_annul_due"] = "";
+	$placeHoldersdomains["French"]["date_annul_due"] = "";
+	$fieldLabelsdomains["French"]["etat"] = "Etat";
+	$fieldToolTipsdomains["French"]["etat"] = "";
+	$placeHoldersdomains["French"]["etat"] = "";
+	$fieldLabelsdomains["French"]["modif"] = "Modif";
+	$fieldToolTipsdomains["French"]["modif"] = "";
+	$placeHoldersdomains["French"]["modif"] = "";
+	$fieldLabelsdomains["French"]["commentaire"] = "Commentaire";
+	$fieldToolTipsdomains["French"]["commentaire"] = "";
+	$placeHoldersdomains["French"]["commentaire"] = "";
+	$fieldLabelsdomains["French"]["ns_modif"] = "Ns Modif";
+	$fieldToolTipsdomains["French"]["ns_modif"] = "";
+	$placeHoldersdomains["French"]["ns_modif"] = "";
+	$fieldLabelsdomains["French"]["id_fsi_in"] = "Id Fsi In";
+	$fieldToolTipsdomains["French"]["id_fsi_in"] = "";
+	$placeHoldersdomains["French"]["id_fsi_in"] = "";
+	$fieldLabelsdomains["French"]["domain_pw"] = "Domain Pw";
+	$fieldToolTipsdomains["French"]["domain_pw"] = "";
+	$placeHoldersdomains["French"]["domain_pw"] = "";
+	$fieldLabelsdomains["French"]["date_blocked"] = "Date Blocked";
+	$fieldToolTipsdomains["French"]["date_blocked"] = "";
+	$placeHoldersdomains["French"]["date_blocked"] = "";
+	$fieldLabelsdomains["French"]["date_blocked_max"] = "Date Blocked Max";
+	$fieldToolTipsdomains["French"]["date_blocked_max"] = "";
+	$placeHoldersdomains["French"]["date_blocked_max"] = "";
+	$fieldLabelsdomains["French"]["blocked_by"] = "Blocked By";
+	$fieldToolTipsdomains["French"]["blocked_by"] = "";
+	$placeHoldersdomains["French"]["blocked_by"] = "";
+	$fieldLabelsdomains["French"]["date_unblocked"] = "Date Unblocked";
+	$fieldToolTipsdomains["French"]["date_unblocked"] = "";
+	$placeHoldersdomains["French"]["date_unblocked"] = "";
+	$fieldLabelsdomains["French"]["date_transfer_req"] = "Date Transfer Req";
+	$fieldToolTipsdomains["French"]["date_transfer_req"] = "";
+	$placeHoldersdomains["French"]["date_transfer_req"] = "";
+	$fieldLabelsdomains["French"]["date_transfer_due"] = "Date Transfer Due";
+	$fieldToolTipsdomains["French"]["date_transfer_due"] = "";
+	$placeHoldersdomains["French"]["date_transfer_due"] = "";
+	$fieldLabelsdomains["French"]["date_transfer_canceled"] = "Date Transfer Canceled";
+	$fieldToolTipsdomains["French"]["date_transfer_canceled"] = "";
+	$placeHoldersdomains["French"]["date_transfer_canceled"] = "";
+	$fieldLabelsdomains["French"]["date_transfer_accepted"] = "Date Transfer Accepted";
+	$fieldToolTipsdomains["French"]["date_transfer_accepted"] = "";
+	$placeHoldersdomains["French"]["date_transfer_accepted"] = "";
+	$fieldLabelsdomains["French"]["date_transfer_rejected"] = "Date Transfer Rejected";
+	$fieldToolTipsdomains["French"]["date_transfer_rejected"] = "";
+	$placeHoldersdomains["French"]["date_transfer_rejected"] = "";
+	$fieldLabelsdomains["French"]["date_annul_req"] = "Date Annul Req";
+	$fieldToolTipsdomains["French"]["date_annul_req"] = "";
+	$placeHoldersdomains["French"]["date_annul_req"] = "";
+	$fieldLabelsdomains["French"]["last_status"] = "Last Status";
+	$fieldToolTipsdomains["French"]["last_status"] = "";
+	$placeHoldersdomains["French"]["last_status"] = "";
+	$fieldLabelsdomains["French"]["updated_by"] = "Updated By";
+	$fieldToolTipsdomains["French"]["updated_by"] = "";
+	$placeHoldersdomains["French"]["updated_by"] = "";
+	$fieldLabelsdomains["French"]["private"] = "Private";
+	$fieldToolTipsdomains["French"]["private"] = "";
+	$placeHoldersdomains["French"]["private"] = "";
+	$fieldLabelsdomains["French"]["mgmt"] = "Mgmt";
+	$fieldToolTipsdomains["French"]["mgmt"] = "";
+	$placeHoldersdomains["French"]["mgmt"] = "";
+	$fieldLabelsdomains["French"]["forward"] = "Forward";
+	$fieldToolTipsdomains["French"]["forward"] = "";
+	$placeHoldersdomains["French"]["forward"] = "";
+	$fieldLabelsdomains["French"]["dnssec"] = "Dnssec";
+	$fieldToolTipsdomains["French"]["dnssec"] = "";
+	$placeHoldersdomains["French"]["dnssec"] = "";
+	$fieldLabelsdomains["French"]["stat"] = "Stat";
+	$fieldToolTipsdomains["French"]["stat"] = "";
+	$placeHoldersdomains["French"]["stat"] = "";
+	$fieldLabelsdomains["French"]["in"] = "In";
+	$fieldToolTipsdomains["French"]["in"] = "";
+	$placeHoldersdomains["French"]["in"] = "";
+	$fieldLabelsdomains["French"]["change_prop"] = "Change Prop";
+	$fieldToolTipsdomains["French"]["change_prop"] = "";
+	$placeHoldersdomains["French"]["change_prop"] = "";
+	$fieldLabelsdomains["French"]["reg_annul_reason"] = "Reg Annul Reason";
+	$fieldToolTipsdomains["French"]["reg_annul_reason"] = "";
+	$placeHoldersdomains["French"]["reg_annul_reason"] = "";
+	$fieldLabelsdomains["French"]["reg_comment"] = "Reg Comment";
+	$fieldToolTipsdomains["French"]["reg_comment"] = "";
+	$placeHoldersdomains["French"]["reg_comment"] = "";
+	$fieldLabelsdomains["French"]["reg_transfer_prohibited"] = "Reg Transfer Prohibited";
+	$fieldToolTipsdomains["French"]["reg_transfer_prohibited"] = "";
+	$placeHoldersdomains["French"]["reg_transfer_prohibited"] = "";
+	$fieldLabelsdomains["French"]["reg_restore_prohibited"] = "Reg Restore Prohibited";
+	$fieldToolTipsdomains["French"]["reg_restore_prohibited"] = "";
+	$placeHoldersdomains["French"]["reg_restore_prohibited"] = "";
+	if (count($fieldToolTipsdomains["French"]))
+		$tdatadomains[".isUseToolTips"] = true;
+}
 
 
 	$tdatadomains[".NCSearch"] = true;
@@ -1036,7 +1348,7 @@ $tdatadomains[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1046,6 +1358,34 @@ $tdatadomains[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "extensions";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "id";
+	$edata["LinkFieldType"] = 16;
+	$edata["DisplayField"] = "nom";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "id";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1060,17 +1400,14 @@ $tdatadomains[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -1090,7 +1427,7 @@ $tdatadomains[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1175,7 +1512,7 @@ $tdatadomains[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1185,6 +1522,34 @@ $tdatadomains[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "fsi";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "id_fsi";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "nom";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1199,17 +1564,14 @@ $tdatadomains[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -1229,7 +1591,7 @@ $tdatadomains[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -7322,6 +7684,36 @@ $detailsTablesData["domains"] = array();
 				$detailsTablesData["domains"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["domains"][$dIndex]["detailKeys"][]="domain_id";
+//	domain_contacts
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="domain_contacts";
+		$detailsParam["dOriginalTable"] = "domain_contacts";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "domain_contacts";
+	$detailsParam["dCaptionTable"] = GetTableCaption("domain_contacts");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["domains"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["domains"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["domains"][$dIndex]["masterKeys"][]="domain";
+
+				$detailsTablesData["domains"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["domains"][$dIndex]["detailKeys"][]="domain";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -7329,42 +7721,6 @@ $masterTablesData["domains"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="contacts";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="contacts";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "contacts";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["domains"][0] = $masterParams;
-				$masterTablesData["domains"][0]["masterKeys"] = array();
-	$masterTablesData["domains"][0]["masterKeys"][]="id";
-				$masterTablesData["domains"][0]["detailKeys"] = array();
-	$masterTablesData["domains"][0]["detailKeys"][]="contact";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="extensions";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="extensions";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "extensions";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["domains"][1] = $masterParams;
-				$masterTablesData["domains"][1]["masterKeys"] = array();
-	$masterTablesData["domains"][1]["masterKeys"][]="id";
-				$masterTablesData["domains"][1]["detailKeys"] = array();
-	$masterTablesData["domains"][1]["detailKeys"][]="ext";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

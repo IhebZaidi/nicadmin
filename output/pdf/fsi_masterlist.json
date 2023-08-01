@@ -148,9 +148,6 @@ pdfDocument = {
 										{BEGIN col_grid_27}
 					"%",
 					{END col_grid_27}
-										{BEGIN col_grid_28}
-					"%",
-					{END col_grid_28}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -282,35 +279,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'id_fsi',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel fsi id_fsi }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_fsi_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
 			fieldName: 'nom',
 				style: 'headcell',
 		
@@ -325,7 +293,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi nom }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
+			{"text":"{$jslabel fsi nom }","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -334,10 +302,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field1',
 	col:0,
 	row:0,
 			fieldName: 'adresse',
@@ -354,7 +322,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi adresse }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
+			{"text":"{$jslabel fsi adresse }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -363,10 +331,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'tel',
@@ -383,7 +351,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi tel }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
+			{"text":"{$jslabel fsi tel }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -392,10 +360,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field4',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'fax',
@@ -412,7 +380,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi fax }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
+			{"text":"{$jslabel fsi fax }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -421,10 +389,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
 {
-	cellId: 'headcell_field5',
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'email',
@@ -441,7 +409,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi email }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
+			{"text":"{$jslabel fsi email }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -450,10 +418,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
 {
-	cellId: 'headcell_field6',
+	cellId: 'headcell_field5',
 	col:0,
 	row:0,
 			fieldName: 'prim_email',
@@ -470,7 +438,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi prim_email }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
+			{"text":"{$jslabel fsi prim_email }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -479,10 +447,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
 {
-	cellId: 'headcell_field7',
+	cellId: 'headcell_field6',
 	col:0,
 	row:0,
 			fieldName: 'sec_email',
@@ -499,7 +467,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi sec_email }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
+			{"text":"{$jslabel fsi sec_email }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -508,10 +476,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
 {
-	cellId: 'headcell_field8',
+	cellId: 'headcell_field7',
 	col:0,
 	row:0,
 			fieldName: 'allowed_IPs',
@@ -528,7 +496,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi allowed_IPs }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
+			{"text":"{$jslabel fsi allowed_IPs }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -537,10 +505,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
 {
-	cellId: 'headcell_field9',
+	cellId: 'headcell_field8',
 	col:0,
 	row:0,
 			fieldName: 'url',
@@ -557,7 +525,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi url }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
+			{"text":"{$jslabel fsi url }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -566,10 +534,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
 {
-	cellId: 'headcell_field10',
+	cellId: 'headcell_field9',
 	col:0,
 	row:0,
 			fieldName: 'login',
@@ -586,7 +554,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi login }","hidden":"{$item_hide_simple_grid_field39}","bold":true},
+			{"text":"{$jslabel fsi login }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -595,10 +563,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field10}
-																							{BEGIN cellblock_grid_headcell_field11}
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
 {
-	cellId: 'headcell_field11',
+	cellId: 'headcell_field10',
 	col:0,
 	row:0,
 			fieldName: 'password',
@@ -615,7 +583,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi password }","hidden":"{$item_hide_simple_grid_field40}","bold":true},
+			{"text":"{$jslabel fsi password }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -624,10 +592,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field11}
-																							{BEGIN cellblock_grid_headcell_field12}
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
 {
-	cellId: 'headcell_field12',
+	cellId: 'headcell_field11',
 	col:0,
 	row:0,
 			fieldName: 'API_password',
@@ -644,7 +612,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi API_password }","hidden":"{$item_hide_simple_grid_field41}","bold":true},
+			{"text":"{$jslabel fsi API_password }","hidden":"{$item_hide_simple_grid_field39}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -653,10 +621,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field12}
-																							{BEGIN cellblock_grid_headcell_field13}
+{END cellblock_grid_headcell_field11}
+																							{BEGIN cellblock_grid_headcell_field12}
 {
-	cellId: 'headcell_field13',
+	cellId: 'headcell_field12',
 	col:0,
 	row:0,
 			fieldName: 'password_reset_token',
@@ -673,7 +641,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi password_reset_token }","hidden":"{$item_hide_simple_grid_field42}","bold":true},
+			{"text":"{$jslabel fsi password_reset_token }","hidden":"{$item_hide_simple_grid_field40}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -682,10 +650,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field13}
-																							{BEGIN cellblock_grid_headcell_field14}
+{END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
 {
-	cellId: 'headcell_field14',
+	cellId: 'headcell_field13',
 	col:0,
 	row:0,
 			fieldName: 'password_reset_token_expire',
@@ -702,7 +670,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi password_reset_token_expire }","hidden":"{$item_hide_simple_grid_field43}","bold":true},
+			{"text":"{$jslabel fsi password_reset_token_expire }","hidden":"{$item_hide_simple_grid_field41}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -711,10 +679,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field14}
-																							{BEGIN cellblock_grid_headcell_field15}
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_headcell_field14}
 {
-	cellId: 'headcell_field15',
+	cellId: 'headcell_field14',
 	col:0,
 	row:0,
 			fieldName: 'secret_pass',
@@ -731,7 +699,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi secret_pass }","hidden":"{$item_hide_simple_grid_field44}","bold":true},
+			{"text":"{$jslabel fsi secret_pass }","hidden":"{$item_hide_simple_grid_field42}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -740,10 +708,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field15}
-																							{BEGIN cellblock_grid_headcell_field16}
+{END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field15}
 {
-	cellId: 'headcell_field16',
+	cellId: 'headcell_field15',
 	col:0,
 	row:0,
 			fieldName: 'commentaires',
@@ -760,7 +728,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi commentaires }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
+			{"text":"{$jslabel fsi commentaires }","hidden":"{$item_hide_simple_grid_field43}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -769,10 +737,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field16}
-																							{BEGIN cellblock_grid_headcell_field17}
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field16}
 {
-	cellId: 'headcell_field17',
+	cellId: 'headcell_field16',
 	col:0,
 	row:0,
 			fieldName: 'date_modif',
@@ -789,7 +757,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi date_modif }","hidden":"{$item_hide_simple_grid_field46}","bold":true},
+			{"text":"{$jslabel fsi date_modif }","hidden":"{$item_hide_simple_grid_field44}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -798,10 +766,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field17}
-																							{BEGIN cellblock_grid_headcell_field18}
+{END cellblock_grid_headcell_field16}
+																							{BEGIN cellblock_grid_headcell_field17}
 {
-	cellId: 'headcell_field18',
+	cellId: 'headcell_field17',
 	col:0,
 	row:0,
 			fieldName: 'nomnoc',
@@ -818,7 +786,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi nomnoc }","hidden":"{$item_hide_simple_grid_field47}","bold":true},
+			{"text":"{$jslabel fsi nomnoc }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -827,10 +795,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field18}
-																							{BEGIN cellblock_grid_headcell_field19}
+{END cellblock_grid_headcell_field17}
+																							{BEGIN cellblock_grid_headcell_field18}
 {
-	cellId: 'headcell_field19',
+	cellId: 'headcell_field18',
 	col:0,
 	row:0,
 			fieldName: 'admin',
@@ -847,7 +815,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi admin }","hidden":"{$item_hide_simple_grid_field48}","bold":true},
+			{"text":"{$jslabel fsi admin }","hidden":"{$item_hide_simple_grid_field46}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -856,10 +824,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field19}
-																							{BEGIN cellblock_grid_headcell_field20}
+{END cellblock_grid_headcell_field18}
+																							{BEGIN cellblock_grid_headcell_field19}
 {
-	cellId: 'headcell_field20',
+	cellId: 'headcell_field19',
 	col:0,
 	row:0,
 			fieldName: 'etat',
@@ -876,7 +844,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi etat }","hidden":"{$item_hide_simple_grid_field49}","bold":true},
+			{"text":"{$jslabel fsi etat }","hidden":"{$item_hide_simple_grid_field47}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -885,10 +853,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field20}
-																							{BEGIN cellblock_grid_headcell_field21}
+{END cellblock_grid_headcell_field19}
+																							{BEGIN cellblock_grid_headcell_field20}
 {
-	cellId: 'headcell_field21',
+	cellId: 'headcell_field20',
 	col:0,
 	row:0,
 			fieldName: 'prefix',
@@ -905,7 +873,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi prefix }","hidden":"{$item_hide_simple_grid_field50}","bold":true},
+			{"text":"{$jslabel fsi prefix }","hidden":"{$item_hide_simple_grid_field48}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -914,10 +882,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field21}
-																							{BEGIN cellblock_grid_headcell_field22}
+{END cellblock_grid_headcell_field20}
+																							{BEGIN cellblock_grid_headcell_field21}
 {
-	cellId: 'headcell_field22',
+	cellId: 'headcell_field21',
 	col:0,
 	row:0,
 			fieldName: 'langue',
@@ -934,7 +902,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi langue }","hidden":"{$item_hide_simple_grid_field51}","bold":true},
+			{"text":"{$jslabel fsi langue }","hidden":"{$item_hide_simple_grid_field49}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -943,10 +911,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field22}
-																							{BEGIN cellblock_grid_headcell_field23}
+{END cellblock_grid_headcell_field21}
+																							{BEGIN cellblock_grid_headcell_field22}
 {
-	cellId: 'headcell_field23',
+	cellId: 'headcell_field22',
 	col:0,
 	row:0,
 			fieldName: 'accountBalance',
@@ -963,7 +931,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi accountBalance }","hidden":"{$item_hide_simple_grid_field52}","bold":true},
+			{"text":"{$jslabel fsi accountBalance }","hidden":"{$item_hide_simple_grid_field50}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -972,10 +940,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field23}
-																							{BEGIN cellblock_grid_headcell_field24}
+{END cellblock_grid_headcell_field22}
+																							{BEGIN cellblock_grid_headcell_field23}
 {
-	cellId: 'headcell_field24',
+	cellId: 'headcell_field23',
 	col:0,
 	row:0,
 			fieldName: 'creditLimit',
@@ -992,7 +960,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi creditLimit }","hidden":"{$item_hide_simple_grid_field53}","bold":true},
+			{"text":"{$jslabel fsi creditLimit }","hidden":"{$item_hide_simple_grid_field51}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1001,10 +969,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field24}
-																							{BEGIN cellblock_grid_headcell_field25}
+{END cellblock_grid_headcell_field23}
+																							{BEGIN cellblock_grid_headcell_field24}
 {
-	cellId: 'headcell_field25',
+	cellId: 'headcell_field24',
 	col:0,
 	row:0,
 			fieldName: 'creditThreshold',
@@ -1021,7 +989,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi creditThreshold }","hidden":"{$item_hide_simple_grid_field54}","bold":true},
+			{"text":"{$jslabel fsi creditThreshold }","hidden":"{$item_hide_simple_grid_field52}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1030,10 +998,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field25}
-																							{BEGIN cellblock_grid_headcell_field26}
+{END cellblock_grid_headcell_field24}
+																							{BEGIN cellblock_grid_headcell_field25}
 {
-	cellId: 'headcell_field26',
+	cellId: 'headcell_field25',
 	col:0,
 	row:0,
 			fieldName: 'thresholdType',
@@ -1050,7 +1018,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi thresholdType }","hidden":"{$item_hide_simple_grid_field55}","bold":true},
+			{"text":"{$jslabel fsi thresholdType }","hidden":"{$item_hide_simple_grid_field53}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1059,10 +1027,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field26}
-																							{BEGIN cellblock_grid_headcell_field27}
+{END cellblock_grid_headcell_field25}
+																							{BEGIN cellblock_grid_headcell_field26}
 {
-	cellId: 'headcell_field27',
+	cellId: 'headcell_field26',
 	col:0,
 	row:0,
 			fieldName: 'mgmt',
@@ -1079,7 +1047,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi mgmt }","hidden":"{$item_hide_simple_grid_field56}","bold":true},
+			{"text":"{$jslabel fsi mgmt }","hidden":"{$item_hide_simple_grid_field54}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1088,10 +1056,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field27}
-																							{BEGIN cellblock_grid_headcell_field28}
+{END cellblock_grid_headcell_field26}
+																							{BEGIN cellblock_grid_headcell_field27}
 {
-	cellId: 'headcell_field28',
+	cellId: 'headcell_field27',
 	col:0,
 	row:0,
 			fieldName: 'reg_commentaire',
@@ -1108,7 +1076,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi reg_commentaire }","hidden":"{$item_hide_simple_grid_field57}","bold":true},
+			{"text":"{$jslabel fsi reg_commentaire }","hidden":"{$item_hide_simple_grid_field55}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1117,7 +1085,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field28}
+{END cellblock_grid_headcell_field27}
 											],
 				{END row_grid_0}
 		
@@ -1130,35 +1098,6 @@ pdfDocument = {
 																{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'id_fsi',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$id_fsi_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_fsi_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'nom',
@@ -1184,10 +1123,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'adresse',
@@ -1213,10 +1152,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'tel',
@@ -1242,10 +1181,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field4',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'fax',
@@ -1271,10 +1210,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
 {
-	cellId: 'cell_field5',
+	cellId: 'cell_field4',
 	col:0,
 	row:0,
 			fieldName: 'email',
@@ -1300,10 +1239,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			fieldName: 'prim_email',
@@ -1329,10 +1268,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			fieldName: 'sec_email',
@@ -1358,10 +1297,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			fieldName: 'allowed_IPs',
@@ -1387,10 +1326,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
 {
-	cellId: 'cell_field9',
+	cellId: 'cell_field8',
 	col:0,
 	row:0,
 			fieldName: 'url',
@@ -1416,10 +1355,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
 {
-	cellId: 'cell_field10',
+	cellId: 'cell_field9',
 	col:0,
 	row:0,
 			fieldName: 'login',
@@ -1445,10 +1384,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field10}
-																							{BEGIN cellblock_grid_cell_field11}
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
 {
-	cellId: 'cell_field11',
+	cellId: 'cell_field10',
 	col:0,
 	row:0,
 			fieldName: 'password',
@@ -1474,10 +1413,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field11}
-																							{BEGIN cellblock_grid_cell_field12}
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
 {
-	cellId: 'cell_field12',
+	cellId: 'cell_field11',
 	col:0,
 	row:0,
 			fieldName: 'API_password',
@@ -1503,10 +1442,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field12}
-																							{BEGIN cellblock_grid_cell_field13}
+{END cellblock_grid_cell_field11}
+																							{BEGIN cellblock_grid_cell_field12}
 {
-	cellId: 'cell_field13',
+	cellId: 'cell_field12',
 	col:0,
 	row:0,
 			fieldName: 'password_reset_token',
@@ -1532,10 +1471,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field13}
-																							{BEGIN cellblock_grid_cell_field14}
+{END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
 {
-	cellId: 'cell_field14',
+	cellId: 'cell_field13',
 	col:0,
 	row:0,
 			fieldName: 'password_reset_token_expire',
@@ -1561,10 +1500,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field14}
-																							{BEGIN cellblock_grid_cell_field15}
+{END cellblock_grid_cell_field13}
+																							{BEGIN cellblock_grid_cell_field14}
 {
-	cellId: 'cell_field15',
+	cellId: 'cell_field14',
 	col:0,
 	row:0,
 			fieldName: 'secret_pass',
@@ -1590,10 +1529,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field15}
-																							{BEGIN cellblock_grid_cell_field16}
+{END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
 {
-	cellId: 'cell_field16',
+	cellId: 'cell_field15',
 	col:0,
 	row:0,
 			fieldName: 'commentaires',
@@ -1619,10 +1558,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field16}
-																							{BEGIN cellblock_grid_cell_field17}
+{END cellblock_grid_cell_field15}
+																							{BEGIN cellblock_grid_cell_field16}
 {
-	cellId: 'cell_field17',
+	cellId: 'cell_field16',
 	col:0,
 	row:0,
 			fieldName: 'date_modif',
@@ -1648,10 +1587,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field17}
-																							{BEGIN cellblock_grid_cell_field18}
+{END cellblock_grid_cell_field16}
+																							{BEGIN cellblock_grid_cell_field17}
 {
-	cellId: 'cell_field18',
+	cellId: 'cell_field17',
 	col:0,
 	row:0,
 			fieldName: 'nomnoc',
@@ -1677,10 +1616,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field18}
-																							{BEGIN cellblock_grid_cell_field19}
+{END cellblock_grid_cell_field17}
+																							{BEGIN cellblock_grid_cell_field18}
 {
-	cellId: 'cell_field19',
+	cellId: 'cell_field18',
 	col:0,
 	row:0,
 			fieldName: 'admin',
@@ -1706,10 +1645,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field19}
-																							{BEGIN cellblock_grid_cell_field20}
+{END cellblock_grid_cell_field18}
+																							{BEGIN cellblock_grid_cell_field19}
 {
-	cellId: 'cell_field20',
+	cellId: 'cell_field19',
 	col:0,
 	row:0,
 			fieldName: 'etat',
@@ -1735,10 +1674,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field20}
-																							{BEGIN cellblock_grid_cell_field21}
+{END cellblock_grid_cell_field19}
+																							{BEGIN cellblock_grid_cell_field20}
 {
-	cellId: 'cell_field21',
+	cellId: 'cell_field20',
 	col:0,
 	row:0,
 			fieldName: 'prefix',
@@ -1764,10 +1703,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field21}
-																							{BEGIN cellblock_grid_cell_field22}
+{END cellblock_grid_cell_field20}
+																							{BEGIN cellblock_grid_cell_field21}
 {
-	cellId: 'cell_field22',
+	cellId: 'cell_field21',
 	col:0,
 	row:0,
 			fieldName: 'langue',
@@ -1793,10 +1732,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field22}
-																							{BEGIN cellblock_grid_cell_field23}
+{END cellblock_grid_cell_field21}
+																							{BEGIN cellblock_grid_cell_field22}
 {
-	cellId: 'cell_field23',
+	cellId: 'cell_field22',
 	col:0,
 	row:0,
 			fieldName: 'accountBalance',
@@ -1822,10 +1761,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field23}
-																							{BEGIN cellblock_grid_cell_field24}
+{END cellblock_grid_cell_field22}
+																							{BEGIN cellblock_grid_cell_field23}
 {
-	cellId: 'cell_field24',
+	cellId: 'cell_field23',
 	col:0,
 	row:0,
 			fieldName: 'creditLimit',
@@ -1851,10 +1790,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field24}
-																							{BEGIN cellblock_grid_cell_field25}
+{END cellblock_grid_cell_field23}
+																							{BEGIN cellblock_grid_cell_field24}
 {
-	cellId: 'cell_field25',
+	cellId: 'cell_field24',
 	col:0,
 	row:0,
 			fieldName: 'creditThreshold',
@@ -1880,10 +1819,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field25}
-																							{BEGIN cellblock_grid_cell_field26}
+{END cellblock_grid_cell_field24}
+																							{BEGIN cellblock_grid_cell_field25}
 {
-	cellId: 'cell_field26',
+	cellId: 'cell_field25',
 	col:0,
 	row:0,
 			fieldName: 'thresholdType',
@@ -1909,10 +1848,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field26}
-																							{BEGIN cellblock_grid_cell_field27}
+{END cellblock_grid_cell_field25}
+																							{BEGIN cellblock_grid_cell_field26}
 {
-	cellId: 'cell_field27',
+	cellId: 'cell_field26',
 	col:0,
 	row:0,
 			fieldName: 'mgmt',
@@ -1938,10 +1877,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field27}
-																							{BEGIN cellblock_grid_cell_field28}
+{END cellblock_grid_cell_field26}
+																							{BEGIN cellblock_grid_cell_field27}
 {
-	cellId: 'cell_field28',
+	cellId: 'cell_field27',
 	col:0,
 	row:0,
 			fieldName: 'reg_commentaire',
@@ -1967,7 +1906,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field28}
+{END cellblock_grid_cell_field27}
 											],
 				{END row_grid_1}
 		
@@ -2705,32 +2644,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field27}
-																							{BEGIN cellblock_grid_footcell_field28}
-{
-	cellId: 'footcell_field28',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field28}
 											],
 				{END row_grid_2}
 		

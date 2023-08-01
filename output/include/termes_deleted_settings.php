@@ -46,6 +46,60 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipstermes_deleted["English"]))
 		$tdatatermes_deleted[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelstermes_deleted["Arabic"] = array();
+	$fieldToolTipstermes_deleted["Arabic"] = array();
+	$placeHolderstermes_deleted["Arabic"] = array();
+	$pageTitlestermes_deleted["Arabic"] = array();
+	$fieldLabelstermes_deleted["Arabic"]["id"] = "Id";
+	$fieldToolTipstermes_deleted["Arabic"]["id"] = "";
+	$placeHolderstermes_deleted["Arabic"]["id"] = "";
+	$fieldLabelstermes_deleted["Arabic"]["name"] = "Name";
+	$fieldToolTipstermes_deleted["Arabic"]["name"] = "";
+	$placeHolderstermes_deleted["Arabic"]["name"] = "";
+	$fieldLabelstermes_deleted["Arabic"]["prohibited"] = "Prohibited";
+	$fieldToolTipstermes_deleted["Arabic"]["prohibited"] = "";
+	$placeHolderstermes_deleted["Arabic"]["prohibited"] = "";
+	$fieldLabelstermes_deleted["Arabic"]["reason"] = "Reason";
+	$fieldToolTipstermes_deleted["Arabic"]["reason"] = "";
+	$placeHolderstermes_deleted["Arabic"]["reason"] = "";
+	$fieldLabelstermes_deleted["Arabic"]["date_added"] = "Date Added";
+	$fieldToolTipstermes_deleted["Arabic"]["date_added"] = "";
+	$placeHolderstermes_deleted["Arabic"]["date_added"] = "";
+	$fieldLabelstermes_deleted["Arabic"]["date_deleted"] = "Date Deleted";
+	$fieldToolTipstermes_deleted["Arabic"]["date_deleted"] = "";
+	$placeHolderstermes_deleted["Arabic"]["date_deleted"] = "";
+	if (count($fieldToolTipstermes_deleted["Arabic"]))
+		$tdatatermes_deleted[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelstermes_deleted["French"] = array();
+	$fieldToolTipstermes_deleted["French"] = array();
+	$placeHolderstermes_deleted["French"] = array();
+	$pageTitlestermes_deleted["French"] = array();
+	$fieldLabelstermes_deleted["French"]["id"] = "Id";
+	$fieldToolTipstermes_deleted["French"]["id"] = "";
+	$placeHolderstermes_deleted["French"]["id"] = "";
+	$fieldLabelstermes_deleted["French"]["name"] = "Name";
+	$fieldToolTipstermes_deleted["French"]["name"] = "";
+	$placeHolderstermes_deleted["French"]["name"] = "";
+	$fieldLabelstermes_deleted["French"]["prohibited"] = "Prohibited";
+	$fieldToolTipstermes_deleted["French"]["prohibited"] = "";
+	$placeHolderstermes_deleted["French"]["prohibited"] = "";
+	$fieldLabelstermes_deleted["French"]["reason"] = "Reason";
+	$fieldToolTipstermes_deleted["French"]["reason"] = "";
+	$placeHolderstermes_deleted["French"]["reason"] = "";
+	$fieldLabelstermes_deleted["French"]["date_added"] = "Date Added";
+	$fieldToolTipstermes_deleted["French"]["date_added"] = "";
+	$placeHolderstermes_deleted["French"]["date_added"] = "";
+	$fieldLabelstermes_deleted["French"]["date_deleted"] = "Date Deleted";
+	$fieldToolTipstermes_deleted["French"]["date_deleted"] = "";
+	$placeHolderstermes_deleted["French"]["date_deleted"] = "";
+	if (count($fieldToolTipstermes_deleted["French"]))
+		$tdatatermes_deleted[".isUseToolTips"] = true;
+}
 
 
 	$tdatatermes_deleted[".NCSearch"] = true;

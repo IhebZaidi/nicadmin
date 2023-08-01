@@ -2,15 +2,15 @@
 $tdatahosts = array();
 $tdatahosts[".searchableFields"] = array();
 $tdatahosts[".ShortName"] = "hosts";
-$tdatahosts[".OwnerID"] = "host_id";
+$tdatahosts[".OwnerID"] = "";
 $tdatahosts[".OriginalTable"] = "hosts";
 
 
-$tdatahosts[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatahosts[".pagesByType"] = my_json_decode( "{\"search\":[\"search\"]}" );
 $tdatahosts[".originalPagesByType"] = $tdatahosts[".pagesByType"];
-$tdatahosts[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatahosts[".pages"] = types2pages( my_json_decode( "{\"search\":[\"search\"]}" ) );
 $tdatahosts[".originalPages"] = $tdatahosts[".pages"];
-$tdatahosts[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatahosts[".defaultPages"] = my_json_decode( "{\"search\":\"search\"}" );
 $tdatahosts[".originalDefaultPages"] = $tdatahosts[".defaultPages"];
 
 //	field labels
@@ -40,6 +40,48 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshosts["English"]))
 		$tdatahosts[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelshosts["Arabic"] = array();
+	$fieldToolTipshosts["Arabic"] = array();
+	$placeHoldershosts["Arabic"] = array();
+	$pageTitleshosts["Arabic"] = array();
+	$fieldLabelshosts["Arabic"]["host_id"] = "Host Id";
+	$fieldToolTipshosts["Arabic"]["host_id"] = "";
+	$placeHoldershosts["Arabic"]["host_id"] = "";
+	$fieldLabelshosts["Arabic"]["hostname"] = "Hostname";
+	$fieldToolTipshosts["Arabic"]["hostname"] = "";
+	$placeHoldershosts["Arabic"]["hostname"] = "";
+	$fieldLabelshosts["Arabic"]["comments"] = "Comments";
+	$fieldToolTipshosts["Arabic"]["comments"] = "";
+	$placeHoldershosts["Arabic"]["comments"] = "";
+	$fieldLabelshosts["Arabic"]["created"] = "Created";
+	$fieldToolTipshosts["Arabic"]["created"] = "";
+	$placeHoldershosts["Arabic"]["created"] = "";
+	if (count($fieldToolTipshosts["Arabic"]))
+		$tdatahosts[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelshosts["French"] = array();
+	$fieldToolTipshosts["French"] = array();
+	$placeHoldershosts["French"] = array();
+	$pageTitleshosts["French"] = array();
+	$fieldLabelshosts["French"]["host_id"] = "Host Id";
+	$fieldToolTipshosts["French"]["host_id"] = "";
+	$placeHoldershosts["French"]["host_id"] = "";
+	$fieldLabelshosts["French"]["hostname"] = "Hostname";
+	$fieldToolTipshosts["French"]["hostname"] = "";
+	$placeHoldershosts["French"]["hostname"] = "";
+	$fieldLabelshosts["French"]["comments"] = "Comments";
+	$fieldToolTipshosts["French"]["comments"] = "";
+	$placeHoldershosts["French"]["comments"] = "";
+	$fieldLabelshosts["French"]["created"] = "Created";
+	$fieldToolTipshosts["French"]["created"] = "";
+	$placeHoldershosts["French"]["created"] = "";
+	if (count($fieldToolTipshosts["French"]))
+		$tdatahosts[".isUseToolTips"] = true;
+}
 
 
 	$tdatahosts[".NCSearch"] = true;
@@ -47,9 +89,9 @@ if(mlang_getcurrentlang()=="English")
 
 
 $tdatahosts[".shortTableName"] = "hosts";
-$tdatahosts[".nSecOptions"] = 1;
+$tdatahosts[".nSecOptions"] = 0;
 
-$tdatahosts[".mainTableOwnerID"] = "host_id";
+$tdatahosts[".mainTableOwnerID"] = "";
 $tdatahosts[".entityType"] = 0;
 $tdatahosts[".connId"] = "nicadmin_at_localhost";
 
@@ -146,7 +188,7 @@ $tdatahosts[".addPageEvents"] = false;
 $tdatahosts[".isUseTimeForSearch"] = false;
 
 
-$tdatahosts[".badgeColor"] = "4682B4";
+$tdatahosts[".badgeColor"] = "3CB371";
 
 
 $tdatahosts[".allSearchFields"] = array();
@@ -815,36 +857,6 @@ changeTextControlsToDate( "hosts" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["hosts"] = array();
-//	hosts_ip
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="hosts_ip";
-		$detailsParam["dOriginalTable"] = "hosts_ip";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "hosts_ip";
-	$detailsParam["dCaptionTable"] = GetTableCaption("hosts_ip");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["hosts"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["hosts"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["hosts"][$dIndex]["masterKeys"][]="host_id";
-
-				$detailsTablesData["hosts"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["hosts"][$dIndex]["detailKeys"][]="host_id";
 //endif
 
 // tables which are master tables for current table (detail)

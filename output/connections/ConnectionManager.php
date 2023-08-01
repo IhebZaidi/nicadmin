@@ -121,11 +121,11 @@ class ConnectionManager extends ConnectionManager_Base
 		$data = array();
 		$data["dbType"] = 0;
 		$data["connId"] = "nicadmin_at_localhost";
-		$data["connName"] = "nicadmin at localhost";
+		$data["connName"] = "nic at localhost";
 		$data["connStringType"] = "mysql";
-		$data["connectionString"] = "mysql;localhost;root;root;;nicadmin;;1"; //currently unused
+		$data["connectionString"] = "mysql;localhost;root;root;;nic;;1"; //currently unused
 
-		$this->_connectionsIdByName["nicadmin at localhost"] = "nicadmin_at_localhost";
+		$this->_connectionsIdByName["nic at localhost"] = "nicadmin_at_localhost";
 
 		$data["connInfo"] = array();
 		$data["ODBCUID"] = "root";
@@ -143,10 +143,10 @@ class ConnectionManager extends ConnectionManager_Base
 		$data["connInfo"][1] = "root";
 		$data["connInfo"][2] = "root";
 		$data["connInfo"][3] = "";
-		$data["connInfo"][4] = "nicadmin";
+		$data["connInfo"][4] = "nic";
 		$data["connInfo"][5] = ""; //currently unused
 		$data["connInfo"][6] = "1"; //currently unused
-		$data["ODBCString"] = "DRIVER={MySQL ODBC 3.51 Driver};Server=localhost;Uid=root;Pwd=root;Database=nicadmin;OPTION=3";
+		$data["ODBCString"] = "DRIVER={MySQL ODBC 3.51 Driver};Server=localhost;Uid=root;Pwd=root;Database=nic;OPTION=3";
 		// encription set
 		$data["EncryptInfo"] = array();
 		$data["EncryptInfo"]["mode"] = 0;

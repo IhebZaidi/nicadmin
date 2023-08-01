@@ -30,7 +30,7 @@
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -48,7 +48,7 @@
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -65,13 +65,13 @@
 <div>
 {BEGIN message_back_button}
 		
-	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
 	{END message_back_button}
 {BEGIN view_page_button}
-	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
 {END view_page_button}
 {BEGIN edit_page_button}
-	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
 {END edit_page_button}
 </div>
 </div>
@@ -1166,16 +1166,34 @@
 
 
 {END reg_restore_prohibited_fieldblock}
-	
-								</td>
+										</td>
 			{END cellblock_grid_c3}
-								</tr>
-			</tbody></table>
-{END grid_block}
+										</tr>
+										</tbody></table>
+				
+{BEGIN details_nameservers}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$details_pagetitle_nameservers}			
+							<span>
+					{$detailslButtons_nameservers}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_nameservers}
+		</div>
+	</div>
+</div>
+{END details_nameservers}
+	
+				{END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -1189,20 +1207,20 @@
 		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$savebutton_attrs} >
-							Save			</a>
+							{mlang_message SAVE}			</a>
 </span>
 	 
 		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="resetButton{$id}" >
-							Reset			</a>
+							{mlang_message RESET}			</a>
 </span>
 	 
 		{BEGIN back_button}
 <span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="backButton{$id}" >
-							Back to list			</a>
+							{mlang_message BACK_TO_LIST}			</a>
 </span>
 {END back_button}
 	 
@@ -1210,7 +1228,7 @@
 <span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="cancelButton{$id}" >
-							Cancel			</a>
+							{mlang_message CANCEL}			</a>
 </span>
 {END cancel_button}
 	</div>					</div>

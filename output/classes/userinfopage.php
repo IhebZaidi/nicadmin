@@ -273,7 +273,7 @@ class UserInfoPage extends EditPage {
 			return;
 
 		$this->messageType = MESSAGE_INFO;
-		$this->setMessage( "<strong>"."User profile updated"."</strong>" );
+		$this->setMessage( "<strong>".mlang_message("USERPROFILE_UPDATED")."</strong>" );
 
 		$_SESSION["message_userinfo"] = $this->message . "";
 		$_SESSION["message_userinfo_type"] = $this->messageType;
@@ -681,7 +681,7 @@ class UserInfoPage extends EditPage {
 		}
 		if( !$this->verify2fCode( $method, $twofData, $code ) ) {
 			//	just wrong code, ask to reype
-			$this->send2fError( "Wrong code", 'wrong' );
+			$this->send2fError( mlang_message("WRONG_CODE"), 'wrong' );
 		}
 
 		//	save data in the database

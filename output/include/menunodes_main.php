@@ -24,14 +24,14 @@
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Contacts";
+	$menuNode["title"] = GetTableCaption("contacts");
 
 
 
 	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "2";
-	$menuNode["name"] = "";
+	$menuNode["name"] = "Profile";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "fsi";
@@ -50,7 +50,7 @@
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Fsi";
+	$menuNode["title"] = "Profile";
 
 
 
@@ -76,33 +76,7 @@
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Domain Contacts";
-
-
-
-	$menuNodes[] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "4";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "domain_status";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "glyphicon-headphones";
-	$menuNode["iconType"] = "2";
-	$menuNode["iconShow"] = "2";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Domain Status";
+	$menuNode["title"] = GetTableCaption("domain_contacts");
 
 
 
@@ -128,33 +102,7 @@
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Domains";
-
-
-
-	$menuNodes[] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "6";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "extensions";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "glyphicon-headphones";
-	$menuNode["iconType"] = "2";
-	$menuNode["iconShow"] = "2";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Extensions";
+	$menuNode["title"] = GetTableCaption("domains");
 
 
 
@@ -180,7 +128,7 @@
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Fsi Extensions";
+	$menuNode["title"] = GetTableCaption("fsi_extensions");
 
 
 
@@ -206,117 +154,13 @@
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Fsi Ns";
-
-
-
-	$menuNodes[] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "9";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "hosts";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Hosts";
-
-
-
-	$menuNodes[] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "10";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "hosts_ip";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Hosts Ip";
+	$menuNode["title"] = GetTableCaption("fsi_ns");
 
 
 
 	$menuNodes[] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "11";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "ip";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Ip";
-
-
-
-	$menuNodes[] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "12";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "late_domains";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Late Domains";
-
-
-
-	$menuNodes[] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "13";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -336,59 +180,7 @@
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Nameservers";
-
-
-
-	$menuNodes[] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "14";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "termes";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Termes";
-
-
-
-	$menuNodes[] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "15";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "termes_deleted";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Termes Deleted";
+	$menuNode["title"] = GetTableCaption("nameservers");
 
 
 

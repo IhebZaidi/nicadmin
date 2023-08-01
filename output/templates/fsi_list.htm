@@ -46,7 +46,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Expand" class="btn btn-link   
+	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -212,7 +212,7 @@
 	<div class="panel-heading">
 		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Search in			<span class="caret"></span>
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -222,12 +222,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
 			</ul>
 		</div>
 
@@ -466,19 +466,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_langue}</span>
 						</div>
 		{END searchCtrlBlock_langue}
-																{BEGIN searchCtrlBlock_id_fsi}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id_fsi}" {$filterRow_attrs_id_fsi}>
-			<label>{$label fsi id_fsi }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_id_fsi}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id_fsi}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id_fsi}</span>
-						</div>
-		{END searchCtrlBlock_id_fsi}
 																{BEGIN searchCtrlBlock_fax}
 
 
@@ -627,9 +614,9 @@
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
 
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -646,7 +633,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Show menu" class="btn-link   
+	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -655,7 +642,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Collapse" class="btn-link   
+	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -690,7 +677,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -717,7 +704,7 @@
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
 				
-		Export selected		
+		{mlang_message EXPORT_SELECTED}		
 		</a>
 	</li>
 {END exportselected_link}
@@ -725,21 +712,21 @@
 	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
 				
-		Delete selected		
+		{mlang_message DELETE_SELECTED}		
 		</a>
 	</li>
 {END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="fsi_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		Advanced search		
+		{mlang_message ADVANCED_SEARCH}		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		Show search panel		
+		{mlang_message SHOW_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -747,7 +734,7 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		Hide search panel		
+		{mlang_message HIDE_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -755,7 +742,7 @@
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
 				
-		Export results		
+		{mlang_message EXPORT_RESULTS}		
 		</a>
 	</li>
 {END export_link}
@@ -763,10 +750,25 @@
 	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
 				<a  {$importlink_attrs} href="fsi_import.php{$stateLink_full}"  title="" >
 				
-		Import		
+		{mlang_message IMPORT}		
 		</a>
 	</li>
 {END import_link}
+							<li role="separator" class="divider"></li>								{BEGIN ArabicLANGLINK}
+	<li><a href="#" data-lang="Arabic" class="rnr-langlink">
+		{BEGIN ArabicLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END ArabicLANGLINK_ACTIVE}
+		العربية</a></li>
+	{END ArabicLANGLINK}
+	{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+	{BEGIN FrenchLANGLINK}
+	<li><a href="#" data-lang="French" class="rnr-langlink">
+		{BEGIN FrenchLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END FrenchLANGLINK_ACTIVE}
+		Français</a></li>
+	{END FrenchLANGLINK}
 					</ul>
 	</span>
 </span>
@@ -777,7 +779,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							Login			</a>
+							{mlang_message LOGIN}			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -795,7 +797,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		User Profile		
+		{mlang_message USERINFO}		
 		</a>
 	</li>
 {END userinfo_link}
@@ -803,7 +805,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		Log out		
+		{mlang_message LOG_OUT}		
 		</a>
 	</li>
 {END logoutbutton}
@@ -821,7 +823,16 @@
 					<div class="r-top">
 									{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
-	</div>		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
 {END top_block}
 						</div>
 											<div class="r-above">
@@ -841,7 +852,7 @@
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$addlink_attrs} href="fsi_add.php{$stateLink_full}" >
-							Add new			</a>
+							{mlang_message ADD_NEW}			</a>
 </span>
 {END add_link}
 	 
@@ -849,7 +860,7 @@
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Delete			</a>
+							{mlang_message DELETE}			</a>
 </span>
 {END deleteselected_link}
 			{END firstAboveGridCell}	
@@ -867,7 +878,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -879,14 +890,14 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			Scope:		</div>
+			{mlang_message PPANEL_SCOPE}		</div>
 
 			 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="fsi_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									Print all pages							</label>
+									{mlang_message PPANEL_ALL_PAGES}							</label>
 		</div>
 		{END print_friendly_all}
 		</div>
@@ -895,7 +906,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="fsi_print.php?{$crosstable_attrs}">
-				Print this page			</label>
+				{mlang_message PPANEL_THIS_PAGE}			</label>
 		</div>
 	</div>
 		
@@ -907,7 +918,7 @@
 		<div class="col-md-8">
 			<label style="color: gray;" for="printSelection{$id}">
 			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			Print selected			</label>
+			{mlang_message PPANEL_SELECTED}			</label>
 		</div>
 	</div>
 	</div>
@@ -922,16 +933,9 @@
 <div>
 	<label for="printDetailsToggler{$id}">
 		<input type="checkbox" id="printDetailsToggler{$id}">
-		Print details	</label>
+		{mlang_message PPANEL_DETAILS}	</label>
 	<div  id="printdetailstables{$id}" style="display:none;">
-											{BEGIN print_details_contacts}
-			<div>
-				<label for="printDetailscontacts{$id}">
-					<input type="checkbox" value="contacts" id="printDetailscontacts{$id}" checked>
-					Contacts				</label>
-			</div>
-			{END print_details_contacts}
-														{BEGIN print_details_fsi_extensions}
+											{BEGIN print_details_fsi_extensions}
 			<div>
 				<label for="printDetailsfsi_extensions{$id}">
 					<input type="checkbox" value="fsi_extensions" id="printDetailsfsi_extensions{$id}" checked>
@@ -957,7 +961,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					Records Per Page							
+					{mlang_message RECORDS_PP}							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -971,7 +975,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							Print			</a>
+							{mlang_message PPANEL_PRINT}			</a>
 </span>
 				 
 					</li>
@@ -993,9 +997,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="id_fsi"]:before {
-		content: "{$label fsi id_fsi}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nom"]:before {
 		content: "{$label fsi nom}";
 	}
@@ -1153,52 +1154,18 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_fsi_class}	"
-
-			data-field="id_fsi"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_fsi_fieldheadercolumn}
-	{BEGIN id_fsi_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_fsi" data-fieldname="id_fsi" 
-
-			{$id_fsi_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label fsi id_fsi }</span>
-					{$arrow_icon_id_fsi}
-			</span>
-	</span>
-	{END id_fsi_fieldheader}
-{END id_fsi_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$nom_class}	"
 
 			data-field="nom"
 	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN nom_fieldheadercolumn}
 	{BEGIN nom_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nom" data-fieldname="nom" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nom" data-fieldname="nom" 
 
 			{$nom_orderlinkattrs}
 	
@@ -1214,25 +1181,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
-	{$cell_grid_headcell_field2}
+	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$adresse_class}	"
 
 			data-field="adresse"
 	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN adresse_fieldheadercolumn}
 	{BEGIN adresse_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="adresse" data-fieldname="adresse" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="adresse" data-fieldname="adresse" 
 
 			{$adresse_orderlinkattrs}
 	
@@ -1248,25 +1215,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
 	<th
 	
-	{$cell_grid_headcell_field3}
+	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$tel_class}	"
 
 			data-field="tel"
 	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN tel_fieldheadercolumn}
 	{BEGIN tel_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tel" data-fieldname="tel" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tel" data-fieldname="tel" 
 
 			{$tel_orderlinkattrs}
 	
@@ -1282,25 +1249,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
-	{$cell_grid_headcell_field4}
+	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$fax_class}	"
 
 			data-field="fax"
 	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN fax_fieldheadercolumn}
 	{BEGIN fax_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fax" data-fieldname="fax" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fax" data-fieldname="fax" 
 
 			{$fax_orderlinkattrs}
 	
@@ -1316,25 +1283,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
-									{BEGIN cellblock_grid_headcell_field5}
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
 	<th
 	
-	{$cell_grid_headcell_field5}
+	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$email_class}	"
 
 			data-field="email"
 	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN email_fieldheadercolumn}
 	{BEGIN email_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email" data-fieldname="email" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email" data-fieldname="email" 
 
 			{$email_orderlinkattrs}
 	
@@ -1350,25 +1317,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
 	<th
 	
-	{$cell_grid_headcell_field6}
+	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$prim_email_class}	"
 
 			data-field="prim_email"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN prim_email_fieldheadercolumn}
 	{BEGIN prim_email_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="prim_email" data-fieldname="prim_email" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="prim_email" data-fieldname="prim_email" 
 
 			{$prim_email_orderlinkattrs}
 	
@@ -1384,25 +1351,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
 	<th
 	
-	{$cell_grid_headcell_field7}
+	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$sec_email_class}	"
 
 			data-field="sec_email"
 	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN sec_email_fieldheadercolumn}
 	{BEGIN sec_email_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="sec_email" data-fieldname="sec_email" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="sec_email" data-fieldname="sec_email" 
 
 			{$sec_email_orderlinkattrs}
 	
@@ -1418,25 +1385,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
 	<th
 	
-	{$cell_grid_headcell_field8}
+	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$allowed_IPs_class}	"
 
 			data-field="allowed_IPs"
 	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN allowed_IPs_fieldheadercolumn}
 	{BEGIN allowed_IPs_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="allowed_IPs" data-fieldname="allowed_IPs" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="allowed_IPs" data-fieldname="allowed_IPs" 
 
 			{$allowed_IPs_orderlinkattrs}
 	
@@ -1452,25 +1419,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field9}
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
 	<th
 	
-	{$cell_grid_headcell_field9}
+	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$url_class}	"
 
 			data-field="url"
 	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN url_fieldheadercolumn}
 	{BEGIN url_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="url" data-fieldname="url" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="url" data-fieldname="url" 
 
 			{$url_orderlinkattrs}
 	
@@ -1486,25 +1453,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field9}
-									{BEGIN cellblock_grid_headcell_field10}
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
 	<th
 	
-	{$cell_grid_headcell_field10}
+	{$cell_grid_headcell_field9}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$login_class}	"
 
 			data-field="login"
 	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN login_fieldheadercolumn}
 	{BEGIN login_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="login" data-fieldname="login" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="login" data-fieldname="login" 
 
 			{$login_orderlinkattrs}
 	
@@ -1520,25 +1487,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field10}
-									{BEGIN cellblock_grid_headcell_field11}
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
 	<th
 	
-	{$cell_grid_headcell_field11}
+	{$cell_grid_headcell_field10}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$password_class}	"
 
 			data-field="password"
 	
-	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN password_fieldheadercolumn}
 	{BEGIN password_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password" data-fieldname="password" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password" data-fieldname="password" 
 
 			{$password_orderlinkattrs}
 	
@@ -1554,25 +1521,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field11}
-									{BEGIN cellblock_grid_headcell_field12}
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
 	<th
 	
-	{$cell_grid_headcell_field12}
+	{$cell_grid_headcell_field11}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$API_password_class}	"
 
 			data-field="API_password"
 	
-	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN API_password_fieldheadercolumn}
 	{BEGIN API_password_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="API_password" data-fieldname="API_password" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="API_password" data-fieldname="API_password" 
 
 			{$API_password_orderlinkattrs}
 	
@@ -1588,25 +1555,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field12}
-									{BEGIN cellblock_grid_headcell_field13}
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
 	<th
 	
-	{$cell_grid_headcell_field13}
+	{$cell_grid_headcell_field12}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$password_reset_token_class}	"
 
 			data-field="password_reset_token"
 	
-	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN password_reset_token_fieldheadercolumn}
 	{BEGIN password_reset_token_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password_reset_token" data-fieldname="password_reset_token" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password_reset_token" data-fieldname="password_reset_token" 
 
 			{$password_reset_token_orderlinkattrs}
 	
@@ -1622,25 +1589,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field13}
-									{BEGIN cellblock_grid_headcell_field14}
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
 	<th
 	
-	{$cell_grid_headcell_field14}
+	{$cell_grid_headcell_field13}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$password_reset_token_expire_class}	"
 
 			data-field="password_reset_token_expire"
 	
-	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN password_reset_token_expire_fieldheadercolumn}
 	{BEGIN password_reset_token_expire_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password_reset_token_expire" data-fieldname="password_reset_token_expire" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password_reset_token_expire" data-fieldname="password_reset_token_expire" 
 
 			{$password_reset_token_expire_orderlinkattrs}
 	
@@ -1656,25 +1623,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field14}
-									{BEGIN cellblock_grid_headcell_field15}
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
 	<th
 	
-	{$cell_grid_headcell_field15}
+	{$cell_grid_headcell_field14}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$secret_pass_class}	"
 
 			data-field="secret_pass"
 	
-	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN secret_pass_fieldheadercolumn}
 	{BEGIN secret_pass_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="secret_pass" data-fieldname="secret_pass" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="secret_pass" data-fieldname="secret_pass" 
 
 			{$secret_pass_orderlinkattrs}
 	
@@ -1690,25 +1657,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field15}
-									{BEGIN cellblock_grid_headcell_field16}
+	{END cellblock_grid_headcell_field14}
+									{BEGIN cellblock_grid_headcell_field15}
 	<th
 	
-	{$cell_grid_headcell_field16}
+	{$cell_grid_headcell_field15}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$commentaires_class}	"
 
 			data-field="commentaires"
 	
-	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN commentaires_fieldheadercolumn}
 	{BEGIN commentaires_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="commentaires" data-fieldname="commentaires" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="commentaires" data-fieldname="commentaires" 
 
 			{$commentaires_orderlinkattrs}
 	
@@ -1724,25 +1691,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field16}
-									{BEGIN cellblock_grid_headcell_field17}
+	{END cellblock_grid_headcell_field15}
+									{BEGIN cellblock_grid_headcell_field16}
 	<th
 	
-	{$cell_grid_headcell_field17}
+	{$cell_grid_headcell_field16}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$date_modif_class}	"
 
 			data-field="date_modif"
 	
-	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN date_modif_fieldheadercolumn}
 	{BEGIN date_modif_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="date_modif" data-fieldname="date_modif" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="date_modif" data-fieldname="date_modif" 
 
 			{$date_modif_orderlinkattrs}
 	
@@ -1758,25 +1725,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field17}
-									{BEGIN cellblock_grid_headcell_field18}
+	{END cellblock_grid_headcell_field16}
+									{BEGIN cellblock_grid_headcell_field17}
 	<th
 	
-	{$cell_grid_headcell_field18}
+	{$cell_grid_headcell_field17}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$nomnoc_class}	"
 
 			data-field="nomnoc"
 	
-	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN nomnoc_fieldheadercolumn}
 	{BEGIN nomnoc_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nomnoc" data-fieldname="nomnoc" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nomnoc" data-fieldname="nomnoc" 
 
 			{$nomnoc_orderlinkattrs}
 	
@@ -1792,25 +1759,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field18}
-									{BEGIN cellblock_grid_headcell_field19}
+	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
 	<th
 	
-	{$cell_grid_headcell_field19}
+	{$cell_grid_headcell_field18}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$admin_class}	"
 
 			data-field="admin"
 	
-	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN admin_fieldheadercolumn}
 	{BEGIN admin_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="admin" data-fieldname="admin" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="admin" data-fieldname="admin" 
 
 			{$admin_orderlinkattrs}
 	
@@ -1826,25 +1793,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field19}
-									{BEGIN cellblock_grid_headcell_field20}
+	{END cellblock_grid_headcell_field18}
+									{BEGIN cellblock_grid_headcell_field19}
 	<th
 	
-	{$cell_grid_headcell_field20}
+	{$cell_grid_headcell_field19}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$etat_class}	"
 
 			data-field="etat"
 	
-	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN etat_fieldheadercolumn}
 	{BEGIN etat_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="etat" data-fieldname="etat" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="etat" data-fieldname="etat" 
 
 			{$etat_orderlinkattrs}
 	
@@ -1860,25 +1827,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field20}
-									{BEGIN cellblock_grid_headcell_field21}
+	{END cellblock_grid_headcell_field19}
+									{BEGIN cellblock_grid_headcell_field20}
 	<th
 	
-	{$cell_grid_headcell_field21}
+	{$cell_grid_headcell_field20}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$prefix_class}	"
 
 			data-field="prefix"
 	
-	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN prefix_fieldheadercolumn}
 	{BEGIN prefix_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="prefix" data-fieldname="prefix" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="prefix" data-fieldname="prefix" 
 
 			{$prefix_orderlinkattrs}
 	
@@ -1894,25 +1861,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field21}
-									{BEGIN cellblock_grid_headcell_field22}
+	{END cellblock_grid_headcell_field20}
+									{BEGIN cellblock_grid_headcell_field21}
 	<th
 	
-	{$cell_grid_headcell_field22}
+	{$cell_grid_headcell_field21}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$langue_class}	"
 
 			data-field="langue"
 	
-	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN langue_fieldheadercolumn}
 	{BEGIN langue_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="langue" data-fieldname="langue" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="langue" data-fieldname="langue" 
 
 			{$langue_orderlinkattrs}
 	
@@ -1928,25 +1895,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field22}
-									{BEGIN cellblock_grid_headcell_field23}
+	{END cellblock_grid_headcell_field21}
+									{BEGIN cellblock_grid_headcell_field22}
 	<th
 	
-	{$cell_grid_headcell_field23}
+	{$cell_grid_headcell_field22}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$accountBalance_class}	"
 
 			data-field="accountBalance"
 	
-	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN accountBalance_fieldheadercolumn}
 	{BEGIN accountBalance_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="accountBalance" data-fieldname="accountBalance" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="accountBalance" data-fieldname="accountBalance" 
 
 			{$accountBalance_orderlinkattrs}
 	
@@ -1962,25 +1929,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field23}
-									{BEGIN cellblock_grid_headcell_field24}
+	{END cellblock_grid_headcell_field22}
+									{BEGIN cellblock_grid_headcell_field23}
 	<th
 	
-	{$cell_grid_headcell_field24}
+	{$cell_grid_headcell_field23}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$creditLimit_class}	"
 
 			data-field="creditLimit"
 	
-	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN creditLimit_fieldheadercolumn}
 	{BEGIN creditLimit_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="creditLimit" data-fieldname="creditLimit" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="creditLimit" data-fieldname="creditLimit" 
 
 			{$creditLimit_orderlinkattrs}
 	
@@ -1996,25 +1963,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field24}
-									{BEGIN cellblock_grid_headcell_field25}
+	{END cellblock_grid_headcell_field23}
+									{BEGIN cellblock_grid_headcell_field24}
 	<th
 	
-	{$cell_grid_headcell_field25}
+	{$cell_grid_headcell_field24}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$creditThreshold_class}	"
 
 			data-field="creditThreshold"
 	
-	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN creditThreshold_fieldheadercolumn}
 	{BEGIN creditThreshold_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="creditThreshold" data-fieldname="creditThreshold" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="creditThreshold" data-fieldname="creditThreshold" 
 
 			{$creditThreshold_orderlinkattrs}
 	
@@ -2030,25 +1997,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field25}
-									{BEGIN cellblock_grid_headcell_field26}
+	{END cellblock_grid_headcell_field24}
+									{BEGIN cellblock_grid_headcell_field25}
 	<th
 	
-	{$cell_grid_headcell_field26}
+	{$cell_grid_headcell_field25}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$thresholdType_class}	"
 
 			data-field="thresholdType"
 	
-	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN thresholdType_fieldheadercolumn}
 	{BEGIN thresholdType_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="thresholdType" data-fieldname="thresholdType" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="thresholdType" data-fieldname="thresholdType" 
 
 			{$thresholdType_orderlinkattrs}
 	
@@ -2064,25 +2031,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field26}
-									{BEGIN cellblock_grid_headcell_field27}
+	{END cellblock_grid_headcell_field25}
+									{BEGIN cellblock_grid_headcell_field26}
 	<th
 	
-	{$cell_grid_headcell_field27}
+	{$cell_grid_headcell_field26}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$mgmt_class}	"
 
 			data-field="mgmt"
 	
-	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN mgmt_fieldheadercolumn}
 	{BEGIN mgmt_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field56" {$item_simple_grid_field56} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mgmt" data-fieldname="mgmt" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mgmt" data-fieldname="mgmt" 
 
 			{$mgmt_orderlinkattrs}
 	
@@ -2098,25 +2065,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field27}
-									{BEGIN cellblock_grid_headcell_field28}
+	{END cellblock_grid_headcell_field26}
+									{BEGIN cellblock_grid_headcell_field27}
 	<th
 	
-	{$cell_grid_headcell_field28}
+	{$cell_grid_headcell_field27}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$reg_commentaire_class}	"
 
 			data-field="reg_commentaire"
 	
-	data-cellId="grid_headcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN reg_commentaire_fieldheadercolumn}
 	{BEGIN reg_commentaire_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="reg_commentaire" data-fieldname="reg_commentaire" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="reg_commentaire" data-fieldname="reg_commentaire" 
 
 			{$reg_commentaire_orderlinkattrs}
 	
@@ -2132,7 +2099,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field28}
+	{END cellblock_grid_headcell_field27}
 							</tr>
 																				
 					{END grid_header}
@@ -2161,8 +2128,8 @@
 		{BEGIN edit_column}
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Edit" class="btn-link   
-	 glyphicon glyphicon-pencil" href="fsi_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >		
+	<a type="button" title="{mlang_message EDIT}" class="btn-link   
+	 glyphicon glyphicon-pencil" href="fsi_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
 				
 								</a>
 </span>
@@ -2172,8 +2139,8 @@
 		{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="View record" class="btn-link   
-	 glyphicon glyphicon-search" href="fsi_view.php?{$editlink}" {$viewlink_attrs} title="View" >		
+	<a type="button" title="{mlang_message VIEW_RECORD}" class="btn-link   
+	 glyphicon glyphicon-search" href="fsi_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" >		
 				
 								</a>
 </span>
@@ -2225,31 +2192,12 @@
 		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
 		{$dtables_link_attrs} 
 		class="{$dtables_link_class}" 
-		title="Show details"
+		title="{mlang_message SHOW_DETAILS}"
 				
 	>
 					<span class="glyphicon glyphicon-th-list"></span>
 					</a>
 {END dtables_link}
-	 
-		
-		
-	{BEGIN contacts_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$contacts_link_attrs} data-short-details="contacts"
-		class="{$contacts_dlink_class}" 
-		title="{$caption contacts }"			>
-								
-									{BEGIN contacts_childcount}
-				<span class="details-badge badge contacts_badge" {$contacts_childnumber_attr}>
-					{$contacts_childnumber}				
-				</span>
-				{END contacts_childcount}
-						</a>
-	</span>
-	{END contacts_dtable_link}
-
-
 	 
 		
 		
@@ -2297,32 +2245,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_fsi_class}	"
-
-			data-field="id_fsi"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_fsi_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_fsi" data-fieldname="id_fsi" data-default-width >
-{$id_fsi_value}
-</span>
-{END id_fsi_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$nom_class}	"
 
 			data-field="nom"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2332,18 +2259,18 @@
 </span>
 {END nom_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$adresse_class}	"
 
 			data-field="adresse"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2353,18 +2280,18 @@
 </span>
 {END adresse_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$tel_class}	"
 
 			data-field="tel"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2374,18 +2301,18 @@
 </span>
 {END tel_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$fax_class}	"
 
 			data-field="fax"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2395,18 +2322,18 @@
 </span>
 {END fax_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$email_class}	"
 
 			data-field="email"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2416,18 +2343,18 @@
 </span>
 {END email_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$prim_email_class}	"
 
 			data-field="prim_email"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2437,18 +2364,18 @@
 </span>
 {END prim_email_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$sec_email_class}	"
 
 			data-field="sec_email"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2458,18 +2385,18 @@
 </span>
 {END sec_email_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
 	<td
 	
-	{$cell_grid_cell_field8}
+	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$allowed_IPs_class}	"
 
 			data-field="allowed_IPs"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2479,18 +2406,18 @@
 </span>
 {END allowed_IPs_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
 	<td
 	
-	{$cell_grid_cell_field9}
+	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$url_class}	"
 
 			data-field="url"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2500,18 +2427,18 @@
 </span>
 {END url_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field10}
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
 	<td
 	
-	{$cell_grid_cell_field10}
+	{$cell_grid_cell_field9}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$login_class}	"
 
 			data-field="login"
 	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2521,18 +2448,18 @@
 </span>
 {END login_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field10}
-									{BEGIN cellblock_grid_cell_field11}
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
 	<td
 	
-	{$cell_grid_cell_field11}
+	{$cell_grid_cell_field10}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$password_class}	"
 
 			data-field="password"
 	
-	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2542,18 +2469,18 @@
 </span>
 {END password_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field11}
-									{BEGIN cellblock_grid_cell_field12}
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
 	<td
 	
-	{$cell_grid_cell_field12}
+	{$cell_grid_cell_field11}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$API_password_class}	"
 
 			data-field="API_password"
 	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2563,18 +2490,18 @@
 </span>
 {END API_password_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field12}
-									{BEGIN cellblock_grid_cell_field13}
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
 	<td
 	
-	{$cell_grid_cell_field13}
+	{$cell_grid_cell_field12}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$password_reset_token_class}	"
 
 			data-field="password_reset_token"
 	
-	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2584,18 +2511,18 @@
 </span>
 {END password_reset_token_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field13}
-									{BEGIN cellblock_grid_cell_field14}
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
 	<td
 	
-	{$cell_grid_cell_field14}
+	{$cell_grid_cell_field13}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$password_reset_token_expire_class}	"
 
 			data-field="password_reset_token_expire"
 	
-	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2605,18 +2532,18 @@
 </span>
 {END password_reset_token_expire_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field14}
-									{BEGIN cellblock_grid_cell_field15}
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
 	<td
 	
-	{$cell_grid_cell_field15}
+	{$cell_grid_cell_field14}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$secret_pass_class}	"
 
 			data-field="secret_pass"
 	
-	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2626,18 +2553,18 @@
 </span>
 {END secret_pass_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field15}
-									{BEGIN cellblock_grid_cell_field16}
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
 	<td
 	
-	{$cell_grid_cell_field16}
+	{$cell_grid_cell_field15}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$commentaires_class}	"
 
 			data-field="commentaires"
 	
-	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2647,18 +2574,18 @@
 </span>
 {END commentaires_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field16}
-									{BEGIN cellblock_grid_cell_field17}
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
 	<td
 	
-	{$cell_grid_cell_field17}
+	{$cell_grid_cell_field16}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$date_modif_class}	"
 
 			data-field="date_modif"
 	
-	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2668,18 +2595,18 @@
 </span>
 {END date_modif_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field17}
-									{BEGIN cellblock_grid_cell_field18}
+	{END cellblock_grid_cell_field16}
+									{BEGIN cellblock_grid_cell_field17}
 	<td
 	
-	{$cell_grid_cell_field18}
+	{$cell_grid_cell_field17}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$nomnoc_class}	"
 
 			data-field="nomnoc"
 	
-	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2689,18 +2616,18 @@
 </span>
 {END nomnoc_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field18}
-									{BEGIN cellblock_grid_cell_field19}
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
 	<td
 	
-	{$cell_grid_cell_field19}
+	{$cell_grid_cell_field18}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$admin_class}	"
 
 			data-field="admin"
 	
-	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2710,18 +2637,18 @@
 </span>
 {END admin_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field19}
-									{BEGIN cellblock_grid_cell_field20}
+	{END cellblock_grid_cell_field18}
+									{BEGIN cellblock_grid_cell_field19}
 	<td
 	
-	{$cell_grid_cell_field20}
+	{$cell_grid_cell_field19}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$etat_class}	"
 
 			data-field="etat"
 	
-	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2731,18 +2658,18 @@
 </span>
 {END etat_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field20}
-									{BEGIN cellblock_grid_cell_field21}
+	{END cellblock_grid_cell_field19}
+									{BEGIN cellblock_grid_cell_field20}
 	<td
 	
-	{$cell_grid_cell_field21}
+	{$cell_grid_cell_field20}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$prefix_class}	"
 
 			data-field="prefix"
 	
-	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2752,18 +2679,18 @@
 </span>
 {END prefix_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field21}
-									{BEGIN cellblock_grid_cell_field22}
+	{END cellblock_grid_cell_field20}
+									{BEGIN cellblock_grid_cell_field21}
 	<td
 	
-	{$cell_grid_cell_field22}
+	{$cell_grid_cell_field21}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$langue_class}	"
 
 			data-field="langue"
 	
-	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2773,18 +2700,18 @@
 </span>
 {END langue_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field22}
-									{BEGIN cellblock_grid_cell_field23}
+	{END cellblock_grid_cell_field21}
+									{BEGIN cellblock_grid_cell_field22}
 	<td
 	
-	{$cell_grid_cell_field23}
+	{$cell_grid_cell_field22}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$accountBalance_class}	"
 
 			data-field="accountBalance"
 	
-	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2794,18 +2721,18 @@
 </span>
 {END accountBalance_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field23}
-									{BEGIN cellblock_grid_cell_field24}
+	{END cellblock_grid_cell_field22}
+									{BEGIN cellblock_grid_cell_field23}
 	<td
 	
-	{$cell_grid_cell_field24}
+	{$cell_grid_cell_field23}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$creditLimit_class}	"
 
 			data-field="creditLimit"
 	
-	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2815,18 +2742,18 @@
 </span>
 {END creditLimit_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field24}
-									{BEGIN cellblock_grid_cell_field25}
+	{END cellblock_grid_cell_field23}
+									{BEGIN cellblock_grid_cell_field24}
 	<td
 	
-	{$cell_grid_cell_field25}
+	{$cell_grid_cell_field24}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$creditThreshold_class}	"
 
 			data-field="creditThreshold"
 	
-	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2836,18 +2763,18 @@
 </span>
 {END creditThreshold_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field25}
-									{BEGIN cellblock_grid_cell_field26}
+	{END cellblock_grid_cell_field24}
+									{BEGIN cellblock_grid_cell_field25}
 	<td
 	
-	{$cell_grid_cell_field26}
+	{$cell_grid_cell_field25}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$thresholdType_class}	"
 
 			data-field="thresholdType"
 	
-	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2857,18 +2784,18 @@
 </span>
 {END thresholdType_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field26}
-									{BEGIN cellblock_grid_cell_field27}
+	{END cellblock_grid_cell_field25}
+									{BEGIN cellblock_grid_cell_field26}
 	<td
 	
-	{$cell_grid_cell_field27}
+	{$cell_grid_cell_field26}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$mgmt_class}	"
 
 			data-field="mgmt"
 	
-	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2878,18 +2805,18 @@
 </span>
 {END mgmt_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field27}
-									{BEGIN cellblock_grid_cell_field28}
+	{END cellblock_grid_cell_field26}
+									{BEGIN cellblock_grid_cell_field27}
 	<td
 	
-	{$cell_grid_cell_field28}
+	{$cell_grid_cell_field27}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$reg_commentaire_class}	"
 
 			data-field="reg_commentaire"
 	
-	data-cellId="grid_cell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2899,7 +2826,7 @@
 </span>
 {END reg_commentaire_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field28}
+	{END cellblock_grid_cell_field27}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -2917,11 +2844,9 @@
 	>
 
 	 
-					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="contacts,fsi_extensions,fsi_ns"
-			data-details-contacts			data-details-fsi_extensions			data-details-fsi_ns	>
-		<span data-details-inside data-short-table="contacts">
-			</span>
+				<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="fsi_extensions,fsi_ns"
+			data-details-fsi_extensions			data-details-fsi_ns	>
 		<span data-details-inside data-short-table="fsi_extensions">
 			</span>
 		<span data-details-inside data-short-table="fsi_ns">
@@ -2930,7 +2855,6 @@
 	</div>
 </div>
 	 
-			 
 			
 	</td>
 	{END cellblock_grid_cell_dpreview}
@@ -2996,7 +2920,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_fsi_class}	"
+		 r-ori-vert		 {$nom_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3011,7 +2935,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$nom_class}	"
+		 r-ori-vert		 {$adresse_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3026,7 +2950,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$adresse_class}	"
+		 r-ori-vert		 {$tel_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3041,7 +2965,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$tel_class}	"
+		 r-ori-vert		 {$fax_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3056,7 +2980,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$fax_class}	"
+		 r-ori-vert		 {$email_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3071,7 +2995,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$email_class}	"
+		 r-ori-vert		 {$prim_email_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3086,7 +3010,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$prim_email_class}	"
+		 r-ori-vert		 {$sec_email_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3101,7 +3025,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$sec_email_class}	"
+		 r-ori-vert		 {$allowed_IPs_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3116,7 +3040,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$allowed_IPs_class}	"
+		 r-ori-vert		 {$url_class}	"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3131,7 +3055,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$url_class}	"
+		 r-ori-vert		 {$login_class}	"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3146,7 +3070,7 @@
 	{$cell_grid_footcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$login_class}	"
+		 r-ori-vert		 {$password_class}	"
 
 	
 	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3161,7 +3085,7 @@
 	{$cell_grid_footcell_field11}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$password_class}	"
+		 r-ori-vert		 {$API_password_class}	"
 
 	
 	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3176,7 +3100,7 @@
 	{$cell_grid_footcell_field12}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$API_password_class}	"
+		 r-ori-vert		 {$password_reset_token_class}	"
 
 	
 	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3191,7 +3115,7 @@
 	{$cell_grid_footcell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$password_reset_token_class}	"
+		 r-ori-vert		 {$password_reset_token_expire_class}	"
 
 	
 	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3206,7 +3130,7 @@
 	{$cell_grid_footcell_field14}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$password_reset_token_expire_class}	"
+		 r-ori-vert		 {$secret_pass_class}	"
 
 	
 	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3221,7 +3145,7 @@
 	{$cell_grid_footcell_field15}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$secret_pass_class}	"
+		 r-ori-vert		 {$commentaires_class}	"
 
 	
 	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3236,7 +3160,7 @@
 	{$cell_grid_footcell_field16}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$commentaires_class}	"
+		 r-ori-vert		 {$date_modif_class}	"
 
 	
 	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3251,7 +3175,7 @@
 	{$cell_grid_footcell_field17}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$date_modif_class}	"
+		 r-ori-vert		 {$nomnoc_class}	"
 
 	
 	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3266,7 +3190,7 @@
 	{$cell_grid_footcell_field18}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$nomnoc_class}	"
+		 r-ori-vert		 {$admin_class}	"
 
 	
 	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3281,7 +3205,7 @@
 	{$cell_grid_footcell_field19}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$admin_class}	"
+		 r-ori-vert		 {$etat_class}	"
 
 	
 	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3296,7 +3220,7 @@
 	{$cell_grid_footcell_field20}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$etat_class}	"
+		 r-ori-vert		 {$prefix_class}	"
 
 	
 	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3311,7 +3235,7 @@
 	{$cell_grid_footcell_field21}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$prefix_class}	"
+		 r-ori-vert		 {$langue_class}	"
 
 	
 	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3326,7 +3250,7 @@
 	{$cell_grid_footcell_field22}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$langue_class}	"
+		 r-ori-vert		 {$accountBalance_class}	"
 
 	
 	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3341,7 +3265,7 @@
 	{$cell_grid_footcell_field23}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$accountBalance_class}	"
+		 r-ori-vert		 {$creditLimit_class}	"
 
 	
 	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3356,7 +3280,7 @@
 	{$cell_grid_footcell_field24}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$creditLimit_class}	"
+		 r-ori-vert		 {$creditThreshold_class}	"
 
 	
 	data-cellId="grid_footcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3371,7 +3295,7 @@
 	{$cell_grid_footcell_field25}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$creditThreshold_class}	"
+		 r-ori-vert		 {$thresholdType_class}	"
 
 	
 	data-cellId="grid_footcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3386,7 +3310,7 @@
 	{$cell_grid_footcell_field26}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$thresholdType_class}	"
+		 r-ori-vert		 {$mgmt_class}	"
 
 	
 	data-cellId="grid_footcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3401,7 +3325,7 @@
 	{$cell_grid_footcell_field27}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$mgmt_class}	"
+		 r-ori-vert		 {$reg_commentaire_class}	"
 
 	
 	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
@@ -3410,21 +3334,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field27}
-									{BEGIN cellblock_grid_footcell_field28}
-	<td
-	
-	{$cell_grid_footcell_field28}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$reg_commentaire_class}	"
-
-	
-	data-cellId="grid_footcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="fsi_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field28}
 							</tr>
 					
 					</tfoot>

@@ -46,6 +46,15 @@
 </span>
 {END printtabheader}
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c4" data-pageid="{$pageid}"	{$cell_top_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
 			</div>		
 {END top_block}
 									{BEGIN above-grid_block}
@@ -357,7 +366,7 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
@@ -367,10 +376,6 @@
 		{BEGIN details_domains}
 {$displayDetailTable_domains}
 {END details_domains}
-	 
-		{BEGIN details_late_domains}
-{$displayDetailTable_late_domains}
-{END details_late_domains}
 	
 	</td>
 	{END cellblock_grid_cell_dpreview}

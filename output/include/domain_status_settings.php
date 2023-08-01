@@ -34,6 +34,36 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsdomain_status["English"]))
 		$tdatadomain_status[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelsdomain_status["Arabic"] = array();
+	$fieldToolTipsdomain_status["Arabic"] = array();
+	$placeHoldersdomain_status["Arabic"] = array();
+	$pageTitlesdomain_status["Arabic"] = array();
+	$fieldLabelsdomain_status["Arabic"]["id_status"] = "Id Status";
+	$fieldToolTipsdomain_status["Arabic"]["id_status"] = "";
+	$placeHoldersdomain_status["Arabic"]["id_status"] = "";
+	$fieldLabelsdomain_status["Arabic"]["status"] = "Status";
+	$fieldToolTipsdomain_status["Arabic"]["status"] = "";
+	$placeHoldersdomain_status["Arabic"]["status"] = "";
+	if (count($fieldToolTipsdomain_status["Arabic"]))
+		$tdatadomain_status[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelsdomain_status["French"] = array();
+	$fieldToolTipsdomain_status["French"] = array();
+	$placeHoldersdomain_status["French"] = array();
+	$pageTitlesdomain_status["French"] = array();
+	$fieldLabelsdomain_status["French"]["id_status"] = "Id Status";
+	$fieldToolTipsdomain_status["French"]["id_status"] = "";
+	$placeHoldersdomain_status["French"]["id_status"] = "";
+	$fieldLabelsdomain_status["French"]["status"] = "Status";
+	$fieldToolTipsdomain_status["French"]["status"] = "";
+	$placeHoldersdomain_status["French"]["status"] = "";
+	if (count($fieldToolTipsdomain_status["French"]))
+		$tdatadomain_status[".isUseToolTips"] = true;
+}
 
 
 	$tdatadomain_status[".NCSearch"] = true;
@@ -140,7 +170,7 @@ $tdatadomain_status[".addPageEvents"] = false;
 $tdatadomain_status[".isUseTimeForSearch"] = false;
 
 
-$tdatadomain_status[".badgeColor"] = "00C2C5";
+$tdatadomain_status[".badgeColor"] = "00c2c5";
 
 
 $tdatadomain_status[".allSearchFields"] = array();
@@ -535,6 +565,24 @@ $masterTablesData["domain_status"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="domains";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="domains";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "domains";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["domain_status"][0] = $masterParams;
+				$masterTablesData["domain_status"][0]["masterKeys"] = array();
+	$masterTablesData["domain_status"][0]["masterKeys"][]="etat";
+				$masterTablesData["domain_status"][0]["detailKeys"] = array();
+	$masterTablesData["domain_status"][0]["detailKeys"][]="id_status";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

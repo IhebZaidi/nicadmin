@@ -1,7 +1,5 @@
 <?php
 			$optionsArray = array( 'details' => array( 'domains' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'late_domains' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'nom',

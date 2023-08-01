@@ -149,6 +149,29 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
 		
 		]
 	}
@@ -185,7 +208,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -537,11 +560,6 @@ pdfDocument = {
 			 {BEGIN details_domains}
 			{$displayDetailTable_domains }
 		{END details_domains},
-				
-				
-			 {BEGIN details_late_domains}
-			{$displayDetailTable_late_domains }
-		{END details_late_domains},
 				
 		  ],
   "border": [ true, true, true, true ],

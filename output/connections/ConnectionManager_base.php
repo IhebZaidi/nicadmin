@@ -246,18 +246,12 @@ class ConnectionManager_Base
 		$connectionsIds["contacts"] = "nicadmin_at_localhost";
 		$connectionsIds["fsi"] = "nicadmin_at_localhost";
 		$connectionsIds["domain_contacts"] = "nicadmin_at_localhost";
-		$connectionsIds["domain_status"] = "nicadmin_at_localhost";
 		$connectionsIds["domains"] = "nicadmin_at_localhost";
-		$connectionsIds["extensions"] = "nicadmin_at_localhost";
 		$connectionsIds["fsi_extensions"] = "nicadmin_at_localhost";
 		$connectionsIds["fsi_ns"] = "nicadmin_at_localhost";
-		$connectionsIds["hosts"] = "nicadmin_at_localhost";
-		$connectionsIds["hosts_ip"] = "nicadmin_at_localhost";
-		$connectionsIds["ip"] = "nicadmin_at_localhost";
-		$connectionsIds["late_domains"] = "nicadmin_at_localhost";
 		$connectionsIds["nameservers"] = "nicadmin_at_localhost";
-		$connectionsIds["termes"] = "nicadmin_at_localhost";
-		$connectionsIds["termes_deleted"] = "nicadmin_at_localhost";
+		$connectionsIds["extensions"] = "nicadmin_at_localhost";
+		$connectionsIds["hosts"] = "nicadmin_at_localhost";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

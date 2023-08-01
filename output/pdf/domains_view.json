@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel domains id }","bold":true},{"text":{$id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel domains code }","bold":true},{"text":{$code_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -311,6 +308,11 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field48}","stack":[{"text":"{$jslabel domains reg_restore_prohibited }","bold":true},{"text":{$reg_restore_prohibited_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			 {BEGIN details_nameservers}
+			{$displayDetailTable_nameservers }
+		{END details_nameservers},
 				
 		  ],
   "border": [ false, false, false, false ],

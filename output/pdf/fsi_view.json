@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel fsi id_fsi }","bold":true},{"text":{$id_fsi_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel fsi nom }","bold":true},{"text":{$nom_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

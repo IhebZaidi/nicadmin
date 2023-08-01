@@ -94,25 +94,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN id_fsi_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_id_fsi}  r-vertical-field" data-fieldname="id_fsi" data-signal-error-for="id_fsi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="id_fsi" data-fieldname="id_fsi" data-compact >
-
-	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_fsi}">
-		
-		{BEGIN id_fsi_label}{$label fsi id_fsi }{END id_fsi_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$id_fsi_value}	</div>
-
-		
-</div>
-
-
-{END id_fsi_fieldblock}
-											
 {BEGIN nom_fieldblock}
 
 
@@ -668,7 +649,7 @@
 <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							Back to list			</a>
+							{mlang_message BACK_TO_LIST}			</a>
 </span>
 {END back_button}
 	 
@@ -676,7 +657,7 @@
 <span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" href="#" {$closebutton_attrs} >
-							Close window			</a>
+							{mlang_message CLOSE_WINDOW}			</a>
 </span>
 {END close_button}
 	</div>			 
@@ -696,10 +677,25 @@
 	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
 				<a  href="fsi_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
 				
-		Edit		
+		{mlang_message EDIT}		
 		</a>
 	</li>
 {END edit_page_button}
+								<li data-itemtype="view_pdf" data-itemid="view_pdf" {$item_view_pdf} data-pageid="{$pageid}" data-small >
+				<a class="pdflink" data-pdfpage="view" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Fsi.pdf" 
+data-pagesize="LETTER" 
+data-pagetype="view" 
+{$pdflink_attrs}  title="" >
+				
+		{mlang_message PDF_VIEW}		
+		</a>
+	</li>
 					</ul>
 	</span>
 </span>

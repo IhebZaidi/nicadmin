@@ -67,9 +67,6 @@ pdfDocument = {
 														{BEGIN col_grid_0}
 					"%",
 					{END col_grid_0}
-										{BEGIN col_grid_1}
-					"%",
-					{END col_grid_1}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -200,7 +197,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
@@ -236,7 +233,7 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'id_fsi',
+			fieldName: 'nom',
 				style: 'headcell',
 		
 		
@@ -250,45 +247,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel fsi_extensions id_fsi }","hidden":"{$item_hide_simple_grid_field2}","bold":true},
+			{"text":"{$jslabel fsi_extensions nom }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$id_fsi_align}',
+              "alignment": '{$nom_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
-			fieldName: 'ext',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel fsi_extensions ext }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ext_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field1}
 											],
 				{END row_grid_0}
 		
@@ -303,7 +271,7 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'id_fsi',
+			fieldName: 'nom',
 				style: 'bodycell',
 		
 		
@@ -317,45 +285,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$id_fsi_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+			{"text":{$nom_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$id_fsi_align}',
+              "alignment": '{$nom_align}',
      
       
       },
 
 {END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
-	col:0,
-	row:0,
-			fieldName: 'ext',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$ext_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ext_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field1}
 											],
 				{END row_grid_1}
 		
@@ -391,32 +330,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field}
-																							{BEGIN cellblock_grid_footcell_field1}
-{
-	cellId: 'footcell_field1',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field1}
 											],
 				{END row_grid_2}
 		

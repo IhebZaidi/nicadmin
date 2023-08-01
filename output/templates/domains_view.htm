@@ -30,7 +30,7 @@
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -48,7 +48,7 @@
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -94,25 +94,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN id_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_id}  r-vertical-field" data-fieldname="id" data-signal-error-for="id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id" data-compact >
-
-	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id}">
-		
-		{BEGIN id_label}{$label domains id }{END id_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$id_value}	</div>
-
-		
-</div>
-
-
-{END id_fieldblock}
-											
 {BEGIN code_fieldblock}
 
 
@@ -1024,16 +1005,34 @@
 
 
 {END reg_restore_prohibited_fieldblock}
-	
-								</td>
+										</td>
 			{END cellblock_grid_c3}
-								</tr>
-			</tbody></table>
-{END grid_block}
+										</tr>
+										</tbody></table>
+				
+{BEGIN details_nameservers}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$details_pagetitle_nameservers}			
+							<span>
+					{$detailslButtons_nameservers}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_nameservers}
+		</div>
+	</div>
+</div>
+{END details_nameservers}
+	
+				{END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -1048,7 +1047,7 @@
 <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							Back to list			</a>
+							{mlang_message BACK_TO_LIST}			</a>
 </span>
 {END back_button}
 	 
@@ -1056,7 +1055,7 @@
 <span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" href="#" {$closebutton_attrs} >
-							Close window			</a>
+							{mlang_message CLOSE_WINDOW}			</a>
 </span>
 {END close_button}
 	</div>			 
@@ -1076,7 +1075,7 @@
 	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
 				<a  href="domains_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
 				
-		Edit		
+		{mlang_message EDIT}		
 		</a>
 	</li>
 {END edit_page_button}

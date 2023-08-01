@@ -34,6 +34,36 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsfsi_ns["English"]))
 		$tdatafsi_ns[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelsfsi_ns["Arabic"] = array();
+	$fieldToolTipsfsi_ns["Arabic"] = array();
+	$placeHoldersfsi_ns["Arabic"] = array();
+	$pageTitlesfsi_ns["Arabic"] = array();
+	$fieldLabelsfsi_ns["Arabic"]["id_fsi"] = "Id Fsi";
+	$fieldToolTipsfsi_ns["Arabic"]["id_fsi"] = "";
+	$placeHoldersfsi_ns["Arabic"]["id_fsi"] = "";
+	$fieldLabelsfsi_ns["Arabic"]["nameserver"] = "Nameserver";
+	$fieldToolTipsfsi_ns["Arabic"]["nameserver"] = "";
+	$placeHoldersfsi_ns["Arabic"]["nameserver"] = "";
+	if (count($fieldToolTipsfsi_ns["Arabic"]))
+		$tdatafsi_ns[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelsfsi_ns["French"] = array();
+	$fieldToolTipsfsi_ns["French"] = array();
+	$placeHoldersfsi_ns["French"] = array();
+	$pageTitlesfsi_ns["French"] = array();
+	$fieldLabelsfsi_ns["French"]["id_fsi"] = "Id Fsi";
+	$fieldToolTipsfsi_ns["French"]["id_fsi"] = "";
+	$placeHoldersfsi_ns["French"]["id_fsi"] = "";
+	$fieldLabelsfsi_ns["French"]["nameserver"] = "Nameserver";
+	$fieldToolTipsfsi_ns["French"]["nameserver"] = "";
+	$placeHoldersfsi_ns["French"]["nameserver"] = "";
+	if (count($fieldToolTipsfsi_ns["French"]))
+		$tdatafsi_ns[".isUseToolTips"] = true;
+}
 
 
 	$tdatafsi_ns[".NCSearch"] = true;
@@ -288,7 +318,7 @@ $tdatafsi_ns[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -298,6 +328,34 @@ $tdatafsi_ns[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "fsi";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "id_fsi";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "nom";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -313,17 +371,14 @@ $tdatafsi_ns[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -344,7 +399,7 @@ $tdatafsi_ns[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -429,7 +484,7 @@ $tdatafsi_ns[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -439,6 +494,34 @@ $tdatafsi_ns[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "hosts";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "host_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "hostname";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -454,17 +537,14 @@ $tdatafsi_ns[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -485,7 +565,7 @@ $tdatafsi_ns[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

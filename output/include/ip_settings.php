@@ -46,6 +46,60 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsip["English"]))
 		$tdataip[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelsip["Arabic"] = array();
+	$fieldToolTipsip["Arabic"] = array();
+	$placeHoldersip["Arabic"] = array();
+	$pageTitlesip["Arabic"] = array();
+	$fieldLabelsip["Arabic"]["id_ip"] = "Id Ip";
+	$fieldToolTipsip["Arabic"]["id_ip"] = "";
+	$placeHoldersip["Arabic"]["id_ip"] = "";
+	$fieldLabelsip["Arabic"]["id_domain"] = "Id Domain";
+	$fieldToolTipsip["Arabic"]["id_domain"] = "";
+	$placeHoldersip["Arabic"]["id_domain"] = "";
+	$fieldLabelsip["Arabic"]["ip"] = "Ip";
+	$fieldToolTipsip["Arabic"]["ip"] = "";
+	$placeHoldersip["Arabic"]["ip"] = "";
+	$fieldLabelsip["Arabic"]["date_reception"] = "Date Reception";
+	$fieldToolTipsip["Arabic"]["date_reception"] = "";
+	$placeHoldersip["Arabic"]["date_reception"] = "";
+	$fieldLabelsip["Arabic"]["date_modification"] = "Date Modification";
+	$fieldToolTipsip["Arabic"]["date_modification"] = "";
+	$placeHoldersip["Arabic"]["date_modification"] = "";
+	$fieldLabelsip["Arabic"]["commentaire"] = "Commentaire";
+	$fieldToolTipsip["Arabic"]["commentaire"] = "";
+	$placeHoldersip["Arabic"]["commentaire"] = "";
+	if (count($fieldToolTipsip["Arabic"]))
+		$tdataip[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelsip["French"] = array();
+	$fieldToolTipsip["French"] = array();
+	$placeHoldersip["French"] = array();
+	$pageTitlesip["French"] = array();
+	$fieldLabelsip["French"]["id_ip"] = "Id Ip";
+	$fieldToolTipsip["French"]["id_ip"] = "";
+	$placeHoldersip["French"]["id_ip"] = "";
+	$fieldLabelsip["French"]["id_domain"] = "Id Domain";
+	$fieldToolTipsip["French"]["id_domain"] = "";
+	$placeHoldersip["French"]["id_domain"] = "";
+	$fieldLabelsip["French"]["ip"] = "Ip";
+	$fieldToolTipsip["French"]["ip"] = "";
+	$placeHoldersip["French"]["ip"] = "";
+	$fieldLabelsip["French"]["date_reception"] = "Date Reception";
+	$fieldToolTipsip["French"]["date_reception"] = "";
+	$placeHoldersip["French"]["date_reception"] = "";
+	$fieldLabelsip["French"]["date_modification"] = "Date Modification";
+	$fieldToolTipsip["French"]["date_modification"] = "";
+	$placeHoldersip["French"]["date_modification"] = "";
+	$fieldLabelsip["French"]["commentaire"] = "Commentaire";
+	$fieldToolTipsip["French"]["commentaire"] = "";
+	$placeHoldersip["French"]["commentaire"] = "";
+	if (count($fieldToolTipsip["French"]))
+		$tdataip[".isUseToolTips"] = true;
+}
 
 
 	$tdataip[".NCSearch"] = true;

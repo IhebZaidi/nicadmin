@@ -1,11 +1,6 @@
 <?php
 			$optionsArray = array( 'details' => array( 'domain_contacts' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'domains' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'late_domains' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
-'master' => array( 'fsi' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Prenom',
 'personne_physique',

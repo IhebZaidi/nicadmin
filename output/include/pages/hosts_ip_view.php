@@ -1,7 +1,6 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'master' => array( 'hosts' => array( 'preview' => false ),
-'ip' => array( 'preview' => false ) ),
+'master' => array( 'hosts' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'id',
 'address',
 'host_id',

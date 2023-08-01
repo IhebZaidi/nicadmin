@@ -83,10 +83,13 @@ pdfDocument = {
 													{BEGIN row_grid_1}
 							"%",
 							{END row_grid_1}
-													{END grid_row}
 																								{BEGIN row_grid_2}
 							"%",
 							{END row_grid_2}
+													{END grid_row}
+																								{BEGIN row_grid_3}
+							"%",
+							{END row_grid_3}
 															],
 							
 				body: [
@@ -203,7 +206,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
@@ -239,64 +242,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'id_domain',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel domain_contacts id_domain }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_domain_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
-			fieldName: 'id_contact',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel domain_contacts id_contact }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_contact_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
-{
-	cellId: 'headcell_field2',
-	col:0,
-	row:0,
 			fieldName: 'type_contact',
 				style: 'headcell',
 		
@@ -311,11 +256,69 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel domain_contacts type_contact }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel domain_contacts type_contact }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$type_contact_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
+{
+	cellId: 'headcell_field1',
+	col:0,
+	row:0,
+			fieldName: 'domain',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel domain_contacts domain }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$domain_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'nom',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel domain_contacts nom }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$nom_align}',
      
       
       },
@@ -333,64 +336,6 @@ pdfDocument = {
 																{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'id_domain',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$id_domain_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_domain_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
-	col:0,
-	row:0,
-			fieldName: 'id_contact',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$id_contact_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_contact_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
-{
-	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'type_contact',
@@ -416,15 +361,122 @@ pdfDocument = {
       
       },
 
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
+{
+	cellId: 'cell_field1',
+	col:0,
+	row:0,
+			fieldName: 'domain',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$domain_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$domain_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'nom',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$nom_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$nom_align}',
+     
+      
+      },
+
 {END cellblock_grid_cell_field2}
 											],
 				{END row_grid_1}
+						{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_cell_dpreview}
+{
+	cellId: 'cell_dpreview',
+	col:0,
+	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_dpreview}
+			colSpan: {$colspan_grid_cell_dpreview},
+			{END colspan_grid_cell_dpreview}
+		
+		
+	
+			
+	
+			"stack": [
+		
+				
+			 {BEGIN details_contacts}
+			{$displayDetailTable_contacts }
+		{END details_contacts},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_dpreview}
+																		{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+							],
+				{END row_grid_2}
 		
 		{END grid_record}
 	{END grid_row}
 			
 					
-				{BEGIN row_grid_2}
+				{BEGIN row_grid_3}
 				[
 																{BEGIN cellblock_grid_footcell_field}
 {
@@ -505,7 +557,7 @@ pdfDocument = {
 
 {END cellblock_grid_footcell_field2}
 											],
-				{END row_grid_2}
+				{END row_grid_3}
 		
 				
 									]

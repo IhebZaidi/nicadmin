@@ -3584,30 +3584,18 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "fsi" ] = "fsi";
 	$projectEntities[ "domain_contacts" ] = array( "url" => "domain_contacts", "type" => 0 );
 	$projectEntitiesReverse[ "domain_contacts" ] = "domain_contacts";
-	$projectEntities[ "domain_status" ] = array( "url" => "domain_status", "type" => 0 );
-	$projectEntitiesReverse[ "domain_status" ] = "domain_status";
 	$projectEntities[ "domains" ] = array( "url" => "domains", "type" => 0 );
 	$projectEntitiesReverse[ "domains" ] = "domains";
-	$projectEntities[ "extensions" ] = array( "url" => "extensions", "type" => 0 );
-	$projectEntitiesReverse[ "extensions" ] = "extensions";
 	$projectEntities[ "fsi_extensions" ] = array( "url" => "fsi_extensions", "type" => 0 );
 	$projectEntitiesReverse[ "fsi_extensions" ] = "fsi_extensions";
 	$projectEntities[ "fsi_ns" ] = array( "url" => "fsi_ns", "type" => 0 );
 	$projectEntitiesReverse[ "fsi_ns" ] = "fsi_ns";
-	$projectEntities[ "hosts" ] = array( "url" => "hosts", "type" => 0 );
-	$projectEntitiesReverse[ "hosts" ] = "hosts";
-	$projectEntities[ "hosts_ip" ] = array( "url" => "hosts_ip", "type" => 0 );
-	$projectEntitiesReverse[ "hosts_ip" ] = "hosts_ip";
-	$projectEntities[ "ip" ] = array( "url" => "ip", "type" => 0 );
-	$projectEntitiesReverse[ "ip" ] = "ip";
-	$projectEntities[ "late_domains" ] = array( "url" => "late_domains", "type" => 0 );
-	$projectEntitiesReverse[ "late_domains" ] = "late_domains";
 	$projectEntities[ "nameservers" ] = array( "url" => "nameservers", "type" => 0 );
 	$projectEntitiesReverse[ "nameservers" ] = "nameservers";
-	$projectEntities[ "termes" ] = array( "url" => "termes", "type" => 0 );
-	$projectEntitiesReverse[ "termes" ] = "termes";
-	$projectEntities[ "termes_deleted" ] = array( "url" => "termes_deleted", "type" => 0 );
-	$projectEntitiesReverse[ "termes_deleted" ] = "termes_deleted";
+	$projectEntities[ "extensions" ] = array( "url" => "extensions", "type" => 0 );
+	$projectEntitiesReverse[ "extensions" ] = "extensions";
+	$projectEntities[ "hosts" ] = array( "url" => "hosts", "type" => 0 );
+	$projectEntitiesReverse[ "hosts" ] = "hosts";
 }
 
 function findTable( $table ) {

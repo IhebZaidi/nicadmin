@@ -42,7 +42,7 @@ class CheckboxField extends EditControl
 				
 			$options = array( "", "on", "off" );
 			$possibleOptions = array( "" => array(), "on" => array("on", "1"), "off" => array("off", "0") );		
-			$labels = array("", "True", "False");
+			$labels = array("", mlang_message("TRUE"), mlang_message("FALSE"));
 			
 			foreach( $options as $key => $optValue )
 			{	

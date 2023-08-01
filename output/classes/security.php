@@ -230,7 +230,7 @@ class Security
 	 */
 	public static function sendPermissionError( $message = '' )
 	{
-		echo printJSON(array("success" => false, "message" => "You don't have permissions to access this table" . " " .$message ) );
+		echo printJSON(array("success" => false, "message" => mlang_message("NO_PERMISSIONS") . " " .$message ) );
 		exit();
 	}
 
@@ -1477,34 +1477,14 @@ class Security
 						storageSet( "OwnerID", $userId );
 			storageSet( "_contacts_OwnerID", $userId );
 						storageSet( "_fsi_OwnerID", $userId );
-						storageSet( "_domain_contacts_OwnerID", $userId );
-						storageSet( "_domain_status_OwnerID", $userId );
 						storageSet( "_domains_OwnerID", $userId );
-						storageSet( "_extensions_OwnerID", $userId );
 						storageSet( "_fsi_extensions_OwnerID", $userId );
-						storageSet( "_hosts_OwnerID", $userId );
-						storageSet( "_hosts_ip_OwnerID", $userId );
-						storageSet( "_ip_OwnerID", $userId );
-						storageSet( "_late_domains_OwnerID", $userId );
-						storageSet( "_nameservers_OwnerID", $userId );
-						storageSet( "_termes_OwnerID", $userId );
-						storageSet( "_termes_deleted_OwnerID", $userId );
 		} else {
 						storageSet( "OwnerID", $data["id_fsi"] );
 			storageSet( "_contacts_OwnerID", $data["id_fsi"] );
 						storageSet( "_fsi_OwnerID", $data["id_fsi"] );
-						storageSet( "_domain_contacts_OwnerID", $data["id_fsi"] );
-						storageSet( "_domain_status_OwnerID", $data["id_fsi"] );
 						storageSet( "_domains_OwnerID", $data["id_fsi"] );
-						storageSet( "_extensions_OwnerID", $data["id_fsi"] );
 						storageSet( "_fsi_extensions_OwnerID", $data["id_fsi"] );
-						storageSet( "_hosts_OwnerID", $data["id_fsi"] );
-						storageSet( "_hosts_ip_OwnerID", $data["id_fsi"] );
-						storageSet( "_ip_OwnerID", $data["id_fsi"] );
-						storageSet( "_late_domains_OwnerID", $data["id_fsi"] );
-						storageSet( "_nameservers_OwnerID", $data["id_fsi"] );
-						storageSet( "_termes_OwnerID", $data["id_fsi"] );
-						storageSet( "_termes_deleted_OwnerID", $data["id_fsi"] );
 		}
 	}
 
@@ -1557,7 +1537,7 @@ class Security
 		if( $userId == "" ) {
 			$userId = "Guest";
 			$accessLevel = ACCESS_LEVEL_GUEST;
-			$displayName = "Guest";
+			$displayName = mlang_message("AA_GROUP_GUEST");
 		}
 		if( $displayName == "" ) {
 			$displayName = $userId;

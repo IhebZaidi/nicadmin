@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel contacts id }","bold":true},{"text":{$id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel contacts Prenom }","bold":true},{"text":{$Prenom_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

@@ -1,9 +1,7 @@
 <?php
-			$optionsArray = array( 'details' => array( 'contacts' => array( 'displayPreview' => 2,
+			$optionsArray = array( 'details' => array( 'fsi_ns' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'fsi_extensions' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'fsi_ns' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'nom',

@@ -94,50 +94,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN id_domain_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_id_domain}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="id_domain{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id_domain" data-fieldname="id_domain" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_id_domain}">
-		{$label domain_contacts id_domain }	</label>
-	<div class="r-search-option">
-		{$searchtype_id_domain}
-	</div>
-	<div class="r-search-field">
-		{$id_domain_editcontrol}	</div>
-	<div class="r-search-field">
-		{$id_domain_editcontrol1}
-	</div>
-	
-</div>
-
-{END id_domain_fieldblock}
-											
-{BEGIN id_contact_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_id_contact}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="id_contact{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="id_contact" data-fieldname="id_contact" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_id_contact}">
-		{$label domain_contacts id_contact }	</label>
-	<div class="r-search-option">
-		{$searchtype_id_contact}
-	</div>
-	<div class="r-search-field">
-		{$id_contact_editcontrol}	</div>
-	<div class="r-search-field">
-		{$id_contact_editcontrol1}
-	</div>
-	
-</div>
-
-{END id_contact_fieldblock}
-											
 {BEGIN type_contact_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_type_contact}  r-horizontal-field form-horizontal" 	
@@ -159,6 +115,50 @@
 </div>
 
 {END type_contact_fieldblock}
+											
+{BEGIN domain_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_domain}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="domain{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="domain" data-fieldname="domain" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_domain}">
+		{$label domain_contacts domain }	</label>
+	<div class="r-search-option">
+		{$searchtype_domain}
+	</div>
+	<div class="r-search-field">
+		{$domain_editcontrol}	</div>
+	<div class="r-search-field">
+		{$domain_editcontrol1}
+	</div>
+	
+</div>
+
+{END domain_fieldblock}
+											
+{BEGIN nom_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nom}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="nom{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="nom" data-fieldname="nom" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_nom}">
+		{$label domain_contacts nom }	</label>
+	<div class="r-search-option">
+		{$searchtype_nom}
+	</div>
+	<div class="r-search-field">
+		{$nom_editcontrol}	</div>
+	<div class="r-search-field">
+		{$nom_editcontrol1}
+	</div>
+	
+</div>
+
+{END nom_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -182,20 +182,20 @@
 		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$searchbutton_attrs} data-page=undefined >
-							Search			</a>
+							{mlang_message SEARCH}			</a>
 </span>
 	 
 		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$resetbutton_attrs} >
-							Reset			</a>
+							{mlang_message RESET}			</a>
 </span>
 	 
 		{BEGIN back_button}
 <span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							Back to list			</a>
+							{mlang_message BACK_TO_LIST}			</a>
 </span>
 {END back_button}
 	 
@@ -203,7 +203,7 @@
 <span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="cancelButton{$id}" >
-							Cancel			</a>
+							{mlang_message CANCEL}			</a>
 </span>
 {END cancel_button}
 	</div>					</div>

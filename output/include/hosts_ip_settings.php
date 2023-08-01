@@ -40,6 +40,48 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipshosts_ip["English"]))
 		$tdatahosts_ip[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelshosts_ip["Arabic"] = array();
+	$fieldToolTipshosts_ip["Arabic"] = array();
+	$placeHoldershosts_ip["Arabic"] = array();
+	$pageTitleshosts_ip["Arabic"] = array();
+	$fieldLabelshosts_ip["Arabic"]["id"] = "Id";
+	$fieldToolTipshosts_ip["Arabic"]["id"] = "";
+	$placeHoldershosts_ip["Arabic"]["id"] = "";
+	$fieldLabelshosts_ip["Arabic"]["address"] = "Address";
+	$fieldToolTipshosts_ip["Arabic"]["address"] = "";
+	$placeHoldershosts_ip["Arabic"]["address"] = "";
+	$fieldLabelshosts_ip["Arabic"]["host_id"] = "Host Id";
+	$fieldToolTipshosts_ip["Arabic"]["host_id"] = "";
+	$placeHoldershosts_ip["Arabic"]["host_id"] = "";
+	$fieldLabelshosts_ip["Arabic"]["ip"] = "Ip";
+	$fieldToolTipshosts_ip["Arabic"]["ip"] = "";
+	$placeHoldershosts_ip["Arabic"]["ip"] = "";
+	if (count($fieldToolTipshosts_ip["Arabic"]))
+		$tdatahosts_ip[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelshosts_ip["French"] = array();
+	$fieldToolTipshosts_ip["French"] = array();
+	$placeHoldershosts_ip["French"] = array();
+	$pageTitleshosts_ip["French"] = array();
+	$fieldLabelshosts_ip["French"]["id"] = "Id";
+	$fieldToolTipshosts_ip["French"]["id"] = "";
+	$placeHoldershosts_ip["French"]["id"] = "";
+	$fieldLabelshosts_ip["French"]["address"] = "Address";
+	$fieldToolTipshosts_ip["French"]["address"] = "";
+	$placeHoldershosts_ip["French"]["address"] = "";
+	$fieldLabelshosts_ip["French"]["host_id"] = "Host Id";
+	$fieldToolTipshosts_ip["French"]["host_id"] = "";
+	$placeHoldershosts_ip["French"]["host_id"] = "";
+	$fieldLabelshosts_ip["French"]["ip"] = "Ip";
+	$fieldToolTipshosts_ip["French"]["ip"] = "";
+	$placeHoldershosts_ip["French"]["ip"] = "";
+	if (count($fieldToolTipshosts_ip["French"]))
+		$tdatahosts_ip[".isUseToolTips"] = true;
+}
 
 
 	$tdatahosts_ip[".NCSearch"] = true;
@@ -851,24 +893,6 @@ $masterTablesData["hosts_ip"] = array();
 	$masterTablesData["hosts_ip"][0]["masterKeys"][]="host_id";
 				$masterTablesData["hosts_ip"][0]["detailKeys"] = array();
 	$masterTablesData["hosts_ip"][0]["detailKeys"][]="host_id";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="ip";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="ip";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "ip";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["hosts_ip"][1] = $masterParams;
-				$masterTablesData["hosts_ip"][1]["masterKeys"] = array();
-	$masterTablesData["hosts_ip"][1]["masterKeys"][]="ip";
-				$masterTablesData["hosts_ip"][1]["detailKeys"] = array();
-	$masterTablesData["hosts_ip"][1]["detailKeys"][]="ip";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

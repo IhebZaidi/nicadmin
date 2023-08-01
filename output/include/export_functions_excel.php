@@ -50,7 +50,7 @@ function ExportExcelRecord( $arrdata, $datatype, $numberRow, $objPHPExcel, $page
 			
 			if(!$gdImage)
 			{
-				$objASIndex->setCellValueByColumnAndRow($col,$numberRow+1,"LONG BINARY DATA - CANNOT BE DISPLAYED");
+				$objASIndex->setCellValueByColumnAndRow($col,$numberRow+1,mlang_message("LONG_BINARY"));
 				continue;
 			}			
 			

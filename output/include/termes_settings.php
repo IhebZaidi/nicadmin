@@ -46,6 +46,60 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipstermes["English"]))
 		$tdatatermes[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Arabic")
+{
+	$fieldLabelstermes["Arabic"] = array();
+	$fieldToolTipstermes["Arabic"] = array();
+	$placeHolderstermes["Arabic"] = array();
+	$pageTitlestermes["Arabic"] = array();
+	$fieldLabelstermes["Arabic"]["id"] = "Id";
+	$fieldToolTipstermes["Arabic"]["id"] = "";
+	$placeHolderstermes["Arabic"]["id"] = "";
+	$fieldLabelstermes["Arabic"]["name"] = "Name";
+	$fieldToolTipstermes["Arabic"]["name"] = "";
+	$placeHolderstermes["Arabic"]["name"] = "";
+	$fieldLabelstermes["Arabic"]["prohibited"] = "Prohibited";
+	$fieldToolTipstermes["Arabic"]["prohibited"] = "";
+	$placeHolderstermes["Arabic"]["prohibited"] = "";
+	$fieldLabelstermes["Arabic"]["reason"] = "Reason";
+	$fieldToolTipstermes["Arabic"]["reason"] = "";
+	$placeHolderstermes["Arabic"]["reason"] = "";
+	$fieldLabelstermes["Arabic"]["date_added"] = "Date Added";
+	$fieldToolTipstermes["Arabic"]["date_added"] = "";
+	$placeHolderstermes["Arabic"]["date_added"] = "";
+	$fieldLabelstermes["Arabic"]["type"] = "Type";
+	$fieldToolTipstermes["Arabic"]["type"] = "";
+	$placeHolderstermes["Arabic"]["type"] = "";
+	if (count($fieldToolTipstermes["Arabic"]))
+		$tdatatermes[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="French")
+{
+	$fieldLabelstermes["French"] = array();
+	$fieldToolTipstermes["French"] = array();
+	$placeHolderstermes["French"] = array();
+	$pageTitlestermes["French"] = array();
+	$fieldLabelstermes["French"]["id"] = "Id";
+	$fieldToolTipstermes["French"]["id"] = "";
+	$placeHolderstermes["French"]["id"] = "";
+	$fieldLabelstermes["French"]["name"] = "Name";
+	$fieldToolTipstermes["French"]["name"] = "";
+	$placeHolderstermes["French"]["name"] = "";
+	$fieldLabelstermes["French"]["prohibited"] = "Prohibited";
+	$fieldToolTipstermes["French"]["prohibited"] = "";
+	$placeHolderstermes["French"]["prohibited"] = "";
+	$fieldLabelstermes["French"]["reason"] = "Reason";
+	$fieldToolTipstermes["French"]["reason"] = "";
+	$placeHolderstermes["French"]["reason"] = "";
+	$fieldLabelstermes["French"]["date_added"] = "Date Added";
+	$fieldToolTipstermes["French"]["date_added"] = "";
+	$placeHolderstermes["French"]["date_added"] = "";
+	$fieldLabelstermes["French"]["type"] = "Type";
+	$fieldToolTipstermes["French"]["type"] = "";
+	$placeHolderstermes["French"]["type"] = "";
+	if (count($fieldToolTipstermes["French"]))
+		$tdatatermes[".isUseToolTips"] = true;
+}
 
 
 	$tdatatermes[".NCSearch"] = true;

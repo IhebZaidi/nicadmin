@@ -384,29 +384,17 @@ class Chart
 			return true;
 		if("domain_contacts" == $this->chrt_array['tables'][0])
 			return true;
-		if("domain_status" == $this->chrt_array['tables'][0])
-			return true;
 		if("domains" == $this->chrt_array['tables'][0])
-			return true;
-		if("extensions" == $this->chrt_array['tables'][0])
 			return true;
 		if("fsi_extensions" == $this->chrt_array['tables'][0])
 			return true;
 		if("fsi_ns" == $this->chrt_array['tables'][0])
 			return true;
-		if("hosts" == $this->chrt_array['tables'][0])
-			return true;
-		if("hosts_ip" == $this->chrt_array['tables'][0])
-			return true;
-		if("ip" == $this->chrt_array['tables'][0])
-			return true;
-		if("late_domains" == $this->chrt_array['tables'][0])
-			return true;
 		if("nameservers" == $this->chrt_array['tables'][0])
 			return true;
-		if("termes" == $this->chrt_array['tables'][0])
+		if("extensions" == $this->chrt_array['tables'][0])
 			return true;
-		if("termes_deleted" == $this->chrt_array['tables'][0])
+		if("hosts" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}
@@ -497,12 +485,12 @@ class Chart
 			return "";
 
 		if( !$this->searchClauseObj )
-			return "No data yet.";
+			return mlang_message("NO_DATA_YET");
 
 		if( $this->searchClauseObj->isSearchFunctionalityActivated() )
-			return "No results found.";
+			return mlang_message("NO_RECORDS");
 
-		return "No data yet.";
+		return mlang_message("NO_DATA_YET");
 	}
 
 	/**

@@ -368,15 +368,7 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="domain_status")
-		{
-			return false;
-		}
 		if($table=="domains")
-		{
-			return false;
-		}
-		if($table=="extensions")
 		{
 			return false;
 		}
@@ -388,31 +380,15 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="hosts")
-		{
-			return false;
-		}
-		if($table=="hosts_ip")
-		{
-			return false;
-		}
-		if($table=="ip")
-		{
-			return false;
-		}
-		if($table=="late_domains")
-		{
-			return false;
-		}
 		if($table=="nameservers")
 		{
 			return false;
 		}
-		if($table=="termes")
+		if($table=="extensions")
 		{
 			return false;
 		}
-		if($table=="termes_deleted")
+		if($table=="hosts")
 		{
 			return false;
 		}
@@ -736,15 +712,7 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="domain_status")
-		{
-			return false;
-		}
 		if($table=="domains")
-		{
-			return false;
-		}
-		if($table=="extensions")
 		{
 			return false;
 		}
@@ -756,31 +724,15 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="hosts")
-		{
-			return false;
-		}
-		if($table=="hosts_ip")
-		{
-			return false;
-		}
-		if($table=="ip")
-		{
-			return false;
-		}
-		if($table=="late_domains")
-		{
-			return false;
-		}
 		if($table=="nameservers")
 		{
 			return false;
 		}
-		if($table=="termes")
+		if($table=="extensions")
 		{
 			return false;
 		}
-		if($table=="termes_deleted")
+		if($table=="hosts")
 		{
 			return false;
 		}

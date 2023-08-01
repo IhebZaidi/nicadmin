@@ -30,7 +30,7 @@
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -48,7 +48,7 @@
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -63,10 +63,10 @@
 <h5>{$message}</h5>
 <div>
 {BEGIN message_back_button}
-			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+			<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
 	{END message_back_button}
 {BEGIN message_view_page_button}
-		<a class="btn btn-sm btn-default" href="domains_view.php?{$editlink}" {$view_page_button_attrs}>View</a>
+		<a class="btn btn-sm btn-default" href="domains_view.php?{$editlink}" {$view_page_button_attrs}>{mlang_message VIEW}</a>
 {END message_view_page_button}
 </div>
 </div>
@@ -1161,16 +1161,34 @@
 
 
 {END reg_restore_prohibited_fieldblock}
-	
-								</td>
+										</td>
 			{END cellblock_grid_c3}
-								</tr>
-			</tbody></table>
-{END grid_block}
+										</tr>
+										</tbody></table>
+				
+{BEGIN details_nameservers}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$details_pagetitle_nameservers}			
+							<span>
+					{$detailslButtons_nameservers}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_nameservers}
+		</div>
+	</div>
+</div>
+{END details_nameservers}
+	
+				{END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -1185,7 +1203,7 @@
 <span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$savebutton_attrs} >
-							Save			</a>
+							{mlang_message SAVE}			</a>
 </span>
 {END save_edit}
 	 
@@ -1193,7 +1211,7 @@
 <span data-itemtype="edit_back_list" data-itemid="edit_back_list" {$item_edit_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							Back to list			</a>
+							{mlang_message BACK_TO_LIST}			</a>
 </span>
 {END back_button}
 	 
@@ -1201,7 +1219,7 @@
 <span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$closebutton_attrs} >
-							Cancel			</a>
+							{mlang_message CANCEL}			</a>
 </span>
 {END close_button}
 	</div>			 
@@ -1220,14 +1238,14 @@
 								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
 				<a  {$resetbutton_attrs}  title="" >
 				
-		Reset		
+		{mlang_message RESET}		
 		</a>
 	</li>
 							{BEGIN view_page_button}
 	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
 				<a  href="domains_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
 				
-		View		
+		{mlang_message VIEW}		
 		</a>
 	</li>
 {END view_page_button}

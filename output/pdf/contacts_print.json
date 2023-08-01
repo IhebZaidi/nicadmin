@@ -115,12 +115,6 @@ pdfDocument = {
 										{BEGIN col_grid_16}
 					"%",
 					{END col_grid_16}
-										{BEGIN col_grid_17}
-					"%",
-					{END col_grid_17}
-										{BEGIN col_grid_18}
-					"%",
-					{END col_grid_18}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -131,13 +125,10 @@ pdfDocument = {
 													{BEGIN row_grid_1}
 							"%",
 							{END row_grid_1}
+													{END grid_row}
 																								{BEGIN row_grid_2}
 							"%",
 							{END row_grid_2}
-													{END grid_row}
-																								{BEGIN row_grid_3}
-							"%",
-							{END row_grid_3}
 															],
 							
 				body: [
@@ -164,6 +155,31 @@ pdfDocument = {
 		body: [
 				
 				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_print_pdf}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
 																{
 	cellId: 'c2',
 	col:0,
@@ -254,7 +270,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
@@ -290,35 +306,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'id',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel contacts id }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Prenom',
 				style: 'headcell',
 		
@@ -333,7 +320,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts Prenom }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+			{"text":"{$jslabel contacts Prenom }","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -342,10 +329,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field1',
 	col:0,
 	row:0,
 			fieldName: 'personne_physique',
@@ -362,7 +349,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts personne_physique }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
+			{"text":"{$jslabel contacts personne_physique }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -371,10 +358,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'nom',
@@ -391,7 +378,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts nom }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
+			{"text":"{$jslabel contacts nom }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -400,10 +387,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field4',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'adresse',
@@ -420,7 +407,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts adresse }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
+			{"text":"{$jslabel contacts adresse }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -429,10 +416,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
 {
-	cellId: 'headcell_field5',
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'tel',
@@ -449,7 +436,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts tel }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
+			{"text":"{$jslabel contacts tel }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -458,10 +445,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
 {
-	cellId: 'headcell_field6',
+	cellId: 'headcell_field5',
 	col:0,
 	row:0,
 			fieldName: 'email',
@@ -478,7 +465,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts email }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
+			{"text":"{$jslabel contacts email }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -487,10 +474,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
 {
-	cellId: 'headcell_field7',
+	cellId: 'headcell_field6',
 	col:0,
 	row:0,
 			fieldName: 'fax',
@@ -507,7 +494,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts fax }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
+			{"text":"{$jslabel contacts fax }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -516,10 +503,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
 {
-	cellId: 'headcell_field8',
+	cellId: 'headcell_field7',
 	col:0,
 	row:0,
 			fieldName: 'date_creation',
@@ -536,7 +523,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts date_creation }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
+			{"text":"{$jslabel contacts date_creation }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -545,10 +532,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
 {
-	cellId: 'headcell_field9',
+	cellId: 'headcell_field8',
 	col:0,
 	row:0,
 			fieldName: 'date_modif',
@@ -565,7 +552,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts date_modif }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
+			{"text":"{$jslabel contacts date_modif }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -574,10 +561,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
 {
-	cellId: 'headcell_field10',
+	cellId: 'headcell_field9',
 	col:0,
 	row:0,
 			fieldName: 'etat',
@@ -594,7 +581,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts etat }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
+			{"text":"{$jslabel contacts etat }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -603,39 +590,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field10}
-																							{BEGIN cellblock_grid_headcell_field11}
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
 {
-	cellId: 'headcell_field11',
-	col:0,
-	row:0,
-			fieldName: 'id_fsi',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel contacts id_fsi }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_fsi_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field11}
-																							{BEGIN cellblock_grid_headcell_field12}
-{
-	cellId: 'headcell_field12',
+	cellId: 'headcell_field10',
 	col:0,
 	row:0,
 			fieldName: 'password',
@@ -652,7 +610,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts password }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
+			{"text":"{$jslabel contacts password }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -661,10 +619,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field12}
-																							{BEGIN cellblock_grid_headcell_field13}
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
 {
-	cellId: 'headcell_field13',
+	cellId: 'headcell_field11',
 	col:0,
 	row:0,
 			fieldName: 'adresse2',
@@ -681,7 +639,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts adresse2 }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
+			{"text":"{$jslabel contacts adresse2 }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -690,10 +648,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field13}
-																							{BEGIN cellblock_grid_headcell_field14}
+{END cellblock_grid_headcell_field11}
+																							{BEGIN cellblock_grid_headcell_field12}
 {
-	cellId: 'headcell_field14',
+	cellId: 'headcell_field12',
 	col:0,
 	row:0,
 			fieldName: 'state_prov',
@@ -710,7 +668,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts state_prov }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
+			{"text":"{$jslabel contacts state_prov }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -719,10 +677,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field14}
-																							{BEGIN cellblock_grid_headcell_field15}
+{END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
 {
-	cellId: 'headcell_field15',
+	cellId: 'headcell_field13',
 	col:0,
 	row:0,
 			fieldName: 'zip_code',
@@ -739,7 +697,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts zip_code }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
+			{"text":"{$jslabel contacts zip_code }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -748,10 +706,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field15}
-																							{BEGIN cellblock_grid_headcell_field16}
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_headcell_field14}
 {
-	cellId: 'headcell_field16',
+	cellId: 'headcell_field14',
 	col:0,
 	row:0,
 			fieldName: 'city',
@@ -768,7 +726,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts city }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
+			{"text":"{$jslabel contacts city }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -777,10 +735,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field16}
-																							{BEGIN cellblock_grid_headcell_field17}
+{END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field15}
 {
-	cellId: 'headcell_field17',
+	cellId: 'headcell_field15',
 	col:0,
 	row:0,
 			fieldName: 'country',
@@ -797,7 +755,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts country }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
+			{"text":"{$jslabel contacts country }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -806,10 +764,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field17}
-																							{BEGIN cellblock_grid_headcell_field18}
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field16}
 {
-	cellId: 'headcell_field18',
+	cellId: 'headcell_field16',
 	col:0,
 	row:0,
 			fieldName: 'authtype',
@@ -826,7 +784,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel contacts authtype }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
+			{"text":"{$jslabel contacts authtype }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -835,7 +793,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field18}
+{END cellblock_grid_headcell_field16}
 											],
 				{END row_grid_0}
 		
@@ -848,35 +806,6 @@ pdfDocument = {
 																{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'id',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$id_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Prenom',
@@ -902,10 +831,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'personne_physique',
@@ -931,10 +860,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'nom',
@@ -960,10 +889,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field4',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'adresse',
@@ -989,10 +918,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
 {
-	cellId: 'cell_field5',
+	cellId: 'cell_field4',
 	col:0,
 	row:0,
 			fieldName: 'tel',
@@ -1018,10 +947,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			fieldName: 'email',
@@ -1047,10 +976,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			fieldName: 'fax',
@@ -1076,10 +1005,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			fieldName: 'date_creation',
@@ -1105,10 +1034,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
 {
-	cellId: 'cell_field9',
+	cellId: 'cell_field8',
 	col:0,
 	row:0,
 			fieldName: 'date_modif',
@@ -1134,10 +1063,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
 {
-	cellId: 'cell_field10',
+	cellId: 'cell_field9',
 	col:0,
 	row:0,
 			fieldName: 'etat',
@@ -1163,39 +1092,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field10}
-																							{BEGIN cellblock_grid_cell_field11}
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
 {
-	cellId: 'cell_field11',
-	col:0,
-	row:0,
-			fieldName: 'id_fsi',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$id_fsi_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$id_fsi_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field11}
-																							{BEGIN cellblock_grid_cell_field12}
-{
-	cellId: 'cell_field12',
+	cellId: 'cell_field10',
 	col:0,
 	row:0,
 			fieldName: 'password',
@@ -1221,10 +1121,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field12}
-																							{BEGIN cellblock_grid_cell_field13}
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
 {
-	cellId: 'cell_field13',
+	cellId: 'cell_field11',
 	col:0,
 	row:0,
 			fieldName: 'adresse2',
@@ -1250,10 +1150,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field13}
-																							{BEGIN cellblock_grid_cell_field14}
+{END cellblock_grid_cell_field11}
+																							{BEGIN cellblock_grid_cell_field12}
 {
-	cellId: 'cell_field14',
+	cellId: 'cell_field12',
 	col:0,
 	row:0,
 			fieldName: 'state_prov',
@@ -1279,10 +1179,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field14}
-																							{BEGIN cellblock_grid_cell_field15}
+{END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
 {
-	cellId: 'cell_field15',
+	cellId: 'cell_field13',
 	col:0,
 	row:0,
 			fieldName: 'zip_code',
@@ -1308,10 +1208,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field15}
-																							{BEGIN cellblock_grid_cell_field16}
+{END cellblock_grid_cell_field13}
+																							{BEGIN cellblock_grid_cell_field14}
 {
-	cellId: 'cell_field16',
+	cellId: 'cell_field14',
 	col:0,
 	row:0,
 			fieldName: 'city',
@@ -1337,10 +1237,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field16}
-																							{BEGIN cellblock_grid_cell_field17}
+{END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
 {
-	cellId: 'cell_field17',
+	cellId: 'cell_field15',
 	col:0,
 	row:0,
 			fieldName: 'country',
@@ -1366,10 +1266,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field17}
-																							{BEGIN cellblock_grid_cell_field18}
+{END cellblock_grid_cell_field15}
+																							{BEGIN cellblock_grid_cell_field16}
 {
-	cellId: 'cell_field18',
+	cellId: 'cell_field16',
 	col:0,
 	row:0,
 			fieldName: 'authtype',
@@ -1395,170 +1295,15 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field18}
+{END cellblock_grid_cell_field16}
 											],
 				{END row_grid_1}
-						{BEGIN row_grid_2}
-				[
-																{BEGIN cellblock_grid_cell_dpreview}
-{
-	cellId: 'cell_dpreview',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-					{BEGIN colspan_grid_cell_dpreview}
-			colSpan: {$colspan_grid_cell_dpreview},
-			{END colspan_grid_cell_dpreview}
-		
-		
-	
-			
-	
-			"stack": [
-		
-				
-			 {BEGIN details_domain_contacts}
-			{$displayDetailTable_domain_contacts }
-		{END details_domain_contacts},
-				
-				
-			 {BEGIN details_domains}
-			{$displayDetailTable_domains }
-		{END details_domains},
-				
-				
-			 {BEGIN details_late_domains}
-			{$displayDetailTable_late_domains }
-		{END details_late_domains},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_dpreview}
-																		{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  2,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  3,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  4,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  5,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  6,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  7,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  8,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  9,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  10,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  11,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  12,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  13,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  14,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  15,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  16,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  17,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  18,
-				text: ''
-			},
-							],
-				{END row_grid_2}
 		
 		{END grid_record}
 	{END grid_row}
 			
 					
-				{BEGIN row_grid_3}
+				{BEGIN row_grid_2}
 				[
 																{BEGIN cellblock_grid_footcell_field}
 {
@@ -2002,60 +1747,8 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field16}
-																							{BEGIN cellblock_grid_footcell_field17}
-{
-	cellId: 'footcell_field17',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field17}
-																							{BEGIN cellblock_grid_footcell_field18}
-{
-	cellId: 'footcell_field18',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field18}
 											],
-				{END row_grid_3}
+				{END row_grid_2}
 		
 				
 									]
