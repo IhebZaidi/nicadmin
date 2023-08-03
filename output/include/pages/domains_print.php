@@ -1,7 +1,6 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'details' => array( 'nameservers' => array( 'displayPreview' => 1 ),
-'domain_contacts' => array( 'displayPreview' => 1 ) ),
+'details' => array( 'domain_contacts' => array( 'displayPreview' => 1 ) ),
 'totals' => array( 'id' => array( 'totalsType' => '' ),
 'code' => array( 'totalsType' => '' ),
 'domain' => array( 'totalsType' => '' ),

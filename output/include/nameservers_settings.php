@@ -25,15 +25,15 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsnameservers["English"] = array();
 	$placeHoldersnameservers["English"] = array();
 	$pageTitlesnameservers["English"] = array();
-	$fieldLabelsnameservers["English"]["domain_id"] = "Domain Id";
-	$fieldToolTipsnameservers["English"]["domain_id"] = "";
-	$placeHoldersnameservers["English"]["domain_id"] = "";
 	$fieldLabelsnameservers["English"]["ttl"] = "Ttl";
 	$fieldToolTipsnameservers["English"]["ttl"] = "";
 	$placeHoldersnameservers["English"]["ttl"] = "";
 	$fieldLabelsnameservers["English"]["nameserver"] = "Nameserver";
 	$fieldToolTipsnameservers["English"]["nameserver"] = "";
 	$placeHoldersnameservers["English"]["nameserver"] = "";
+	$fieldLabelsnameservers["English"]["domain"] = "Domain";
+	$fieldToolTipsnameservers["English"]["domain"] = "";
+	$placeHoldersnameservers["English"]["domain"] = "";
 	if (count($fieldToolTipsnameservers["English"]))
 		$tdatanameservers[".isUseToolTips"] = true;
 }
@@ -43,15 +43,15 @@ if(mlang_getcurrentlang()=="Arabic")
 	$fieldToolTipsnameservers["Arabic"] = array();
 	$placeHoldersnameservers["Arabic"] = array();
 	$pageTitlesnameservers["Arabic"] = array();
-	$fieldLabelsnameservers["Arabic"]["domain_id"] = "Domain Id";
-	$fieldToolTipsnameservers["Arabic"]["domain_id"] = "";
-	$placeHoldersnameservers["Arabic"]["domain_id"] = "";
 	$fieldLabelsnameservers["Arabic"]["ttl"] = "Ttl";
 	$fieldToolTipsnameservers["Arabic"]["ttl"] = "";
 	$placeHoldersnameservers["Arabic"]["ttl"] = "";
 	$fieldLabelsnameservers["Arabic"]["nameserver"] = "Nameserver";
 	$fieldToolTipsnameservers["Arabic"]["nameserver"] = "";
 	$placeHoldersnameservers["Arabic"]["nameserver"] = "";
+	$fieldLabelsnameservers["Arabic"]["domain"] = "Domain";
+	$fieldToolTipsnameservers["Arabic"]["domain"] = "";
+	$placeHoldersnameservers["Arabic"]["domain"] = "";
 	if (count($fieldToolTipsnameservers["Arabic"]))
 		$tdatanameservers[".isUseToolTips"] = true;
 }
@@ -61,15 +61,15 @@ if(mlang_getcurrentlang()=="French")
 	$fieldToolTipsnameservers["French"] = array();
 	$placeHoldersnameservers["French"] = array();
 	$pageTitlesnameservers["French"] = array();
-	$fieldLabelsnameservers["French"]["domain_id"] = "Domain Id";
-	$fieldToolTipsnameservers["French"]["domain_id"] = "";
-	$placeHoldersnameservers["French"]["domain_id"] = "";
 	$fieldLabelsnameservers["French"]["ttl"] = "Ttl";
 	$fieldToolTipsnameservers["French"]["ttl"] = "";
 	$placeHoldersnameservers["French"]["ttl"] = "";
 	$fieldLabelsnameservers["French"]["nameserver"] = "Nameserver";
 	$fieldToolTipsnameservers["French"]["nameserver"] = "";
 	$placeHoldersnameservers["French"]["nameserver"] = "";
+	$fieldLabelsnameservers["French"]["domain"] = "Domain";
+	$fieldToolTipsnameservers["French"]["domain"] = "";
+	$placeHoldersnameservers["French"]["domain"] = "";
 	if (count($fieldToolTipsnameservers["French"]))
 		$tdatanameservers[".isUseToolTips"] = true;
 }
@@ -187,9 +187,9 @@ $tdatanameservers[".filterFields"] = array();
 $tdatanameservers[".requiredSearchFields"] = array();
 
 $tdatanameservers[".googleLikeFields"] = array();
-$tdatanameservers[".googleLikeFields"][] = "domain_id";
 $tdatanameservers[".googleLikeFields"][] = "ttl";
 $tdatanameservers[".googleLikeFields"][] = "nameserver";
+$tdatanameservers[".googleLikeFields"][] = "domain";
 
 
 
@@ -223,8 +223,8 @@ $tdatanameservers[".strOrderBy"] = $tstrOrderBy;
 $tdatanameservers[".orderindexes"] = array();
 
 
-$tdatanameservers[".sqlHead"] = "SELECT domain_id,  	ttl,  	nameserver";
-$tdatanameservers[".sqlFrom"] = "FROM nameservers";
+$tdatanameservers[".sqlHead"] = "SELECT nameservers.ttl,  nameservers.nameserver,  domains.`domain`";
+$tdatanameservers[".sqlFrom"] = "FROM nameservers  INNER JOIN domains ON nameservers.domain_id = domains.id";
 $tdatanameservers[".sqlWhereExpr"] = "";
 $tdatanameservers[".sqlTail"] = "";
 
@@ -262,7 +262,6 @@ $tdatanameservers[".arrGroupsPerPage"] = $arrGPP;
 $tdatanameservers[".highlightSearchResults"] = true;
 
 $tableKeysnameservers = array();
-$tableKeysnameservers[] = "domain_id";
 $tableKeysnameservers[] = "nameserver";
 $tdatanameservers[".Keys"] = $tableKeysnameservers;
 
@@ -272,176 +271,10 @@ $tdatanameservers[".hideMobileList"] = array();
 
 
 
-//	domain_id
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 1;
-	$fdata["strName"] = "domain_id";
-	$fdata["GoodName"] = "domain_id";
-	$fdata["ownerTable"] = "nameservers";
-	$fdata["Label"] = GetFieldLabel("nameservers","domain_id");
-	$fdata["FieldType"] = 20;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "domain_id";
-
-		$fdata["sourceSingle"] = "domain_id";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "domain_id";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "domains";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "id";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "domain";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatanameservers["domain_id"] = $fdata;
-		$tdatanameservers[".searchableFields"][] = "domain_id";
 //	ttl
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 2;
+	$fdata["Index"] = 1;
 	$fdata["strName"] = "ttl";
 	$fdata["GoodName"] = "ttl";
 	$fdata["ownerTable"] = "nameservers";
@@ -459,7 +292,7 @@ $tdatanameservers[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ttl";
+	$fdata["FullName"] = "nameservers.ttl";
 
 	
 	
@@ -580,7 +413,7 @@ $tdatanameservers[".hideMobileList"] = array();
 //	nameserver
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 3;
+	$fdata["Index"] = 2;
 	$fdata["strName"] = "nameserver";
 	$fdata["GoodName"] = "nameserver";
 	$fdata["ownerTable"] = "nameservers";
@@ -598,7 +431,7 @@ $tdatanameservers[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "nameserver";
+	$fdata["FullName"] = "nameservers.nameserver";
 
 	
 	
@@ -743,6 +576,143 @@ $tdatanameservers[".hideMobileList"] = array();
 
 	$tdatanameservers["nameserver"] = $fdata;
 		$tdatanameservers[".searchableFields"][] = "nameserver";
+//	domain
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 3;
+	$fdata["strName"] = "domain";
+	$fdata["GoodName"] = "domain";
+	$fdata["ownerTable"] = "domains";
+	$fdata["Label"] = GetFieldLabel("nameservers","domain");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "domain";
+
+	
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "domains.`domain`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatanameservers["domain"] = $fdata;
+		$tdatanameservers[".searchableFields"][] = "domain";
 
 
 $tables_data["nameservers"]=&$tdatanameservers;
@@ -767,24 +737,6 @@ $masterTablesData["nameservers"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="domains";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="domains";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "domains";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["nameservers"][0] = $masterParams;
-				$masterTablesData["nameservers"][0]["masterKeys"] = array();
-	$masterTablesData["nameservers"][0]["masterKeys"][]="id";
-				$masterTablesData["nameservers"][0]["detailKeys"] = array();
-	$masterTablesData["nameservers"][0]["detailKeys"][]="domain_id";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -805,8 +757,8 @@ function createSqlQuery_nameservers()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "domain_id,  	ttl,  	nameserver";
-$proto0["m_strFrom"] = "FROM nameservers";
+$proto0["m_strFieldList"] = "nameservers.ttl,  nameservers.nameserver,  domains.`domain`";
+$proto0["m_strFrom"] = "FROM nameservers  INNER JOIN domains ON nameservers.domain_id = domains.id";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -847,12 +799,12 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "domain_id",
+	"m_strName" => "ttl",
 	"m_strTable" => "nameservers",
 	"m_srcTableName" => "nameservers"
 ));
 
-$proto6["m_sql"] = "domain_id";
+$proto6["m_sql"] = "nameservers.ttl";
 $proto6["m_srcTableName"] = "nameservers";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -861,12 +813,12 @@ $obj = new SQLFieldListItem($proto6);
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
-	"m_strName" => "ttl",
+	"m_strName" => "nameserver",
 	"m_strTable" => "nameservers",
 	"m_srcTableName" => "nameservers"
 ));
 
-$proto8["m_sql"] = "ttl";
+$proto8["m_sql"] = "nameservers.nameserver";
 $proto8["m_srcTableName"] = "nameservers";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -875,12 +827,12 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "nameserver",
-	"m_strTable" => "nameservers",
+	"m_strName" => "domain",
+	"m_strTable" => "domains",
 	"m_srcTableName" => "nameservers"
 ));
 
-$proto10["m_sql"] = "nameserver";
+$proto10["m_sql"] = "domains.`domain`";
 $proto10["m_srcTableName"] = "nameservers";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -920,6 +872,88 @@ $obj = new SQLLogicalExpr($proto14);
 
 $proto12["m_joinon"] = $obj;
 $obj = new SQLFromListItem($proto12);
+
+$proto0["m_fromlist"][]=$obj;
+												$proto16=array();
+$proto16["m_link"] = "SQLL_INNERJOIN";
+			$proto17=array();
+$proto17["m_strName"] = "domains";
+$proto17["m_srcTableName"] = "nameservers";
+$proto17["m_columns"] = array();
+$proto17["m_columns"][] = "id";
+$proto17["m_columns"][] = "code";
+$proto17["m_columns"][] = "domain";
+$proto17["m_columns"][] = "domainidn";
+$proto17["m_columns"][] = "ext";
+$proto17["m_columns"][] = "fsi";
+$proto17["m_columns"][] = "organisme";
+$proto17["m_columns"][] = "adresse";
+$proto17["m_columns"][] = "tel";
+$proto17["m_columns"][] = "fax";
+$proto17["m_columns"][] = "email";
+$proto17["m_columns"][] = "contact";
+$proto17["m_columns"][] = "activite";
+$proto17["m_columns"][] = "rubrique";
+$proto17["m_columns"][] = "date_recept";
+$proto17["m_columns"][] = "date_accept";
+$proto17["m_columns"][] = "date_activ";
+$proto17["m_columns"][] = "date_modif";
+$proto17["m_columns"][] = "date_annul";
+$proto17["m_columns"][] = "date_annul_due";
+$proto17["m_columns"][] = "etat";
+$proto17["m_columns"][] = "modif";
+$proto17["m_columns"][] = "commentaire";
+$proto17["m_columns"][] = "ns_modif";
+$proto17["m_columns"][] = "id_fsi_in";
+$proto17["m_columns"][] = "domain_pw";
+$proto17["m_columns"][] = "date_blocked";
+$proto17["m_columns"][] = "date_blocked_max";
+$proto17["m_columns"][] = "blocked_by";
+$proto17["m_columns"][] = "date_unblocked";
+$proto17["m_columns"][] = "date_transfer_req";
+$proto17["m_columns"][] = "date_transfer_due";
+$proto17["m_columns"][] = "date_transfer_canceled";
+$proto17["m_columns"][] = "date_transfer_accepted";
+$proto17["m_columns"][] = "date_transfer_rejected";
+$proto17["m_columns"][] = "date_annul_req";
+$proto17["m_columns"][] = "last_status";
+$proto17["m_columns"][] = "updated_by";
+$proto17["m_columns"][] = "private";
+$proto17["m_columns"][] = "mgmt";
+$proto17["m_columns"][] = "forward";
+$proto17["m_columns"][] = "dnssec";
+$proto17["m_columns"][] = "stat";
+$proto17["m_columns"][] = "in";
+$proto17["m_columns"][] = "change_prop";
+$proto17["m_columns"][] = "reg_annul_reason";
+$proto17["m_columns"][] = "reg_comment";
+$proto17["m_columns"][] = "reg_transfer_prohibited";
+$proto17["m_columns"][] = "reg_restore_prohibited";
+$obj = new SQLTable($proto17);
+
+$proto16["m_table"] = $obj;
+$proto16["m_sql"] = "INNER JOIN domains ON nameservers.domain_id = domains.id";
+$proto16["m_alias"] = "";
+$proto16["m_srcTableName"] = "nameservers";
+$proto18=array();
+$proto18["m_sql"] = "domains.id = nameservers.domain_id";
+$proto18["m_uniontype"] = "SQLL_UNKNOWN";
+						$obj = new SQLField(array(
+	"m_strName" => "id",
+	"m_strTable" => "domains",
+	"m_srcTableName" => "nameservers"
+));
+
+$proto18["m_column"]=$obj;
+$proto18["m_contained"] = array();
+$proto18["m_strCase"] = "= nameservers.domain_id";
+$proto18["m_havingmode"] = false;
+$proto18["m_inBrackets"] = false;
+$proto18["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto18);
+
+$proto16["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto16);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();

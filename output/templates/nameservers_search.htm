@@ -94,28 +94,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN domain_id_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_domain_id}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="domain_id{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="domain_id" data-fieldname="domain_id" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_domain_id}">
-		{$label nameservers domain_id }	</label>
-	<div class="r-search-option">
-		{$searchtype_domain_id}
-	</div>
-	<div class="r-search-field">
-		{$domain_id_editcontrol}	</div>
-	<div class="r-search-field">
-		{$domain_id_editcontrol1}
-	</div>
-	
-</div>
-
-{END domain_id_fieldblock}
-											
 {BEGIN ttl_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_ttl}  r-horizontal-field form-horizontal" 	
@@ -159,6 +137,28 @@
 </div>
 
 {END nameserver_fieldblock}
+											
+{BEGIN domain_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_domain}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="domain{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="domain" data-fieldname="domain" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_domain}">
+		{$label nameservers domain }	</label>
+	<div class="r-search-option">
+		{$searchtype_domain}
+	</div>
+	<div class="r-search-field">
+		{$domain_editcontrol}	</div>
+	<div class="r-search-field">
+		{$domain_editcontrol1}
+	</div>
+	
+</div>
+
+{END domain_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

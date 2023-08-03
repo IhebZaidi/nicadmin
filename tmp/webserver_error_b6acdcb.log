@@ -1,0 +1,11 @@
+[Thu Aug 03 07:10:10.134060 2023] [core:warn] [pid 16724:tid 404] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Projects/www/nicadmin/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::e608:e813:4140:a5ac. Set the 'ServerName' directive globally to suppress this message
+[Thu Aug 03 07:10:11.940235 2023] [mpm_winnt:notice] [pid 16724:tid 404] AH00455: Apache/2.4.54 (Win64) PHP/7.4.30 configured -- resuming normal operations
+[Thu Aug 03 07:10:11.940235 2023] [mpm_winnt:notice] [pid 16724:tid 404] AH00456: Server built: Jul 26 2022 23:58:26
+[Thu Aug 03 07:10:11.941235 2023] [core:notice] [pid 16724:tid 404] AH00094: Command line: 'C:\\Program Files\\PHPRunner10.91\\EmbeddedServer64\\bin\\httpd.exe -d C:/Program Files/PHPRunner10.91/EmbeddedServer64 -d C:\\Program Files\\PHPRunner10.91\\EmbeddedServer64 -f C:\\Projects\\www\\nicadmin\\tmp\\webserver.conf'
+[Thu Aug 03 07:10:11.956240 2023] [mpm_winnt:notice] [pid 16724:tid 404] AH00418: Parent: Created child process 16164
+[Thu Aug 03 07:10:14.109240 2023] [core:warn] [pid 16164:tid 196] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Projects/www/nicadmin/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::e608:e813:4140:a5ac. Set the 'ServerName' directive globally to suppress this message
+[Thu Aug 03 07:10:15.224243 2023] [core:warn] [pid 16164:tid 196] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Projects/www/nicadmin/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::e608:e813:4140:a5ac. Set the 'ServerName' directive globally to suppress this message
+[Thu Aug 03 07:10:16.613714 2023] [mpm_winnt:notice] [pid 16164:tid 196] AH00354: Child: Starting 64 worker threads.

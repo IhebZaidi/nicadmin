@@ -245,20 +245,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_domain_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_domain_id}" {$filterRow_attrs_domain_id}>
-			<label>{$label nameservers domain_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_domain_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_domain_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_domain_id}</span>
-						</div>
-		{END searchCtrlBlock_domain_id}
-																{BEGIN searchCtrlBlock_ttl}
+																		{BEGIN searchCtrlBlock_ttl}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_ttl}" {$filterRow_attrs_ttl}>
@@ -271,6 +258,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ttl}</span>
 						</div>
 		{END searchCtrlBlock_ttl}
+																{BEGIN searchCtrlBlock_domain}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_domain}" {$filterRow_attrs_domain}>
+			<label>{$label nameservers domain }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_domain}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_domain}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_domain}</span>
+						</div>
+		{END searchCtrlBlock_domain}
 																{BEGIN searchCtrlBlock_nameserver}
 
 
@@ -484,6 +484,14 @@
 		</a>
 	</li>
 {END logoutbutton}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		{mlang_message CHANGE_PASSWORD}		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -535,14 +543,6 @@
 							{mlang_message ADD_NEW}			</a>
 </span>
 {END add_link}
-	 
-		{BEGIN inlineadd_link}
-<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$inlineaddlink_attrs} >
-							{mlang_message INLINE_ADD}			</a>
-</span>
-{END inlineadd_link}
 	 
 		{BEGIN deleteselected_link}
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
@@ -655,14 +655,14 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="domain_id"]:before {
-		content: "{$label nameservers domain_id}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ttl"]:before {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ttl"]:before {
 		content: "{$label nameservers ttl}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nameserver"]:before {
 		content: "{$label nameservers nameserver}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="domain"]:before {
+		content: "{$label nameservers domain}";
 	}
 	}
 </style>
@@ -722,52 +722,18 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$domain_id_class}	"
-
-			data-field="domain_id"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN domain_id_fieldheadercolumn}
-	{BEGIN domain_id_fieldheader}
-<span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="domain_id" data-fieldname="domain_id" 
-
-			{$domain_id_orderlinkattrs}
-	
-	
-	>
-	<span class="text-label">
-		<span>{$label nameservers domain_id }</span>
-					{$arrow_icon_domain_id}
-			</span>
-	</span>
-	{END domain_id_fieldheader}
-{END domain_id_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$ttl_class}	"
 
 			data-field="ttl"
 	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN ttl_fieldheadercolumn}
 	{BEGIN ttl_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ttl" data-fieldname="ttl" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ttl" data-fieldname="ttl" 
 
 			{$ttl_orderlinkattrs}
 	
@@ -783,25 +749,25 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
-	{$cell_grid_headcell_field2}
+	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$nameserver_class}	"
 
 			data-field="nameserver"
 	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN nameserver_fieldheadercolumn}
 	{BEGIN nameserver_fieldheader}
 <span 
-	data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nameserver" data-fieldname="nameserver" 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nameserver" data-fieldname="nameserver" 
 
 			{$nameserver_orderlinkattrs}
 	
@@ -814,6 +780,40 @@
 	</span>
 	{END nameserver_fieldheader}
 {END nameserver_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$domain_class}	"
+
+			data-field="domain"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN domain_fieldheadercolumn}
+	{BEGIN domain_fieldheader}
+<span 
+	data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="domain" data-fieldname="domain" 
+
+			{$domain_orderlinkattrs}
+	
+	
+	>
+	<span class="text-label">
+		<span>{$label nameservers domain }</span>
+					{$arrow_icon_domain}
+			</span>
+	</span>
+	{END domain_fieldheader}
+{END domain_fieldheadercolumn}
 
 	
 	</th>
@@ -853,15 +853,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN inline_cancel}
-<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
-				
-								</a>
-</span>
-{END inline_cancel}
 	 
 		{BEGIN view_column}
 {BEGIN view_link}
@@ -906,32 +897,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$domain_id_class}	"
-
-			data-field="domain_id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN domain_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="domain_id" data-fieldname="domain_id" data-default-width >
-{$domain_id_value}
-</span>
-{END domain_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$ttl_class}	"
 
 			data-field="ttl"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -941,18 +911,18 @@
 </span>
 {END ttl_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$nameserver_class}	"
 
 			data-field="nameserver"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -961,6 +931,27 @@
 {$nameserver_value}
 </span>
 {END nameserver_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$domain_class}	"
+
+			data-field="domain"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN domain_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="domain" data-fieldname="domain" data-default-width >
+{$domain_value}
+</span>
+{END domain_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 							</tr>
@@ -1010,7 +1001,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$domain_id_class}	"
+		 r-ori-vert		 {$ttl_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="nameservers_list"	
@@ -1025,7 +1016,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ttl_class}	"
+		 r-ori-vert		 {$nameserver_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="nameservers_list"	
@@ -1040,7 +1031,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$nameserver_class}	"
+		 r-ori-vert		 {$domain_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="nameservers_list"	

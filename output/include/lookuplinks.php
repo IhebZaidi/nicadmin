@@ -75,13 +75,6 @@ function InitLookupLinks()
 			$lookupTableLinks["hosts"]["fsi_ns.nameserver"] = array();
 		}
 		$lookupTableLinks["hosts"]["fsi_ns.nameserver"]["edit"] = array("table" => "fsi_ns", "field" => "nameserver", "page" => "edit");
-		if( !isset( $lookupTableLinks["domains"] ) ) {
-			$lookupTableLinks["domains"] = array();
-		}
-		if( !isset( $lookupTableLinks["domains"]["nameservers.domain_id"] )) {
-			$lookupTableLinks["domains"]["nameservers.domain_id"] = array();
-		}
-		$lookupTableLinks["domains"]["nameservers.domain_id"]["edit"] = array("table" => "nameservers", "field" => "domain_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["hosts"] ) ) {
 			$lookupTableLinks["hosts"] = array();
 		}

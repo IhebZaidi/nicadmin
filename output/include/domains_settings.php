@@ -7654,41 +7654,11 @@ changeTextControlsToDate( "domains" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["domains"] = array();
-//	nameservers
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="nameservers";
-		$detailsParam["dOriginalTable"] = "nameservers";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "nameservers";
-	$detailsParam["dCaptionTable"] = GetTableCaption("nameservers");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["domains"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["domains"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["domains"][$dIndex]["masterKeys"][]="id";
-
-				$detailsTablesData["domains"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["domains"][$dIndex]["detailKeys"][]="domain_id";
 //	domain_contacts
 	
 	
 
-		$dIndex = 1;
+		$dIndex = 0;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="domain_contacts";
 		$detailsParam["dOriginalTable"] = "domain_contacts";

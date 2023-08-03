@@ -82,6 +82,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelscontacts["English"]["id"] = "Id";
 	$fieldToolTipscontacts["English"]["id"] = "";
 	$placeHolderscontacts["English"]["id"] = "";
+	$fieldLabelscontacts["English"]["type_contact"] = "Type Contact";
+	$fieldToolTipscontacts["English"]["type_contact"] = "";
+	$placeHolderscontacts["English"]["type_contact"] = "";
 	if (count($fieldToolTipscontacts["English"]))
 		$tdatacontacts[".isUseToolTips"] = true;
 }
@@ -148,6 +151,9 @@ if(mlang_getcurrentlang()=="Arabic")
 	$fieldLabelscontacts["Arabic"]["id"] = "Id";
 	$fieldToolTipscontacts["Arabic"]["id"] = "";
 	$placeHolderscontacts["Arabic"]["id"] = "";
+	$fieldLabelscontacts["Arabic"]["type_contact"] = "Type Contact";
+	$fieldToolTipscontacts["Arabic"]["type_contact"] = "";
+	$placeHolderscontacts["Arabic"]["type_contact"] = "";
 	if (count($fieldToolTipscontacts["Arabic"]))
 		$tdatacontacts[".isUseToolTips"] = true;
 }
@@ -214,6 +220,9 @@ if(mlang_getcurrentlang()=="French")
 	$fieldLabelscontacts["French"]["id"] = "Id";
 	$fieldToolTipscontacts["French"]["id"] = "";
 	$placeHolderscontacts["French"]["id"] = "";
+	$fieldLabelscontacts["French"]["type_contact"] = "Type Contact";
+	$fieldToolTipscontacts["French"]["type_contact"] = "";
+	$placeHolderscontacts["French"]["type_contact"] = "";
 	if (count($fieldToolTipscontacts["French"]))
 		$tdatacontacts[".isUseToolTips"] = true;
 }
@@ -350,6 +359,7 @@ $tdatacontacts[".googleLikeFields"][] = "city";
 $tdatacontacts[".googleLikeFields"][] = "country";
 $tdatacontacts[".googleLikeFields"][] = "authtype";
 $tdatacontacts[".googleLikeFields"][] = "id";
+$tdatacontacts[".googleLikeFields"][] = "type_contact";
 
 
 
@@ -383,8 +393,8 @@ $tdatacontacts[".strOrderBy"] = $tstrOrderBy;
 $tdatacontacts[".orderindexes"] = array();
 
 
-$tdatacontacts[".sqlHead"] = "SELECT Prenom,  personne_physique,  nom,  adresse,  tel,  email,  fax,  date_creation,  date_modif,  etat,  id_fsi,  password,  adresse2,  state_prov,  zip_code,  city,  country,  authtype,  id";
-$tdatacontacts[".sqlFrom"] = "FROM contacts";
+$tdatacontacts[".sqlHead"] = "SELECT contacts.Prenom,  contacts.personne_physique,  contacts.nom,  contacts.adresse,  contacts.tel,  contacts.email,  contacts.fax,  contacts.date_creation,  contacts.date_modif,  contacts.etat,  contacts.id_fsi,  contacts.password,  contacts.adresse2,  contacts.state_prov,  contacts.zip_code,  contacts.city,  contacts.country,  contacts.authtype,  contacts.id,  domain_contacts.type_contact";
+$tdatacontacts[".sqlFrom"] = "FROM contacts  INNER JOIN domain_contacts ON contacts.id = domain_contacts.id_contact";
 $tdatacontacts[".sqlWhereExpr"] = "";
 $tdatacontacts[".sqlTail"] = "";
 
@@ -451,7 +461,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Prenom";
+	$fdata["FullName"] = "contacts.Prenom";
 
 	
 	
@@ -590,7 +600,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "personne_physique";
+	$fdata["FullName"] = "contacts.personne_physique";
 
 	
 	
@@ -729,7 +739,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "nom";
+	$fdata["FullName"] = "contacts.nom";
 
 	
 	
@@ -868,7 +878,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "adresse";
+	$fdata["FullName"] = "contacts.adresse";
 
 	
 	
@@ -1007,7 +1017,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "tel";
+	$fdata["FullName"] = "contacts.tel";
 
 	
 	
@@ -1146,7 +1156,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "email";
+	$fdata["FullName"] = "contacts.email";
 
 	
 	
@@ -1285,7 +1295,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fax";
+	$fdata["FullName"] = "contacts.fax";
 
 	
 	
@@ -1424,7 +1434,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "date_creation";
+	$fdata["FullName"] = "contacts.date_creation";
 
 	
 	
@@ -1563,7 +1573,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "date_modif";
+	$fdata["FullName"] = "contacts.date_modif";
 
 	
 	
@@ -1702,7 +1712,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "etat";
+	$fdata["FullName"] = "contacts.etat";
 
 	
 	
@@ -1841,7 +1851,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "id_fsi";
+	$fdata["FullName"] = "contacts.id_fsi";
 
 	
 	
@@ -1980,7 +1990,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "password";
+	$fdata["FullName"] = "contacts.password";
 
 	
 	
@@ -2119,7 +2129,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "adresse2";
+	$fdata["FullName"] = "contacts.adresse2";
 
 	
 	
@@ -2258,7 +2268,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "state_prov";
+	$fdata["FullName"] = "contacts.state_prov";
 
 	
 	
@@ -2397,7 +2407,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "zip_code";
+	$fdata["FullName"] = "contacts.zip_code";
 
 	
 	
@@ -2536,7 +2546,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "city";
+	$fdata["FullName"] = "contacts.city";
 
 	
 	
@@ -2675,7 +2685,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "country";
+	$fdata["FullName"] = "contacts.country";
 
 	
 	
@@ -2814,7 +2824,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "authtype";
+	$fdata["FullName"] = "contacts.authtype";
 
 	
 	
@@ -2967,7 +2977,7 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "id";
+	$fdata["FullName"] = "contacts.id";
 
 	
 	
@@ -3087,6 +3097,143 @@ $tdatacontacts[".hideMobileList"] = array();
 
 	$tdatacontacts["id"] = $fdata;
 		$tdatacontacts[".searchableFields"][] = "id";
+//	type_contact
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 20;
+	$fdata["strName"] = "type_contact";
+	$fdata["GoodName"] = "type_contact";
+	$fdata["ownerTable"] = "domain_contacts";
+	$fdata["Label"] = GetFieldLabel("contacts","type_contact");
+	$fdata["FieldType"] = 129;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "type_contact";
+
+	
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "domain_contacts.type_contact";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacontacts["type_contact"] = $fdata;
+		$tdatacontacts[".searchableFields"][] = "type_contact";
 
 
 $tables_data["contacts"]=&$tdatacontacts;
@@ -3149,8 +3296,8 @@ function createSqlQuery_contacts()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "Prenom,  personne_physique,  nom,  adresse,  tel,  email,  fax,  date_creation,  date_modif,  etat,  id_fsi,  password,  adresse2,  state_prov,  zip_code,  city,  country,  authtype,  id";
-$proto0["m_strFrom"] = "FROM contacts";
+$proto0["m_strFieldList"] = "contacts.Prenom,  contacts.personne_physique,  contacts.nom,  contacts.adresse,  contacts.tel,  contacts.email,  contacts.fax,  contacts.date_creation,  contacts.date_modif,  contacts.etat,  contacts.id_fsi,  contacts.password,  contacts.adresse2,  contacts.state_prov,  contacts.zip_code,  contacts.city,  contacts.country,  contacts.authtype,  contacts.id,  domain_contacts.type_contact";
+$proto0["m_strFrom"] = "FROM contacts  INNER JOIN domain_contacts ON contacts.id = domain_contacts.id_contact";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -3196,7 +3343,7 @@ $proto0["m_fieldlist"] = array();
 	"m_srcTableName" => "contacts"
 ));
 
-$proto6["m_sql"] = "Prenom";
+$proto6["m_sql"] = "contacts.Prenom";
 $proto6["m_srcTableName"] = "contacts";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -3210,7 +3357,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto8["m_sql"] = "personne_physique";
+$proto8["m_sql"] = "contacts.personne_physique";
 $proto8["m_srcTableName"] = "contacts";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -3224,7 +3371,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto10["m_sql"] = "nom";
+$proto10["m_sql"] = "contacts.nom";
 $proto10["m_srcTableName"] = "contacts";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -3238,7 +3385,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto12["m_sql"] = "adresse";
+$proto12["m_sql"] = "contacts.adresse";
 $proto12["m_srcTableName"] = "contacts";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -3252,7 +3399,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto14["m_sql"] = "tel";
+$proto14["m_sql"] = "contacts.tel";
 $proto14["m_srcTableName"] = "contacts";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -3266,7 +3413,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto16["m_sql"] = "email";
+$proto16["m_sql"] = "contacts.email";
 $proto16["m_srcTableName"] = "contacts";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -3280,7 +3427,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto18["m_sql"] = "fax";
+$proto18["m_sql"] = "contacts.fax";
 $proto18["m_srcTableName"] = "contacts";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -3294,7 +3441,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto20["m_sql"] = "date_creation";
+$proto20["m_sql"] = "contacts.date_creation";
 $proto20["m_srcTableName"] = "contacts";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
@@ -3308,7 +3455,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto22["m_sql"] = "date_modif";
+$proto22["m_sql"] = "contacts.date_modif";
 $proto22["m_srcTableName"] = "contacts";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
@@ -3322,7 +3469,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto24["m_sql"] = "etat";
+$proto24["m_sql"] = "contacts.etat";
 $proto24["m_srcTableName"] = "contacts";
 $proto24["m_expr"]=$obj;
 $proto24["m_alias"] = "";
@@ -3336,7 +3483,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto26["m_sql"] = "id_fsi";
+$proto26["m_sql"] = "contacts.id_fsi";
 $proto26["m_srcTableName"] = "contacts";
 $proto26["m_expr"]=$obj;
 $proto26["m_alias"] = "";
@@ -3350,7 +3497,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto28["m_sql"] = "password";
+$proto28["m_sql"] = "contacts.password";
 $proto28["m_srcTableName"] = "contacts";
 $proto28["m_expr"]=$obj;
 $proto28["m_alias"] = "";
@@ -3364,7 +3511,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto30["m_sql"] = "adresse2";
+$proto30["m_sql"] = "contacts.adresse2";
 $proto30["m_srcTableName"] = "contacts";
 $proto30["m_expr"]=$obj;
 $proto30["m_alias"] = "";
@@ -3378,7 +3525,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto32["m_sql"] = "state_prov";
+$proto32["m_sql"] = "contacts.state_prov";
 $proto32["m_srcTableName"] = "contacts";
 $proto32["m_expr"]=$obj;
 $proto32["m_alias"] = "";
@@ -3392,7 +3539,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto34["m_sql"] = "zip_code";
+$proto34["m_sql"] = "contacts.zip_code";
 $proto34["m_srcTableName"] = "contacts";
 $proto34["m_expr"]=$obj;
 $proto34["m_alias"] = "";
@@ -3406,7 +3553,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto36["m_sql"] = "city";
+$proto36["m_sql"] = "contacts.city";
 $proto36["m_srcTableName"] = "contacts";
 $proto36["m_expr"]=$obj;
 $proto36["m_alias"] = "";
@@ -3420,7 +3567,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto38["m_sql"] = "country";
+$proto38["m_sql"] = "contacts.country";
 $proto38["m_srcTableName"] = "contacts";
 $proto38["m_expr"]=$obj;
 $proto38["m_alias"] = "";
@@ -3434,7 +3581,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto40["m_sql"] = "authtype";
+$proto40["m_sql"] = "contacts.authtype";
 $proto40["m_srcTableName"] = "contacts";
 $proto40["m_expr"]=$obj;
 $proto40["m_alias"] = "";
@@ -3448,62 +3595,112 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "contacts"
 ));
 
-$proto42["m_sql"] = "id";
+$proto42["m_sql"] = "contacts.id";
 $proto42["m_srcTableName"] = "contacts";
 $proto42["m_expr"]=$obj;
 $proto42["m_alias"] = "";
 $obj = new SQLFieldListItem($proto42);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto44=array();
-$proto44["m_link"] = "SQLL_MAIN";
-			$proto45=array();
-$proto45["m_strName"] = "contacts";
-$proto45["m_srcTableName"] = "contacts";
-$proto45["m_columns"] = array();
-$proto45["m_columns"][] = "id";
-$proto45["m_columns"][] = "Prenom";
-$proto45["m_columns"][] = "personne_physique";
-$proto45["m_columns"][] = "nom";
-$proto45["m_columns"][] = "adresse";
-$proto45["m_columns"][] = "tel";
-$proto45["m_columns"][] = "email";
-$proto45["m_columns"][] = "fax";
-$proto45["m_columns"][] = "date_creation";
-$proto45["m_columns"][] = "date_modif";
-$proto45["m_columns"][] = "etat";
-$proto45["m_columns"][] = "id_fsi";
-$proto45["m_columns"][] = "password";
-$proto45["m_columns"][] = "adresse2";
-$proto45["m_columns"][] = "state_prov";
-$proto45["m_columns"][] = "zip_code";
-$proto45["m_columns"][] = "city";
-$proto45["m_columns"][] = "country";
-$proto45["m_columns"][] = "authtype";
-$obj = new SQLTable($proto45);
+						$proto44=array();
+			$obj = new SQLField(array(
+	"m_strName" => "type_contact",
+	"m_strTable" => "domain_contacts",
+	"m_srcTableName" => "contacts"
+));
 
-$proto44["m_table"] = $obj;
-$proto44["m_sql"] = "contacts";
-$proto44["m_alias"] = "";
+$proto44["m_sql"] = "domain_contacts.type_contact";
 $proto44["m_srcTableName"] = "contacts";
-$proto46=array();
-$proto46["m_sql"] = "";
-$proto46["m_uniontype"] = "SQLL_UNKNOWN";
+$proto44["m_expr"]=$obj;
+$proto44["m_alias"] = "";
+$obj = new SQLFieldListItem($proto44);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto46=array();
+$proto46["m_link"] = "SQLL_MAIN";
+			$proto47=array();
+$proto47["m_strName"] = "contacts";
+$proto47["m_srcTableName"] = "contacts";
+$proto47["m_columns"] = array();
+$proto47["m_columns"][] = "id";
+$proto47["m_columns"][] = "Prenom";
+$proto47["m_columns"][] = "personne_physique";
+$proto47["m_columns"][] = "nom";
+$proto47["m_columns"][] = "adresse";
+$proto47["m_columns"][] = "tel";
+$proto47["m_columns"][] = "email";
+$proto47["m_columns"][] = "fax";
+$proto47["m_columns"][] = "date_creation";
+$proto47["m_columns"][] = "date_modif";
+$proto47["m_columns"][] = "etat";
+$proto47["m_columns"][] = "id_fsi";
+$proto47["m_columns"][] = "password";
+$proto47["m_columns"][] = "adresse2";
+$proto47["m_columns"][] = "state_prov";
+$proto47["m_columns"][] = "zip_code";
+$proto47["m_columns"][] = "city";
+$proto47["m_columns"][] = "country";
+$proto47["m_columns"][] = "authtype";
+$obj = new SQLTable($proto47);
+
+$proto46["m_table"] = $obj;
+$proto46["m_sql"] = "contacts";
+$proto46["m_alias"] = "";
+$proto46["m_srcTableName"] = "contacts";
+$proto48=array();
+$proto48["m_sql"] = "";
+$proto48["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto46["m_column"]=$obj;
-$proto46["m_contained"] = array();
-$proto46["m_strCase"] = "";
-$proto46["m_havingmode"] = false;
-$proto46["m_inBrackets"] = false;
-$proto46["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto46);
+$proto48["m_column"]=$obj;
+$proto48["m_contained"] = array();
+$proto48["m_strCase"] = "";
+$proto48["m_havingmode"] = false;
+$proto48["m_inBrackets"] = false;
+$proto48["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto48);
 
-$proto44["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto44);
+$proto46["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto46);
+
+$proto0["m_fromlist"][]=$obj;
+												$proto50=array();
+$proto50["m_link"] = "SQLL_INNERJOIN";
+			$proto51=array();
+$proto51["m_strName"] = "domain_contacts";
+$proto51["m_srcTableName"] = "contacts";
+$proto51["m_columns"] = array();
+$proto51["m_columns"][] = "id_domain";
+$proto51["m_columns"][] = "id_contact";
+$proto51["m_columns"][] = "type_contact";
+$obj = new SQLTable($proto51);
+
+$proto50["m_table"] = $obj;
+$proto50["m_sql"] = "INNER JOIN domain_contacts ON contacts.id = domain_contacts.id_contact";
+$proto50["m_alias"] = "";
+$proto50["m_srcTableName"] = "contacts";
+$proto52=array();
+$proto52["m_sql"] = "domain_contacts.id_contact = contacts.id";
+$proto52["m_uniontype"] = "SQLL_UNKNOWN";
+						$obj = new SQLField(array(
+	"m_strName" => "id_contact",
+	"m_strTable" => "domain_contacts",
+	"m_srcTableName" => "contacts"
+));
+
+$proto52["m_column"]=$obj;
+$proto52["m_contained"] = array();
+$proto52["m_strCase"] = "= contacts.id";
+$proto52["m_havingmode"] = false;
+$proto52["m_inBrackets"] = false;
+$proto52["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto52);
+
+$proto50["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto50);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -3519,7 +3716,7 @@ $queryData_contacts = createSqlQuery_contacts();
 	
 		;
 
-																			
+																				
 
 $tdatacontacts[".sqlquery"] = $queryData_contacts;
 

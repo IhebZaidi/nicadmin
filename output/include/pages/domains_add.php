@@ -1,6 +1,5 @@
 <?php
-			$optionsArray = array( 'details' => array( 'nameservers' => array( 'displayPreview' => 1 ),
-'domain_contacts' => array( 'displayPreview' => 2,
+			$optionsArray = array( 'details' => array( 'domain_contacts' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'code',
